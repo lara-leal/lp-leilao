@@ -1,5 +1,6 @@
 package lp.leilao.controllers;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
@@ -32,6 +33,16 @@ public class ClientController {
     @Status(HttpStatus.CREATED)
     public Client createClient(@Body @Valid Client client) {
         return clientService.createClient(client);
+    }
+
+    @Put("/{id}")
+    public HttpResponse<Client> updateClient(Long id, @Body Client updatedClient) {
+        Client updated = clientService.updateClient(id, updatedClient);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
     }
 
     @Delete("/{id}")
