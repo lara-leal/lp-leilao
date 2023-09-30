@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,4 +26,7 @@ public class Client {
     private String cpf;
     @Column(name = "digitalCertificate")
     private String digitalCertificate;
+
+    @OneToMany(mappedBy = "client")
+    private List<Bid> bids;
 }

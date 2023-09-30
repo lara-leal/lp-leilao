@@ -2,8 +2,13 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.entities.Switch;
+import lp.leilao.dtos.DispositivoInformaticaDTO;
+import lp.leilao.entities.devices.Monitor;
+import lp.leilao.entities.devices.Switch;
 import lp.leilao.repositories.SwitchRepository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Singleton
 public class SwitchService {
@@ -14,18 +19,38 @@ public class SwitchService {
         this.switchRepository = switchRepository;
     }
 
-    public Iterable<Switch> getAllSwitches() {
-        return switchRepository.findAll();
+    public Iterable<DispositivoInformaticaDTO> getAllSwitches() {
+        return toDispositivoInformaticaDTOList(switchRepository.findAll());
     }
 
-    public Switch getSwitchById(Long id) {
-        return switchRepository.findById(id).orElse(null);
+    public DispositivoInformaticaDTO getSwitchById(Long id) {
+        return switchRepository.findById(id)
+                .map(this::toDispositivoInformaticaDTO)
+                .orElse(null);
     }
 
-    public Switch createSwitch(Switch switches) {
-        return switchRepository.save(switches);
+    public DispositivoInformaticaDTO createSwitch(Switch switches) {
+        Switch savedSwitch = switchRepository.save(switches);
+        return toDispositivoInformaticaDTO(savedSwitch);
     }
     public void deleteSwitch(Long id) {
         switchRepository.deleteById(id);
     }
+
+    private DispositivoInformaticaDTO toDispositivoInformaticaDTO(Switch swi) {
+        DispositivoInformaticaDTO dto = new DispositivoInformaticaDTO();
+        dto.setNumberOfPorts(swi.getNumberOfPorts());
+        dto.setFirmwareVersion(swi.getFirmwareVersion());
+        return dto;
+    }
+
+    private Iterable<DispositivoInformaticaDTO> toDispositivoInformaticaDTOList(Iterable<Switch> swits) {
+        List<DispositivoInformaticaDTO> dtos = new ArrayList<>();
+        for (Switch swit : swits) {
+            dtos.add(toDispositivoInformaticaDTO(swit));
+        }
+        return dtos;
+    }
+
 }
+

@@ -9,7 +9,7 @@ import io.micronaut.http.annotation.Post;
 import io.micronaut.http.annotation.Status;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.entities.DispositivoInformatica;
+import lp.leilao.entities.devices.DispositivoInformatica;
 import lp.leilao.services.DispositivoInformaticaService;
 
 @Controller("/dispositivos")

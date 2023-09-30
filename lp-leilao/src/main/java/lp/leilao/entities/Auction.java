@@ -21,12 +21,12 @@ public class Auction {
     private Long id;
     @Column(name = "numAuction")
     private Integer numAuction;
-    @Column(name = "batchProducts")
-    private Integer batchProducts;
     @Column(name = "financialInstitution")
     private String  financialInstitution;
-    @Column(name = "data")
-    private Date data;
+    @Column(name = "initialDate")
+    private Date initialDate;
+    @Column(name = "finalDate")
+    private Date finalDate;
     @Column(name = "address")
     private String address;
 }

@@ -4,7 +4,8 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.entities.Roteador;
+import lp.leilao.dtos.DispositivoInformaticaDTO;
+import lp.leilao.entities.devices.Roteador;
 import lp.leilao.services.RoteadorService;
 @Controller("/dispositivos/roteadores")
 public class RoteadorController {
@@ -17,19 +18,19 @@ public class RoteadorController {
     }
 
     @Get("/list")
-    public Iterable<Roteador> listarRoteadores() {
+    public Iterable<DispositivoInformaticaDTO> listarRoteadores() {
         return roteadorService.getAllRoteador();
     }
 
     @Get("/{id}")
-    public Roteador getRoteador(Long id) {
+    public DispositivoInformaticaDTO getRoteador(Long id) {
 
         return roteadorService.getRoteadorById(id);
     }
 
     @Post("/create")
     @Status(HttpStatus.CREATED)
-    public Roteador criarRoteador(@Body @Valid Roteador roteador) {
+    public DispositivoInformaticaDTO criarRoteador(@Body @Valid Roteador roteador) {
         return roteadorService.createRoteador(roteador);
     }
 

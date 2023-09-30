@@ -2,7 +2,7 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.entities.Vehicle;
+import lp.leilao.entities.vehicles.Vehicle;
 import lp.leilao.repositories.VehicleRepository;
 
 @Singleton

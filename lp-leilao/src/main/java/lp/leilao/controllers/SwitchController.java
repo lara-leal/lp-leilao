@@ -5,9 +5,8 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.entities.Hub;
-import lp.leilao.entities.Switch;
-import lp.leilao.services.HubService;
+import lp.leilao.dtos.DispositivoInformaticaDTO;
+import lp.leilao.entities.devices.Switch;
 import lp.leilao.services.SwitchService;
 
 @Controller("/dispositivos/switches")
@@ -21,19 +20,19 @@ public class SwitchController {
     }
 
     @Get("/list")
-    public Iterable<Switch> listarSwitches() {
+    public Iterable<DispositivoInformaticaDTO> listarSwitches() {
         return switchService.getAllSwitches();
     }
 
     @Get("/{id}")
-    public Switch getSwitches(Long id) {
+    public DispositivoInformaticaDTO getSwitches(Long id) {
 
         return switchService.getSwitchById(id);
     }
 
     @Post("/create")
     @Status(HttpStatus.CREATED)
-    public Switch criarSwitch(@Body @Valid Switch switches) {
+    public DispositivoInformaticaDTO criarSwitch(@Body @Valid Switch switches) {
         return switchService.createSwitch(switches);
     }
 

@@ -4,7 +4,7 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.entities.Motorcycle;
+import lp.leilao.entities.vehicles.Motorcycle;
 import lp.leilao.services.MotorcycleService;
 
 

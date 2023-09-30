@@ -4,7 +4,7 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.entities.UtilityVehicle;
+import lp.leilao.entities.vehicles.UtilityVehicle;
 import lp.leilao.services.UtilityVehicleService;
 
 @Controller("/vehicles/utility-vehicles")

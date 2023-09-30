@@ -2,10 +2,13 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.entities.Hub;
-import lp.leilao.entities.Roteador;
+import lp.leilao.dtos.DispositivoInformaticaDTO;
+import lp.leilao.entities.devices.Hub;
+import lp.leilao.entities.devices.Notebook;
 import lp.leilao.repositories.HubRepository;
-import lp.leilao.repositories.RoteadorRepository;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Singleton
 public class HubService {
@@ -16,19 +19,37 @@ public class HubService {
         this.hubRepository = hubRepository;
     }
 
-    public Iterable<Hub> getAllHubs() {
-        return hubRepository.findAll();
+    public Iterable<DispositivoInformaticaDTO> getAllHubs() {
+        return toDispositivoInformaticaDTOList(hubRepository.findAll());
     }
 
-    public Hub getHubById(Long id) {
-        return hubRepository.findById(id).orElse(null);
+    public DispositivoInformaticaDTO getHubById(Long id) {
+        return hubRepository.findById(id)
+                .map(this::toDispositivoInformaticaDTO)
+                .orElse(null);
     }
 
-    public Hub createHub(Hub hub) {
-        return hubRepository.save(hub);
+    public DispositivoInformaticaDTO createHub(Hub hub) {
+        Hub savedHub = hubRepository.save(hub);
+        return toDispositivoInformaticaDTO(savedHub);
     }
 
     public void deleteHub(Long id) {
         hubRepository.deleteById(id);
+    }
+
+    private DispositivoInformaticaDTO toDispositivoInformaticaDTO(Hub hub) {
+        DispositivoInformaticaDTO dto = new DispositivoInformaticaDTO();
+        dto.setPorts(hub.getPorts());
+        dto.setVolts(hub.getVolts());
+        return dto;
+    }
+
+    private Iterable<DispositivoInformaticaDTO> toDispositivoInformaticaDTOList(Iterable<Hub> Hubs) {
+        List<DispositivoInformaticaDTO> dtos = new ArrayList<>();
+        for (Hub hub : Hubs) {
+            dtos.add(toDispositivoInformaticaDTO(hub));
+        }
+        return dtos;
     }
 }

@@ -2,9 +2,7 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import lp.leilao.entities.Client;
-import lp.leilao.entities.Hub;
 import lp.leilao.repositories.ClientRepository;
-import lp.leilao.repositories.HubRepository;
 
 public class ClientService {
     @Inject

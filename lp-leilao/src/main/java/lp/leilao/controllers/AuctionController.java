@@ -5,9 +5,7 @@ import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.entities.Auction;
-import lp.leilao.entities.Hub;
 import lp.leilao.services.AuctionService;
-import lp.leilao.services.HubService;
 
 @Controller("/auctions")
 public class AuctionController {
