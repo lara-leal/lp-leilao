@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Serdeable
 @DiscriminatorValue("HUB")
-public class Hub extends DispositivoInformatica {
+public class Hub extends ComputingDevice {
     @Column(name = "ports")
     private String ports;
     @Column(name = "volts")

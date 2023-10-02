@@ -6,9 +6,7 @@ import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.entities.Client;
-import lp.leilao.entities.FinancialInstitution;
 import lp.leilao.services.ClientService;
-import lp.leilao.services.FInstitutionService;
 @Controller("/clients")
 public class ClientController {
     @Inject

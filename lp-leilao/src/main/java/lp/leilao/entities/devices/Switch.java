@@ -15,7 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Serdeable
 @DiscriminatorValue("SWITCH")
-public class Switch extends DispositivoInformatica {
+public class Switch extends ComputingDevice {
 
     @Column(name = "numberOfPorts")
     private Integer numberOfPorts;

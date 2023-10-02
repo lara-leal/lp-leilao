@@ -1,19 +1,14 @@
 package lp.leilao.controllers;
 
 import io.micronaut.http.HttpStatus;
-import io.micronaut.http.annotation.Body;
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Delete;
-import io.micronaut.http.annotation.Get;
-import io.micronaut.http.annotation.Post;
-import io.micronaut.http.annotation.Status;
+import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.dtos.DispositivoInformaticaDTO;
+import lp.leilao.dtos.ComputingDeviceDTO;
 import lp.leilao.entities.devices.Notebook;
 import lp.leilao.services.NotebookService;
 
-@Controller("/dispositivos/notebooks")
+@Controller("/devices/notebooks")
 public class NotebookController {
 
     @Inject
@@ -24,25 +19,25 @@ public class NotebookController {
     }
 
     @Get("/list")
-    public Iterable<DispositivoInformaticaDTO> listarNotebooks() {
+    public Iterable<ComputingDeviceDTO> listNotebooks() {
         return noteService.getAllNote();
     }
 
     @Get("/{id}")
-    public DispositivoInformaticaDTO getNotebook(Long id) {
+    public ComputingDeviceDTO getNotebook(Long id) {
 
         return noteService.getNoteById(id);
     }
 
     @Post("/create")
     @Status(HttpStatus.CREATED)
-    public DispositivoInformaticaDTO criarNotebook(@Body @Valid Notebook notebook) {
+    public ComputingDeviceDTO createNotebook(@Body @Valid Notebook notebook) {
         return noteService.createNote(notebook);
     }
 
     @Delete("/{id}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deletarDispositivo(Long id) {
+    public void deleteNotebook(Long id) {
         noteService.deleteNote(id);
     }
 }

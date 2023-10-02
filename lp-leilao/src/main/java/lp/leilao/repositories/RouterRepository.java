@@ -2,7 +2,8 @@ package lp.leilao.repositories;
 
 import io.micronaut.data.annotation.Repository;
 import io.micronaut.data.repository.CrudRepository;
-import lp.leilao.entities.devices.Roteador;
+import lp.leilao.entities.devices.Router;
+
 @Repository
-public interface RoteadorRepository  extends CrudRepository<Roteador, Long> {
+public interface RouterRepository  extends CrudRepository<Router, Long> {
 }

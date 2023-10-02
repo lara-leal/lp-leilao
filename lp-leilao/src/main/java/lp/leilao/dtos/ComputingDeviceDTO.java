@@ -3,17 +3,17 @@ package lp.leilao.dtos;
 import io.micronaut.core.annotation.Introspected;
 import io.micronaut.serde.annotation.Serdeable;
 import lombok.Data;
-import lp.leilao.entities.devices.DispositivoInformatica;
+import lp.leilao.entities.devices.ComputingDevice;
 
 @Data
 @Introspected
 @Serdeable
-public class DispositivoInformaticaDTO {
-    public DispositivoInformatica name;
-    public DispositivoInformatica quantity;
-    public DispositivoInformatica description;
-    public DispositivoInformatica deviceValue;
-    public DispositivoInformatica brand;
+public class ComputingDeviceDTO {
+    public ComputingDevice name;
+    public ComputingDevice quantity;
+    public ComputingDevice description;
+    public ComputingDevice deviceValue;
+    public ComputingDevice brand;
     public String ports;
     public String volts;
     public String specification;
@@ -23,10 +23,10 @@ public class DispositivoInformaticaDTO {
     public Integer numberOfPorts;
     public String firmwareVersion;
 
-    public DispositivoInformaticaDTO() {
+    public ComputingDeviceDTO() {
     }
 
-    public DispositivoInformaticaDTO(DispositivoInformatica name, DispositivoInformatica quantity, DispositivoInformatica description, DispositivoInformatica deviceValue, DispositivoInformatica brand, String ports, String volts, String specification, Boolean antenna, String screenSize, String refreshRate, Integer numberOfPorts, String firmwareVersion) {
+    public ComputingDeviceDTO(ComputingDevice name, ComputingDevice quantity, ComputingDevice description, ComputingDevice deviceValue, ComputingDevice brand, String ports, String volts, String specification, Boolean antenna, String screenSize, String refreshRate, Integer numberOfPorts, String firmwareVersion) {
         this.name = name;
         this.quantity = quantity;
         this.description = description;

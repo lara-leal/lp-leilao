@@ -1,17 +1,15 @@
 package lp.leilao.entities.devices;
-import com.fasterxml.jackson.annotation.JsonInclude;
+
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 @Data
 @Entity
 @Serdeable
-@Table(name = "dispositivo_informatica")
+@Table(name = "computing_device")
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
-@DiscriminatorColumn(name = "tipo_dispositivo", discriminatorType = DiscriminatorType.STRING)
-public abstract class DispositivoInformatica {
+@DiscriminatorColumn(name = "device_type", discriminatorType = DiscriminatorType.STRING)
+public abstract class ComputingDevice {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

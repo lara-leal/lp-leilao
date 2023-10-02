@@ -2,8 +2,7 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.DispositivoInformaticaDTO;
-import lp.leilao.entities.devices.Monitor;
+import lp.leilao.dtos.ComputingDeviceDTO;
 import lp.leilao.entities.devices.Switch;
 import lp.leilao.repositories.SwitchRepository;
 
@@ -19,35 +18,35 @@ public class SwitchService {
         this.switchRepository = switchRepository;
     }
 
-    public Iterable<DispositivoInformaticaDTO> getAllSwitches() {
-        return toDispositivoInformaticaDTOList(switchRepository.findAll());
+    public Iterable<ComputingDeviceDTO> getAllSwitches() {
+        return toComputingDeviceDTOList(switchRepository.findAll());
     }
 
-    public DispositivoInformaticaDTO getSwitchById(Long id) {
+    public ComputingDeviceDTO getSwitchById(Long id) {
         return switchRepository.findById(id)
-                .map(this::toDispositivoInformaticaDTO)
+                .map(this::toComputingDeviceDTO)
                 .orElse(null);
     }
 
-    public DispositivoInformaticaDTO createSwitch(Switch switches) {
+    public ComputingDeviceDTO createSwitch(Switch switches) {
         Switch savedSwitch = switchRepository.save(switches);
-        return toDispositivoInformaticaDTO(savedSwitch);
+        return toComputingDeviceDTO(savedSwitch);
     }
     public void deleteSwitch(Long id) {
         switchRepository.deleteById(id);
     }
 
-    private DispositivoInformaticaDTO toDispositivoInformaticaDTO(Switch swi) {
-        DispositivoInformaticaDTO dto = new DispositivoInformaticaDTO();
+    private ComputingDeviceDTO toComputingDeviceDTO(Switch swi) {
+        ComputingDeviceDTO dto = new ComputingDeviceDTO();
         dto.setNumberOfPorts(swi.getNumberOfPorts());
         dto.setFirmwareVersion(swi.getFirmwareVersion());
         return dto;
     }
 
-    private Iterable<DispositivoInformaticaDTO> toDispositivoInformaticaDTOList(Iterable<Switch> swits) {
-        List<DispositivoInformaticaDTO> dtos = new ArrayList<>();
+    private Iterable<ComputingDeviceDTO> toComputingDeviceDTOList(Iterable<Switch> swits) {
+        List<ComputingDeviceDTO> dtos = new ArrayList<>();
         for (Switch swit : swits) {
-            dtos.add(toDispositivoInformaticaDTO(swit));
+            dtos.add(toComputingDeviceDTO(swit));
         }
         return dtos;
     }

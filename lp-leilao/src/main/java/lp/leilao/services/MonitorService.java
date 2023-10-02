@@ -2,9 +2,8 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.DispositivoInformaticaDTO;
+import lp.leilao.dtos.ComputingDeviceDTO;
 import lp.leilao.entities.devices.Monitor;
-import lp.leilao.entities.devices.Notebook;
 import lp.leilao.repositories.MonitorRepository;
 
 import java.util.ArrayList;
@@ -19,19 +18,19 @@ public class MonitorService {
         this.monitorRepository = monitorRepository;
     }
 
-    public Iterable<DispositivoInformaticaDTO> getAllMonitor() {
-        return toDispositivoInformaticaDTOList(monitorRepository.findAll());
+    public Iterable<ComputingDeviceDTO> getAllMonitor() {
+        return toComputingDeviceDTOList(monitorRepository.findAll());
     }
 
-    public DispositivoInformaticaDTO getMonitorById(Long id) {
+    public ComputingDeviceDTO getMonitorById(Long id) {
         return monitorRepository.findById(id)
-                .map(this::toDispositivoInformaticaDTO)
+                .map(this::toComputingDeviceDTO)
                 .orElse(null);
     }
 
-    public DispositivoInformaticaDTO createMonitor(Monitor monitor) {
+    public ComputingDeviceDTO createMonitor(Monitor monitor) {
         Monitor savedMonitor = monitorRepository.save(monitor);
-        return toDispositivoInformaticaDTO(savedMonitor);
+        return toComputingDeviceDTO(savedMonitor);
     }
 
 
@@ -40,17 +39,17 @@ public class MonitorService {
     }
 
 
-    private DispositivoInformaticaDTO toDispositivoInformaticaDTO(Monitor monitor) {
-        DispositivoInformaticaDTO dto = new DispositivoInformaticaDTO();
+    private ComputingDeviceDTO toComputingDeviceDTO(Monitor monitor) {
+        ComputingDeviceDTO dto = new ComputingDeviceDTO();
         dto.setScreenSize(monitor.getScreenSize());
         dto.setRefreshRate(monitor.getRefreshRate());
         return dto;
     }
 
-    private Iterable<DispositivoInformaticaDTO> toDispositivoInformaticaDTOList(Iterable<Monitor> monitors) {
-        List<DispositivoInformaticaDTO> dtos = new ArrayList<>();
+    private Iterable<ComputingDeviceDTO> toComputingDeviceDTOList(Iterable<Monitor> monitors) {
+        List<ComputingDeviceDTO> dtos = new ArrayList<>();
         for (Monitor monitor : monitors) {
-            dtos.add(toDispositivoInformaticaDTO(monitor));
+            dtos.add(toComputingDeviceDTO(monitor));
         }
         return dtos;
     }

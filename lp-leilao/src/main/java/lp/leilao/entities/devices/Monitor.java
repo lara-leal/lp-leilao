@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Serdeable
 @DiscriminatorValue("MONITOR")
-public class Monitor extends DispositivoInformatica {
+public class Monitor extends ComputingDevice {
     @Column(name = "screenSize")
     private String screenSize;
 

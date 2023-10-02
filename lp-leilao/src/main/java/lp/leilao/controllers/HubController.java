@@ -1,19 +1,14 @@
 package lp.leilao.controllers;
 
 import io.micronaut.http.HttpStatus;
-import io.micronaut.http.annotation.Body;
-import io.micronaut.http.annotation.Controller;
-import io.micronaut.http.annotation.Delete;
-import io.micronaut.http.annotation.Get;
-import io.micronaut.http.annotation.Post;
-import io.micronaut.http.annotation.Status;
+import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.dtos.DispositivoInformaticaDTO;
+import lp.leilao.dtos.ComputingDeviceDTO;
 import lp.leilao.entities.devices.Hub;
 import lp.leilao.services.HubService;
 
-@Controller("/dispositivos/hubs")
+@Controller("/devices/hubs")
 public class HubController {
 
     @Inject
@@ -24,25 +19,25 @@ public class HubController {
     }
 
     @Get("/list")
-    public Iterable<DispositivoInformaticaDTO> listarHubs() {
+    public Iterable<ComputingDeviceDTO> listHubs() {
         return hubService.getAllHubs();
     }
 
     @Get("/{id}")
-    public DispositivoInformaticaDTO getHubs(Long id) {
+    public ComputingDeviceDTO getHubs(Long id) {
 
         return hubService.getHubById(id);
     }
 
     @Post("/create")
     @Status(HttpStatus.CREATED)
-    public DispositivoInformaticaDTO criarHub(@Body @Valid Hub hub) {
+    public ComputingDeviceDTO createHub(@Body @Valid Hub hub) {
         return hubService.createHub(hub);
     }
 
     @Delete("/{id}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deletarHub(Long id) {
+    public void deleteHub(Long id) {
         hubService.deleteHub(id);
     }
 }

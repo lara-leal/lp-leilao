@@ -4,7 +4,6 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.entities.Auction;
 import lp.leilao.entities.FinancialInstitution;
 import lp.leilao.services.FInstitutionService;
 
@@ -19,7 +18,7 @@ public class FInstitutionController {
     }
 
     @Get("/list")
-    public Iterable<FinancialInstitution> listarFI() {
+    public Iterable<FinancialInstitution> listFI() {
         return fiService.getAllFI();
     }
 
@@ -37,7 +36,7 @@ public class FInstitutionController {
 
     @Delete("/{id}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deletarFI(Long id) {
+    public void deleteFI(Long id) {
         fiService.deleteFI(id);
     }
 }

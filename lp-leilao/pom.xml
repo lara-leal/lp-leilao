@@ -61,6 +61,7 @@
       <artifactId>swagger-annotations</artifactId>
       <scope>compile</scope>
     </dependency>
+
     <dependency>
       <groupId>jakarta.validation</groupId>
       <artifactId>jakarta.validation-api</artifactId>
@@ -86,10 +87,16 @@
       <artifactId>micronaut-http-client</artifactId>
       <scope>test</scope>
     </dependency>
+
     <dependency>
       <groupId>io.micronaut.test</groupId>
       <artifactId>micronaut-test-junit5</artifactId>
       <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.openapi</groupId>
+      <artifactId>micronaut-openapi-annotations</artifactId>
+      <scope>provided</scope>
     </dependency>
     <dependency>
       <groupId>org.junit.jupiter</groupId>
@@ -183,10 +190,14 @@
               </exclusions>
             </path>
           </annotationProcessorPaths>
+
           <compilerArgs>
+
             <arg>-Amicronaut.processing.group=lp.leilao</arg>
             <arg>-Amicronaut.processing.module=lp-leilao</arg>
+
           </compilerArgs>
+
         </configuration>
       </plugin>
     </plugins>

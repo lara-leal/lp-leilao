@@ -2,9 +2,8 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.DispositivoInformaticaDTO;
+import lp.leilao.dtos.ComputingDeviceDTO;
 import lp.leilao.entities.devices.Hub;
-import lp.leilao.entities.devices.Notebook;
 import lp.leilao.repositories.HubRepository;
 
 import java.util.ArrayList;
@@ -19,36 +18,36 @@ public class HubService {
         this.hubRepository = hubRepository;
     }
 
-    public Iterable<DispositivoInformaticaDTO> getAllHubs() {
-        return toDispositivoInformaticaDTOList(hubRepository.findAll());
+    public Iterable<ComputingDeviceDTO> getAllHubs() {
+        return toComputingDeviceDTOLits(hubRepository.findAll());
     }
 
-    public DispositivoInformaticaDTO getHubById(Long id) {
+    public ComputingDeviceDTO getHubById(Long id) {
         return hubRepository.findById(id)
-                .map(this::toDispositivoInformaticaDTO)
+                .map(this::toComputingDeviceDTO)
                 .orElse(null);
     }
 
-    public DispositivoInformaticaDTO createHub(Hub hub) {
+    public ComputingDeviceDTO createHub(Hub hub) {
         Hub savedHub = hubRepository.save(hub);
-        return toDispositivoInformaticaDTO(savedHub);
+        return toComputingDeviceDTO(savedHub);
     }
 
     public void deleteHub(Long id) {
         hubRepository.deleteById(id);
     }
 
-    private DispositivoInformaticaDTO toDispositivoInformaticaDTO(Hub hub) {
-        DispositivoInformaticaDTO dto = new DispositivoInformaticaDTO();
+    private ComputingDeviceDTO toComputingDeviceDTO(Hub hub) {
+        ComputingDeviceDTO dto = new ComputingDeviceDTO();
         dto.setPorts(hub.getPorts());
         dto.setVolts(hub.getVolts());
         return dto;
     }
 
-    private Iterable<DispositivoInformaticaDTO> toDispositivoInformaticaDTOList(Iterable<Hub> Hubs) {
-        List<DispositivoInformaticaDTO> dtos = new ArrayList<>();
+    private Iterable<ComputingDeviceDTO> toComputingDeviceDTOLits(Iterable<Hub> Hubs) {
+        List<ComputingDeviceDTO> dtos = new ArrayList<>();
         for (Hub hub : Hubs) {
-            dtos.add(toDispositivoInformaticaDTO(hub));
+            dtos.add(toComputingDeviceDTO(hub));
         }
         return dtos;
     }

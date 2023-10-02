@@ -2,7 +2,7 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.DispositivoInformaticaDTO;
+import lp.leilao.dtos.ComputingDeviceDTO;
 import lp.leilao.entities.devices.Notebook;
 import lp.leilao.repositories.NotebookRepository;
 
@@ -18,34 +18,34 @@ public class NotebookService {
         this.noteRepository = noteRepository;
     }
 
-    public Iterable<DispositivoInformaticaDTO> getAllNote() {
-        return toDispositivoInformaticaDTOList(noteRepository.findAll());
+    public Iterable<ComputingDeviceDTO> getAllNote() {
+        return toComputingDeviceDTOList(noteRepository.findAll());
     }
 
-    public DispositivoInformaticaDTO getNoteById(Long id) {
+    public ComputingDeviceDTO getNoteById(Long id) {
         return noteRepository.findById(id)
-                .map(this::toDispositivoInformaticaDTO)
+                .map(this::toComputingDeviceDTO)
                 .orElse(null);
     }
 
-    public DispositivoInformaticaDTO createNote(Notebook notebook) {
-        return toDispositivoInformaticaDTO(noteRepository.save(notebook));
+    public ComputingDeviceDTO createNote(Notebook notebook) {
+        return toComputingDeviceDTO(noteRepository.save(notebook));
     }
 
     public void deleteNote(Long id) {
         noteRepository.deleteById(id);
     }
 
-    private DispositivoInformaticaDTO toDispositivoInformaticaDTO(Notebook notebook) {
-        DispositivoInformaticaDTO dto = new DispositivoInformaticaDTO();
+    private ComputingDeviceDTO toComputingDeviceDTO(Notebook notebook) {
+        ComputingDeviceDTO dto = new ComputingDeviceDTO();
         dto.setSpecification(notebook.getSpecification());
         return dto;
     }
 
-    private Iterable<DispositivoInformaticaDTO> toDispositivoInformaticaDTOList(Iterable<Notebook> notebooks) {
-        List<DispositivoInformaticaDTO> dtos = new ArrayList<>();
+    private Iterable<ComputingDeviceDTO> toComputingDeviceDTOList(Iterable<Notebook> notebooks) {
+        List<ComputingDeviceDTO> dtos = new ArrayList<>();
         for (Notebook notebook : notebooks) {
-            dtos.add(toDispositivoInformaticaDTO(notebook));
+            dtos.add(toComputingDeviceDTO(notebook));
         }
         return dtos;
     }

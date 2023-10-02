@@ -18,7 +18,7 @@ public class AuctionController {
     }
 
     @Get("/list")
-    public Iterable<Auction> listarAuctions() {
+    public Iterable<Auction> listAuctions() {
         return auctionService.getAllAuctions();
     }
 
@@ -30,13 +30,13 @@ public class AuctionController {
 
     @Post("/create")
     @Status(HttpStatus.CREATED)
-    public Auction criarAuction(@Body @Valid Auction auction) {
+    public Auction createAuction(@Body @Valid Auction auction) {
         return auctionService.createAuction(auction);
     }
 
     @Delete("/{id}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deletarAuction(Long id) {
+    public void deleteAuction(Long id) {
         auctionService.deleteAuction(id);
     }
 
