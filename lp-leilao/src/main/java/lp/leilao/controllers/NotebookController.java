@@ -4,7 +4,7 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.dtos.ComputingDeviceDTO;
+import lp.leilao.dtos.NotebookDTO;
 import lp.leilao.entities.devices.Notebook;
 import lp.leilao.services.NotebookService;
 
@@ -19,19 +19,19 @@ public class NotebookController {
     }
 
     @Get("/list")
-    public Iterable<ComputingDeviceDTO> listNotebooks() {
+    public Iterable<NotebookDTO> listNotebooks() {
         return noteService.getAllNote();
     }
 
     @Get("/{id}")
-    public ComputingDeviceDTO getNotebook(Long id) {
+    public NotebookDTO getNotebook(Long id) {
 
         return noteService.getNoteById(id);
     }
 
     @Post("/create")
     @Status(HttpStatus.CREATED)
-    public ComputingDeviceDTO createNotebook(@Body @Valid Notebook notebook) {
+    public NotebookDTO createNotebook(@Body @Valid Notebook notebook) {
         return noteService.createNote(notebook);
     }
 

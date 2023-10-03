@@ -1,0 +1,105 @@
+openapi: 3.0.1
+paths:
+  /devices/notebooks/create:
+    post:
+      operationId: createNotebook
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Notebook'
+        required: true
+      responses:
+        "201":
+          description: createNotebook 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotebookDTO'
+  /devices/notebooks/list:
+    get:
+      operationId: listNotebooks
+      responses:
+        "200":
+          description: listNotebooks 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NotebookDTO'
+  /devices/notebooks/{id}:
+    get:
+      operationId: getNotebook
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getNotebook 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotebookDTO'
+    delete:
+      operationId: deleteNotebook
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteNotebook 204 response
+info:
+components:
+  schemas:
+    ComputingDevice:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          nullable: true
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        description:
+          type: string
+        deviceValue:
+          type: number
+          format: double
+        brand:
+          type: string
+    Notebook:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ComputingDevice'
+      - properties:
+          specification:
+            type: string
+    NotebookDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        description:
+          type: string
+        deviceValue:
+          type: number
+          format: double
+        brand:
+          type: string
+        specification:
+          type: string

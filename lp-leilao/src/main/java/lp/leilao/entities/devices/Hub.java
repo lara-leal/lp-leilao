@@ -1,5 +1,6 @@
 package lp.leilao.entities.devices;
 
+import io.micronaut.core.annotation.Introspected;
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.Column;
 import jakarta.persistence.DiscriminatorValue;
@@ -14,8 +15,8 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
+@Introspected
 @Serdeable
-@DiscriminatorValue("HUB")
 public class Hub extends ComputingDevice {
     @Column(name = "ports")
     private String ports;

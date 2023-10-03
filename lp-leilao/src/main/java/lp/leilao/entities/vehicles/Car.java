@@ -15,12 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Serdeable
-@DiscriminatorValue("CAR")
 public class Car extends Vehicle {
-
-    public Car(Long id, String type, String brand, String manufactureYear, String model, String description, Double price, String color, Boolean sunroof, Integer yearLicensing, String resultPrecautionaryExpertise) {
-        super(id, type, brand, manufactureYear, model, description, price, color);
-    }
 
     @Column(name = "sunroof")
     private Boolean sunroof;

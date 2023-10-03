@@ -6,6 +6,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+import java.util.Set;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -15,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Client {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long id_client;
     @Column(name = "name")
     private String name;
     @Column(name = "email")
@@ -25,6 +28,13 @@ public class Client {
     @Column(name = "digitalCertificate")
     private String digitalCertificate;
 
-//    @OneToMany(mappedBy = "client")
-//    private List<Bid> bids;
+    @OneToMany(mappedBy = "client")
+    private List<Bid> bids;
+
+    @ManyToMany
+    @JoinTable(name = "auction_client",
+            joinColumns = @JoinColumn(name = "id_client"),
+            inverseJoinColumns = @JoinColumn(name = "auction_id"))
+    private Set<Auction> authorizedAuctions;
+
 }

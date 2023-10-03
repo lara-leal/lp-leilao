@@ -2,7 +2,7 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.ComputingDeviceDTO;
+import lp.leilao.dtos.HubDTO;
 import lp.leilao.entities.devices.Hub;
 import lp.leilao.repositories.HubRepository;
 
@@ -18,36 +18,36 @@ public class HubService {
         this.hubRepository = hubRepository;
     }
 
-    public Iterable<ComputingDeviceDTO> getAllHubs() {
-        return toComputingDeviceDTOLits(hubRepository.findAll());
+    public Iterable<HubDTO> getAllHubs() {
+        return toHubDTOList(hubRepository.findAll());
     }
 
-    public ComputingDeviceDTO getHubById(Long id) {
+    public HubDTO getHubById(Long id) {
         return hubRepository.findById(id)
-                .map(this::toComputingDeviceDTO)
+                .map(this::toHubDTO)
                 .orElse(null);
     }
 
-    public ComputingDeviceDTO createHub(Hub hub) {
-        Hub savedHub = hubRepository.save(hub);
-        return toComputingDeviceDTO(savedHub);
+    public HubDTO createHub(Hub hub) {
+
+        return toHubDTO(hubRepository.save(hub));
     }
 
     public void deleteHub(Long id) {
         hubRepository.deleteById(id);
     }
 
-    private ComputingDeviceDTO toComputingDeviceDTO(Hub hub) {
-        ComputingDeviceDTO dto = new ComputingDeviceDTO();
+    private HubDTO toHubDTO(Hub hub) {
+        HubDTO dto = new HubDTO();
         dto.setPorts(hub.getPorts());
         dto.setVolts(hub.getVolts());
         return dto;
     }
 
-    private Iterable<ComputingDeviceDTO> toComputingDeviceDTOLits(Iterable<Hub> Hubs) {
-        List<ComputingDeviceDTO> dtos = new ArrayList<>();
+    private Iterable<HubDTO> toHubDTOList(Iterable<Hub> Hubs) {
+        List<HubDTO> dtos = new ArrayList<>();
         for (Hub hub : Hubs) {
-            dtos.add(toComputingDeviceDTO(hub));
+            dtos.add(toHubDTO(hub));
         }
         return dtos;
     }

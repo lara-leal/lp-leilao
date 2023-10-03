@@ -1,8 +1,6 @@
 package lp.leilao.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -19,7 +17,7 @@ public class Bid {
     public Double value;
     public Date data;
 
-//    @ManyToOne
-//    @JoinColumn(name = "id_client")
-//    private Client client;
+    @ManyToOne
+    @JoinColumn(name = "id_client")
+    private Client client;
 }

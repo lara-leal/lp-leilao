@@ -4,7 +4,7 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.dtos.ComputingDeviceDTO;
+import lp.leilao.dtos.HubDTO;
 import lp.leilao.entities.devices.Hub;
 import lp.leilao.services.HubService;
 
@@ -19,19 +19,19 @@ public class HubController {
     }
 
     @Get("/list")
-    public Iterable<ComputingDeviceDTO> listHubs() {
+    public Iterable<HubDTO> listHubs() {
         return hubService.getAllHubs();
     }
 
     @Get("/{id}")
-    public ComputingDeviceDTO getHubs(Long id) {
+    public HubDTO getHubs(Long id) {
 
         return hubService.getHubById(id);
     }
 
     @Post("/create")
     @Status(HttpStatus.CREATED)
-    public ComputingDeviceDTO createHub(@Body @Valid Hub hub) {
+    public HubDTO createHub(@Body @Valid Hub hub) {
         return hubService.createHub(hub);
     }
 

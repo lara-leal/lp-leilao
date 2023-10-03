@@ -15,7 +15,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Serdeable
-@DiscriminatorValue("ROUTER")
 public class Router extends ComputingDevice {
     @Column(name = "antenna")
     private Boolean antenna;

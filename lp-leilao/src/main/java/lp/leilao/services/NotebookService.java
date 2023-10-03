@@ -2,7 +2,7 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.ComputingDeviceDTO;
+import lp.leilao.dtos.NotebookDTO;
 import lp.leilao.entities.devices.Notebook;
 import lp.leilao.repositories.NotebookRepository;
 
@@ -18,34 +18,35 @@ public class NotebookService {
         this.noteRepository = noteRepository;
     }
 
-    public Iterable<ComputingDeviceDTO> getAllNote() {
-        return toComputingDeviceDTOList(noteRepository.findAll());
+    public Iterable<NotebookDTO> getAllNote() {
+
+        return toNotebookDTOList(noteRepository.findAll());
     }
 
-    public ComputingDeviceDTO getNoteById(Long id) {
+    public NotebookDTO getNoteById(Long id) {
         return noteRepository.findById(id)
-                .map(this::toComputingDeviceDTO)
+                .map(this::toNotebookDTO)
                 .orElse(null);
     }
 
-    public ComputingDeviceDTO createNote(Notebook notebook) {
-        return toComputingDeviceDTO(noteRepository.save(notebook));
+    public NotebookDTO createNote(Notebook notebook) {
+        return toNotebookDTO(noteRepository.save(notebook));
     }
 
     public void deleteNote(Long id) {
         noteRepository.deleteById(id);
     }
 
-    private ComputingDeviceDTO toComputingDeviceDTO(Notebook notebook) {
-        ComputingDeviceDTO dto = new ComputingDeviceDTO();
+    private NotebookDTO toNotebookDTO(Notebook notebook) {
+        NotebookDTO dto = new NotebookDTO();
         dto.setSpecification(notebook.getSpecification());
         return dto;
     }
 
-    private Iterable<ComputingDeviceDTO> toComputingDeviceDTOList(Iterable<Notebook> notebooks) {
-        List<ComputingDeviceDTO> dtos = new ArrayList<>();
+    private Iterable<NotebookDTO> toNotebookDTOList(Iterable<Notebook> notebooks) {
+        List<NotebookDTO> dtos = new ArrayList<>();
         for (Notebook notebook : notebooks) {
-            dtos.add(toComputingDeviceDTO(notebook));
+            dtos.add(toNotebookDTO(notebook));
         }
         return dtos;
     }

@@ -15,12 +15,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Entity
 @Serdeable
-@DiscriminatorValue("TRUCK")
 public class Truck extends Vehicle {
-
-    public Truck(Long id, String type, String brand, String manufactureYear, String model, String description, Double price, String color, double cargoCapacity, String engineType) {
-        super(id, type, brand, manufactureYear, model, description, price, color);
-    }
 
     @Column(name = "cargoCapacity")
     private double cargoCapacity;
