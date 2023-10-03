@@ -26,7 +26,21 @@ Registro, consulta, atualização e remoção das instituições financeiras res
 
 
 ## Executando a aplicação 
+1. Instale o Maven;
+   
+2.  Clonar o repositório utilizando:
+   `git clone https://github.com/lara-leal/lp-leilao.git`
 
+3. Acesse o caminho da pasta executando:
+    `cd lp-leilao`
+   `cd lp-leilao`
+   
+4. Rodar mvn clean install para instalar as dependências;
+   
+5. Execute o seguinte comando:
+   `mvn mn:run`
+   
+6. A aplicação estará disponivel na porta: 8080
 
 ## Acesse a documentação 
 Acesse o link a seguir para visualizar a documentação da aplicação: 
