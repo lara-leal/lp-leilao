@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class UtilityVehicle extends Vehicle {
 
     @Column(name = "groundClearance")
-    private double groundClearance;
+    private Double groundClearance;
     @Column(name = "tractionType")
     private String tractionType;
 

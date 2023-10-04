@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 public class Truck extends Vehicle {
 
     @Column(name = "cargoCapacity")
-    private double cargoCapacity;
+    private Double cargoCapacity;
     @Column(name = "engineType")
     private String engineType;
 }

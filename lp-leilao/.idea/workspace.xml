@@ -5,271 +5,299 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9a99671-1dad-493b-a8b5-9528b6c41cc6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$ComputingDeviceDTO$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$HubDTO$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$MonitorDTO$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$NotebookDTO$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$RouterDTO$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$Auction$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$Bid$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$Client$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$FinancialInstitution$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$Product$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$ComputingDevice$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Hub$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Monitor$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Notebook$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Router$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Switch$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$Car$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$Motorcycle$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$Truck$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$UtilityVehicle$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$Vehicle$IntrospectionRef" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$AuctionController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$BidController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$CarController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$ClientController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$ComputingDeviceController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$FInstitutionController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$HubController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$MonitorController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$MotorcycleController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$NotebookController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$ProductController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$RouterController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$SwitchController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$TruckController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$UtilityVehicleController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$VehicleController$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$Auction$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$Bid$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$Client$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$FinancialInstitution$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$Product$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$ComputingDevice$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Hub$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Monitor$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Notebook$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Router$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Switch$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$Car$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$Motorcycle$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$Truck$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$UtilityVehicle$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$Vehicle$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$AuctionService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$BidService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$CarService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$ComputingDeviceService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$FInstitutionService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$HubService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$MonitorService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$MotorcycleService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$NotebookService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$ProductService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$RouterService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$SwitchService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$TruckService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$UtilityVehicleService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$VehicleService$ReflectConfig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$AuctionController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$AuctionController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$BidController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$BidController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$CarController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$CarController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ClientController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ClientController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ComputingDeviceController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ComputingDeviceController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$FInstitutionController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$FInstitutionController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$HubController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$HubController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$MonitorController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$MonitorController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$MotorcycleController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$MotorcycleController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$NotebookController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$NotebookController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ProductController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ProductController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$RouterController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$RouterController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$SwitchController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$SwitchController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$TruckController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$TruckController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$UtilityVehicleController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$UtilityVehicleController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$VehicleController$Definition$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$VehicleController$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$AuctionRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$BidRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$CarRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$ClientRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$ComputingDeviceRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$FInstitutionRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$HubRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$MonitorRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$MotorcycleRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$NotebookRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$ProductRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$RouterRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$SwitchRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$TruckRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$UtilityVehicleRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$VehicleRepository$Intercepted$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$AuctionService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$BidService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$CarService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$ClientService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$ComputingDeviceService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$FInstitutionService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$HubService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$MonitorService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$MotorcycleService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$NotebookService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$ProductService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$RouterService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$SwitchService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$TruckService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$UtilityVehicleService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$VehicleService$Definition$Reference" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/swagger/swagger.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/HubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/HubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/NotebookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/NotebookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Auction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Bid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/FinancialInstitution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/FinancialInstitution.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/ComputingDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/ComputingDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Hub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Hub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Monitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Notebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Notebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Switch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Motorcycle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/CarController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ComputingDeviceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/ComputingDeviceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/HubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/HubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/MonitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/MonitorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/MotorcycleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/MotorcycleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/NotebookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/NotebookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/RouterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/RouterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/SwitchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/SwitchController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/TruckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/TruckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/UtilityVehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/UtilityVehicleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/VehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/VehicleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/ComputingDeviceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/ComputingDeviceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/HubDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/HubDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/MonitorDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/MonitorDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/MotorcycleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/MotorcycleDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/NotebookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/NotebookDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/RouterDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/RouterDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/SwitchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/SwitchDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/TruckDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/TruckDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/UtilityVehicleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/UtilityVehicleDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/VehicleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/VehicleDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Truck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/UtilityVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/UtilityVehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Vehicle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/HubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/HubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/NotebookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/NotebookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/CarRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/CarRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/ComputingDeviceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/ComputingDeviceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/HubRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/HubRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/MonitorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/MonitorRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/MotorcycleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/MotorcycleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/NotebookRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/NotebookRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/RouterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/RouterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/SwitchRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/SwitchRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/TruckRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/TruckRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/UtilityVehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/UtilityVehicleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/VehicleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/CarService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ComputingDeviceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/ComputingDeviceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/HubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/HubService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/MonitorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/MonitorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/MotorcycleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/MotorcycleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/NotebookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/NotebookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/RouterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/RouterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/SwitchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/SwitchService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/TruckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/TruckService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/UtilityVehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/UtilityVehicleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/VehicleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$ComputingDeviceDTO$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$HubDTO$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$MonitorDTO$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$NotebookDTO$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.dtos.$RouterDTO$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$Auction$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$Bid$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$Client$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$FinancialInstitution$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.$Product$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$ComputingDevice$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Hub$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Monitor$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Notebook$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Router$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.devices.$Switch$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$Car$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$Motorcycle$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$Truck$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$UtilityVehicle$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.beans.BeanIntrospectionReference/lp.leilao.entities.vehicles.$Vehicle$IntrospectionRef" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$AuctionController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$BidController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$CarController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$ClientController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$ComputingDeviceController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$FInstitutionController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$HubController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$MonitorController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$MotorcycleController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$NotebookController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$ProductController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$RouterController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$SwitchController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$TruckController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$UtilityVehicleController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.controllers.$VehicleController$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$Auction$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$Bid$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$Client$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$FinancialInstitution$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.$Product$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$ComputingDevice$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Hub$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Monitor$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Notebook$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Router$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.devices.$Switch$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$Car$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$Motorcycle$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$Truck$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$UtilityVehicle$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.entities.vehicles.$Vehicle$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$AuctionService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$BidService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$CarService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$ComputingDeviceService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$FInstitutionService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$HubService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$MonitorService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$MotorcycleService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$NotebookService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$ProductService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$RouterService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$SwitchService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$TruckService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$UtilityVehicleService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.core.graal.GraalReflectionConfigurer/lp.leilao.services.$VehicleService$ReflectConfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$AuctionController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$AuctionController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$BidController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$BidController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$CarController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$CarController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ClientController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ClientController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ComputingDeviceController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ComputingDeviceController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$FInstitutionController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$FInstitutionController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$HubController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$HubController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$MonitorController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$MonitorController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$MotorcycleController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$MotorcycleController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$NotebookController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$NotebookController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ProductController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$ProductController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$RouterController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$RouterController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$SwitchController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$SwitchController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$TruckController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$TruckController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$UtilityVehicleController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$UtilityVehicleController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$VehicleController$Definition$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.controllers.$VehicleController$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$AuctionRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$BidRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$CarRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$ClientRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$ComputingDeviceRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$FInstitutionRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$HubRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$MonitorRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$MotorcycleRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$NotebookRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$ProductRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$RouterRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$SwitchRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$TruckRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$UtilityVehicleRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.repositories.$VehicleRepository$Intercepted$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$AuctionService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$BidService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$CarService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$ClientService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$ComputingDeviceService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$FInstitutionService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$HubService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$MonitorService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$MotorcycleService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$NotebookService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$ProductService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$RouterService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$SwitchService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$TruckService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$UtilityVehicleService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/micronaut/io.micronaut.inject.BeanDefinitionReference/lp.leilao.services.$VehicleService$Definition$Reference" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/swagger/swagger.yml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/swagger/swagger.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/Application.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/Application.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$HubController$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$HubController$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$HubController$Definition$Intercepted.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$HubController$Definition$Intercepted.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$NotebookController$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$NotebookController$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$NotebookController$Definition$Intercepted.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$NotebookController$Definition$Intercepted.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/AuctionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/AuctionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/BidController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/BidController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/CarController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/CarController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/HubController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/HubController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/MonitorController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/MonitorController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/MotorcycleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/MotorcycleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/NotebookController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/NotebookController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/SwitchController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/SwitchController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/TruckController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/TruckController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/UtilityVehicleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/UtilityVehicleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/VehicleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/VehicleController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Auction$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Auction$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Auction$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Auction$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Bid$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Bid$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Bid$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Bid$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Bid$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Bid$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Client$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Client$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Client$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Client$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Client$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Client$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Product$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Product$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Product$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Product$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Product$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Product$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Auction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Auction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Bid.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Bid.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Client.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Client.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Product.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Hub$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Hub$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Hub$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Hub$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Hub$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Hub$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Monitor$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Monitor$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Monitor$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Monitor$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Monitor$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Monitor$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Notebook$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Notebook$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Notebook$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Notebook$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Notebook$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Notebook$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Switch$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Switch$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Switch$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Switch$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Switch$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Switch$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Hub.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Hub.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Monitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Monitor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Notebook.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Notebook.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Switch.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Switch.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Car$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Car$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Car$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Car$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Car$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Car$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Motorcycle$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Motorcycle$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Motorcycle$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Motorcycle$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Motorcycle$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Motorcycle$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Truck$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Truck$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Truck$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Truck$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Truck$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Truck$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$UtilityVehicle$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$UtilityVehicle$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$UtilityVehicle$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$UtilityVehicle$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$UtilityVehicle$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$UtilityVehicle$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Vehicle$Introspection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Vehicle$Introspection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Vehicle$IntrospectionRef.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Vehicle$IntrospectionRef.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Vehicle$ReflectConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Vehicle$ReflectConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Car.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Motorcycle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Motorcycle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Truck.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Truck.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/UtilityVehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/UtilityVehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Vehicle.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Vehicle.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$BidRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$BidRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$BidRepository$Intercepted$Definition$Reference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$BidRepository$Intercepted$Definition$Reference.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$CarRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$CarRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$HubRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$HubRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$MonitorRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$MonitorRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$MotorcycleRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$MotorcycleRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$NotebookRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$NotebookRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$ProductRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$ProductRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$ProductRepository$Intercepted$Definition$Reference.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$ProductRepository$Intercepted$Definition$Reference.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$SwitchRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$SwitchRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$TruckRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$TruckRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$UtilityVehicleRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$UtilityVehicleRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$VehicleRepository$Intercepted$Definition$Exec.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$VehicleRepository$Intercepted$Definition$Exec.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/BidRepository$Intercepted.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/BidRepository$Intercepted.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/BidRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/BidRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/CarRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/CarRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/HubRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/HubRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/MonitorRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/MonitorRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/MotorcycleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/MotorcycleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/NotebookRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/NotebookRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/ProductRepository$Intercepted.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/ProductRepository$Intercepted.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/ProductRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/ProductRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/SwitchRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/SwitchRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/TruckRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/TruckRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/UtilityVehicleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/UtilityVehicleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/VehicleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/VehicleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/AuctionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/AuctionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/BidService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/BidService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/CarService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/CarService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/ClientService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/ClientService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/HubService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/HubService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/MonitorService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/MonitorService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/MotorcycleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/MotorcycleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/NotebookService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/NotebookService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/ProductService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/SwitchService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/SwitchService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/TruckService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/TruckService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/UtilityVehicleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/UtilityVehicleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/VehicleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/services/VehicleService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/status/AuctionStatus.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/lp/leilao/status/AuctionStatus.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$HubController$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$HubController$Definition$Intercepted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$MonitorController$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$MonitorController$Definition$Intercepted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$NotebookController$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$NotebookController$Definition$Intercepted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$SwitchController$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/$SwitchController$Definition$Intercepted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/AuctionController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/BidController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/CarController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/HubController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/MonitorController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/MotorcycleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/NotebookController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/SwitchController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/TruckController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/UtilityVehicleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/controllers/VehicleController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Auction$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Auction$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Bid$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Bid$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Bid$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Client$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Client$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Client$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Product$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Product$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/$Product$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Auction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Bid.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Client.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Hub$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Hub$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Hub$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Monitor$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Monitor$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Monitor$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Notebook$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Notebook$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Notebook$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Switch$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Switch$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/$Switch$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Hub.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Monitor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Notebook.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/devices/Switch.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Car$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Car$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Car$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Motorcycle$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Motorcycle$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Motorcycle$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Truck$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Truck$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Truck$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$UtilityVehicle$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$UtilityVehicle$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$UtilityVehicle$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Vehicle$Introspection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Vehicle$IntrospectionRef.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/$Vehicle$ReflectConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Motorcycle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Truck.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/UtilityVehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/entities/vehicles/Vehicle.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$BidRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$BidRepository$Intercepted$Definition$Reference.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$CarRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$HubRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$MonitorRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$MotorcycleRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$NotebookRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$ProductRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$ProductRepository$Intercepted$Definition$Reference.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$SwitchRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$TruckRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$UtilityVehicleRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/$VehicleRepository$Intercepted$Definition$Exec.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/BidRepository$Intercepted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/BidRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/CarRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/HubRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/MonitorRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/MotorcycleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/NotebookRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/ProductRepository$Intercepted.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/ProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/SwitchRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/TruckRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/UtilityVehicleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/repositories/VehicleRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/AuctionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/BidService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/CarService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/ClientService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/HubService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/MonitorService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/MotorcycleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/NotebookService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/ProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/SwitchService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/TruckService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/UtilityVehicleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/services/VehicleService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/lp/leilao/status/AuctionStatus.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,7 +342,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "settings.editor.selected.configurable": "reactor",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -323,8 +351,12 @@
     ]
   }
 }]]></component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\leall\OneDrive\Área de Trabalho\testessssssssss\lp-leilao\lp-leilao\src\main\java\lp\leilao\dtos\vehicles" />
       <recent name="C:\Users\leall\OneDrive\Área de Trabalho\testessssssssss\lp-leilao\lp-leilao\src\main\resources" />
     </key>
   </component>
@@ -332,6 +364,7 @@
     <option name="myCommands">
       <command value="mvn exec:exec" />
       <command value="mvn compile" />
+      <command value="mvn exec:java" />
     </option>
   </component>
   <component name="RunManager" selected="Micronaut.Application">
@@ -446,7 +479,8 @@
       <workItem from="1696196440488" duration="7678000" />
       <workItem from="1696204229555" duration="401000" />
       <workItem from="1696206136407" duration="139000" />
-      <workItem from="1696251579175" duration="16931000" />
+      <workItem from="1696251579175" duration="17154000" />
+      <workItem from="1696437093690" duration="8487000" />
     </task>
     <servers />
   </component>
