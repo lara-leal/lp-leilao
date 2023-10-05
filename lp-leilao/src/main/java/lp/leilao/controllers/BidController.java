@@ -1,9 +1,11 @@
 package lp.leilao.controllers;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
+import lp.leilao.entities.Auction;
 import lp.leilao.entities.Bid;
 import lp.leilao.services.BidService;
 
@@ -21,10 +23,10 @@ public class BidController {
         return bidService.getAllBids();
     }
 
-    @Get("/{id}")
-    public Bid getBids(Long id) {
+    @Get("/{bid_id}")
+    public Bid getBids(Long bid_id) {
 
-        return bidService.getBidById(id);
+        return bidService.getBidById(bid_id);
     }
 
     @Post("/create")
@@ -33,10 +35,21 @@ public class BidController {
         return bidService.createBid(bid);
     }
 
-    @Delete("/{id}")
+    @Put("/{bid_id}")
+    public HttpResponse<Bid> updateBid(@PathVariable Long bid_id, @Body Bid updatedBid) {
+        Bid updated = bidService.updateBid(bid_id, updatedBid);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
+    }
+
+
+    @Delete("/{bid_id}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deleteCar(Long id) {
-        bidService.deleteBid(id);
+    public void deleteCar(Long bid_id) {
+        bidService.deleteBid(bid_id);
     }
 
 }

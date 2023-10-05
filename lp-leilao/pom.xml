@@ -110,6 +110,7 @@
     </dependency>
   </dependencies>
   <build>
+
     <plugins>
       <plugin>
         <groupId>io.micronaut.maven</groupId>
@@ -117,6 +118,17 @@
           <configuration>
             <configFile>aot-${packaging}.properties</configFile>
           </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <fork>true</fork>
+          <compilerArgs>
+            <arg>-Amicronaut.openapi.views.spec=rapidoc.enabled=true,swagger-ui.enabled=true,swagger-ui.theme=flattop</arg>
+            ...
+          </compilerArgs>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -192,6 +204,7 @@
           </annotationProcessorPaths>
 
           <compilerArgs>
+
 
             <arg>-Amicronaut.processing.group=lp.leilao</arg>
             <arg>-Amicronaut.processing.module=lp-leilao</arg>

@@ -32,6 +32,7 @@ public class NotebookController {
     @Post("/create")
     @Status(HttpStatus.CREATED)
     public NotebookDTO createNotebook(@Body @Valid Notebook notebook) {
+
         return noteService.createNote(notebook);
     }
 

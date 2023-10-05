@@ -39,6 +39,7 @@ public class NotebookService {
 
     private NotebookDTO toNotebookDTO(Notebook notebook) {
         NotebookDTO dto = new NotebookDTO();
+        dto.setBrand(notebook.getBrand());
         dto.setSpecification(notebook.getSpecification());
         return dto;
     }

@@ -1,5 +1,6 @@
 package lp.leilao.controllers;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
@@ -22,10 +23,10 @@ public class AuctionController {
         return auctionService.getAllAuctions();
     }
 
-    @Get("/{id}")
-    public Auction getAuction(Long id) {
+    @Get("/{auction_id}")
+    public Auction getAuction(Long auction_id) {
 
-        return auctionService.getAuctionById(id);
+        return auctionService.getAuctionById(auction_id);
     }
 
     @Post("/create")
@@ -34,10 +35,21 @@ public class AuctionController {
         return auctionService.createAuction(auction);
     }
 
-    @Delete("/{id}")
+
+    @Put("/{auction_id}")
+    public HttpResponse<Auction> updateAuction(@PathVariable Long auction_id, @Body Auction updatedAuction) {
+        Auction updated = auctionService.updateAuction(auction_id, updatedAuction);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
+    }
+
+    @Delete("/{auction_id}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deleteAuction(Long id) {
-        auctionService.deleteAuction(id);
+    public void deleteAuction(Long auction_id) {
+        auctionService.deleteAuction(auction_id);
     }
 
 }
