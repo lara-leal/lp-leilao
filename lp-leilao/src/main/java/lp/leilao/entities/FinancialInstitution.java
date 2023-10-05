@@ -5,12 +5,13 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Serdeable
-@Table(name ="financial_instituition")
+@Table(name = "financial_instituition")
 public class FinancialInstitution {
     @Id
     private Long id;
@@ -21,7 +22,4 @@ public class FinancialInstitution {
     @Column(name = "address")
     private String address;
 
-    @ManyToOne
-    @JoinColumn(name = "auction_id")
-    private Auction auction;
 }

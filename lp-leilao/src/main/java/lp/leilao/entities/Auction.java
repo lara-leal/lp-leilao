@@ -15,28 +15,18 @@ import java.util.Set;
 @AllArgsConstructor
 @Entity
 @Serdeable
-@Table(name ="auction")
+@Table(name = "auction")
 public class Auction {
     @Id
     private Long auction_id;
     @Column(name = "numAuction")
     private Integer numAuction;
     @Column(name = "financialInstitution")
-    private String  financialInstitution;
+    private String financialInstitution;
     @Column(name = "initialDate")
     private Date initialDate;
     @Column(name = "finalDate")
     private Date finalDate;
     @Column(name = "address")
     private String address;
-
-    @OneToMany(mappedBy = "auction", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<FinancialInstitution> financialInstitutions;
-
-    @OneToMany(mappedBy = "auction", cascade = CascadeType.ALL)
-    private List<Product> products;
-
-    @ManyToMany(mappedBy = "authorizedAuctions")
-    private Set<Client> authorizedClient;
 }
-

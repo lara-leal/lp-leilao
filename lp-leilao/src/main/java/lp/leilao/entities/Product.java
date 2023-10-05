@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name= "product")
+@Table(name = "product")
 public class Product {
     @Id
     public Long id;
@@ -17,7 +17,4 @@ public class Product {
     public String description;
     public Double initialValue;
 
-    @ManyToOne
-    @JoinColumn(name = "auction_id", nullable = false)
-    private Auction auction;
 }

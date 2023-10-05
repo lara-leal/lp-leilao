@@ -28,13 +28,4 @@ public class Client {
     @Column(name = "digitalCertificate")
     private String digitalCertificate;
 
-    @OneToMany(mappedBy = "client")
-    private List<Bid> bids;
-
-    @ManyToMany
-    @JoinTable(name = "auction_client",
-            joinColumns = @JoinColumn(name = "id_client"),
-            inverseJoinColumns = @JoinColumn(name = "auction_id"))
-    private Set<Auction> authorizedAuctions;
-
 }
