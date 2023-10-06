@@ -17,6 +17,8 @@
     <jdk.version>17</jdk.version>
     <release.version>17</release.version>
     <micronaut.version>4.1.0</micronaut.version>
+    <lombok.version>1.18.30</lombok.version>
+    <swagger.version>2.0.5</swagger.version>
     <micronaut.aot.enabled>false</micronaut.aot.enabled>
     <micronaut.aot.packageName>lp.leilao.aot.generated</micronaut.aot.packageName>
     <micronaut.runtime>netty</micronaut.runtime>
@@ -59,9 +61,22 @@
     <dependency>
       <groupId>io.swagger.core.v3</groupId>
       <artifactId>swagger-annotations</artifactId>
+      <version>${swagger.version}</version>
       <scope>compile</scope>
     </dependency>
-
+    <dependency>
+      <groupId>io.swagger.core.v3</groupId>
+      <artifactId>swagger-core</artifactId>
+      <version>${swagger.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.views</groupId>
+      <artifactId>micronaut-views-core</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.micronaut.views</groupId>
+      <artifactId>micronaut-views-handlebars</artifactId>
+  </dependency>
     <dependency>
       <groupId>jakarta.validation</groupId>
       <artifactId>jakarta.validation-api</artifactId>
@@ -80,6 +95,7 @@
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
       <scope>provided</scope>
     </dependency>
     <dependency>
@@ -125,22 +141,10 @@
         <configuration>
           <fork>true</fork>
           <compilerArgs>
-            <arg>-Amicronaut.openapi.views.spec=rapidoc.enabled=true,swagger-ui.enabled=true,swagger-ui.theme=flattop</arg>
-            ...
+            <arg>-Amicronaut.processing.group=lp.leilao</arg>
+            <arg>-Amicronaut.processing.module=lp-leilao</arg>
+            <arg>-J-Dmicronaut.openapi.views.spec=swagger-ui.enabled=true,swagger-ui.theme=flattop</arg>
           </compilerArgs>
-        </configuration>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-enforcer-plugin</artifactId>
-      </plugin>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <configuration>
-          <!-- Uncomment to enable incremental compilation -->
-          <!-- <useIncrementalCompilation>false</useIncrementalCompilation> -->
-
           <annotationProcessorPaths combine.self="override">
             <path>
               <groupId>org.projectlombok</groupId>
@@ -172,12 +176,6 @@
               <groupId>io.micronaut.openapi</groupId>
               <artifactId>micronaut-openapi</artifactId>
               <version>${micronaut.openapi.version}</version>
-              <exclusions>
-                <exclusion>
-                  <groupId>io.micronaut</groupId>
-                  <artifactId>micronaut-inject</artifactId>
-                </exclusion>
-              </exclusions>
             </path>
             <path>
               <groupId>io.micronaut.serde</groupId>
@@ -202,16 +200,11 @@
               </exclusions>
             </path>
           </annotationProcessorPaths>
-
-          <compilerArgs>
-
-
-            <arg>-Amicronaut.processing.group=lp.leilao</arg>
-            <arg>-Amicronaut.processing.module=lp-leilao</arg>
-
-          </compilerArgs>
-
         </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-enforcer-plugin</artifactId>
       </plugin>
     </plugins>
   </build>

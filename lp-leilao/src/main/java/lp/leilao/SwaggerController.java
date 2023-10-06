@@ -1,4 +1,5 @@
 package lp.leilao;
+
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 import io.swagger.v3.oas.annotations.Hidden;
@@ -14,10 +15,8 @@ public class SwaggerController {
 
     @Get("/swagger")
     public String getSwaggerJson() throws IOException {
-        String swaggerFilePath = "target/classes/META-INF/swagger/leilao-sle-1.0.yml";
+        String swaggerFilePath = "target/classes/META-INF/swagger/swagger.yml";
 
         return new String(Files.readAllBytes(Paths.get(swaggerFilePath)));
     }
 }
-
-
