@@ -1,9 +1,11 @@
 package lp.leilao.controllers;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
+import lp.leilao.entities.Bid;
 import lp.leilao.entities.FinancialInstitution;
 import lp.leilao.services.FInstitutionService;
 
@@ -22,10 +24,10 @@ public class FInstitutionController {
         return fiService.getAllFI();
     }
 
-    @Get("/{id}")
-    public FinancialInstitution getFI(Long id) {
+    @Get("/{fi_id}")
+    public FinancialInstitution getFI(Long fi_id) {
 
-        return fiService.getFIById(id);
+        return fiService.getFIById(fi_id);
     }
 
     @Post("/create")
@@ -34,9 +36,21 @@ public class FInstitutionController {
         return fiService.createFI(financial);
     }
 
-    @Delete("/{id}")
+    @Put("/{fi_id}")
+    public HttpResponse<FinancialInstitution> updateFI(@PathVariable Long fi_id, @Body FinancialInstitution updatedFI) {
+        FinancialInstitution updated = fiService.updateFI(fi_id, updatedFI);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
+    }
+
+
+
+    @Delete("/{fi_id}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deleteFI(Long id) {
-        fiService.deleteFI(id);
+    public void deleteFI(Long fi_id) {
+        fiService.deleteFI(fi_id);
     }
 }

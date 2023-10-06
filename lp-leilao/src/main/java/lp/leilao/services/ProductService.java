@@ -2,6 +2,7 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
+import lp.leilao.entities.FinancialInstitution;
 import lp.leilao.entities.Product;
 import lp.leilao.repositories.ProductRepository;
 
@@ -18,16 +19,28 @@ public class ProductService {
         return prodRepository.findAll();
     }
 
-    public Product getProdById(Long id) {
-        return prodRepository.findById(id).orElse(null);
+    public Product getProdById(Long prod_id) {
+        return prodRepository.findById(prod_id).orElse(null);
     }
 
-    public Product createProd(Product note) {
-        return prodRepository.save(note);
+    public Product createProd(Product product) {
+        return prodRepository.save(product);
     }
 
-    public void deleteProd(Long id) {
-        prodRepository.deleteById(id);
+    public Product updateProd(Long prod_id, Product updatedProd) {
+        Product existingProd = prodRepository.findById(prod_id).orElse(null);
+        if (existingProd != null) {
+            existingProd.setName(updatedProd.getName());
+            existingProd.setDescription(updatedProd.getDescription());
+            existingProd.setInitialValue(updatedProd.getInitialValue());
+
+            return prodRepository.update(existingProd);
+        }
+        return null;
+    }
+    
+    public void deleteProd(Long prod_id) {
+        prodRepository.deleteById(prod_id);
     }
     
 }

@@ -6,15 +6,19 @@
   <component name="ChangeListManager">
     <list default="true" id="c9a99671-1dad-493b-a8b5-9528b6c41cc6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/AuctionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/BidController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/BidController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/NotebookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/NotebookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/FInstitutionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/FInstitutionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/HubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/HubController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/HubDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/HubDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Auction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Bid.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/AuctionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/AuctionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/BidService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/BidService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/NotebookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/NotebookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/FinancialInstitution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/FinancialInstitution.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ClientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/FInstitutionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/FInstitutionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/HubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/HubService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -197,7 +201,7 @@
       <workItem from="1696204229555" duration="401000" />
       <workItem from="1696206136407" duration="139000" />
       <workItem from="1696251579175" duration="17154000" />
-      <workItem from="1696437093690" duration="14473000" />
+      <workItem from="1696437093690" duration="19704000" />
     </task>
     <servers />
   </component>

@@ -1,9 +1,11 @@
 package lp.leilao.controllers;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
+import lp.leilao.entities.Bid;
 import lp.leilao.entities.Client;
 import lp.leilao.services.ClientService;
 
@@ -17,14 +19,14 @@ public class ClientController {
     }
 
     @Get("/list")
-    public Iterable<Client> listarClient() {
+    public Iterable<Client> listClient() {
         return clientService.getAllClient();
     }
 
-    @Get("/{id}")
-    public Client getClient(Long id) {
+    @Get("/{id_client}")
+    public Client getClient(Long id_client) {
 
-        return clientService.getClientById(id);
+        return clientService.getClientById(id_client);
     }
 
     @Post("/create")
@@ -33,9 +35,19 @@ public class ClientController {
         return clientService.createClient(client);
     }
 
-    @Delete("/{id}")
+    @Put("/{id_client}")
+    public HttpResponse<Client> updateClient(@PathVariable Long id_client, @Body Client updatedClient) {
+        Client updated = clientService.updateClient(id_client, updatedClient);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
+    }
+
+    @Delete("/{id_client}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deletarClient(Long id) {
-        clientService.deleteClient(id);
+    public void deleteClient(Long id_client) {
+        clientService.deleteClient(id_client);
     }
 }

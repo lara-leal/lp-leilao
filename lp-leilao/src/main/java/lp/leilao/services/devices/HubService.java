@@ -3,6 +3,7 @@ package lp.leilao.services.devices;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lp.leilao.dtos.devices.HubDTO;
+import lp.leilao.entities.Client;
 import lp.leilao.entities.devices.Hub;
 import lp.leilao.repositories.devices.HubRepository;
 
@@ -32,6 +33,17 @@ public class HubService {
 
         return toHubDTO(hubRepository.save(hub));
     }
+
+//    public Hub updateHub(Long id, Hub updatedHub) {
+//        Hub existingHub = hubRepository.findById(id).orElse(null);
+//        if (existingHub != null) {
+//            existingHub.setPorts(updatedHub.getPorts());
+//            existingHub.setVolts(updatedHub.getVolts());
+//
+//            return hubRepository.update(existingHub);
+//        }
+//        return null;
+//    }
 
     public void deleteHub(Long id) {
         hubRepository.deleteById(id);

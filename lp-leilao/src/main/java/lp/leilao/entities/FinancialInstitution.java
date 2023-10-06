@@ -14,7 +14,8 @@ import lombok.NoArgsConstructor;
 @Table(name = "financial_instituition")
 public class FinancialInstitution {
     @Id
-    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long fi_id;
     @Column(name = "cnpj")
     private String cnpj;
     @Column(name = "name")

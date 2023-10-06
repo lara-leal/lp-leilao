@@ -1,9 +1,11 @@
 package lp.leilao.controllers;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
+import lp.leilao.entities.FinancialInstitution;
 import lp.leilao.entities.Product;
 import lp.leilao.services.ProductService;
 
@@ -21,10 +23,10 @@ public class ProductController {
         return productService.getAllProds();
     }
 
-    @Get("/{id}")
-    public Product getProducts(Long id) {
+    @Get("/{prod_id}")
+    public Product getProducts(Long prod_id) {
 
-        return productService.getProdById(id);
+        return productService.getProdById(prod_id);
     }
 
     @Post("/create")
@@ -33,9 +35,21 @@ public class ProductController {
         return productService.createProd(product);
     }
 
-    @Delete("/{id}")
+    @Put("/{prod_id}")
+    public HttpResponse<Product> updateProd(@PathVariable Long prod_id, @Body Product updatedProd) {
+        Product updated = productService.updateProd(prod_id, updatedProd);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
+    }
+
+
+
+    @Delete("/{prod_id}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deleteProduct(Long id) {
-        productService.deleteProd(id);
+    public void deleteProduct(Long prod_id) {
+        productService.deleteProd(prod_id);
     }
 }

@@ -18,6 +18,7 @@ import java.util.Set;
 @Table(name = "auction")
 public class Auction {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long auction_id;
     @Column(name = "numAuction")
     private Integer numAuction;

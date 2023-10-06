@@ -16,6 +16,7 @@ import java.util.Date;
 @Table(name = "bids")
 public class Bid {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long bid_id;
     public Double bid_value;
     public Date data;

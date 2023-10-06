@@ -1,10 +1,12 @@
 package lp.leilao.controllers.devices;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.dtos.devices.HubDTO;
+import lp.leilao.entities.Client;
 import lp.leilao.entities.devices.Hub;
 import lp.leilao.services.devices.HubService;
 
@@ -35,6 +37,16 @@ public class HubController {
         return hubService.createHub(hub);
     }
 
+
+//    @Put("/{id}")
+//    public HttpResponse<Hub> updateHub(@PathVariable Long id, @Body Hub updatedHub) {
+//        Hub updated = hubService.updateHub(id, updatedHub);
+//        if (updated != null) {
+//            return HttpResponse.ok(updated);
+//        } else {
+//            return HttpResponse.notFound();
+//        }
+//    }
     @Delete("/{id}")
     @Status(HttpStatus.NO_CONTENT)
     public void deleteHub(Long id) {

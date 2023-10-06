@@ -9,6 +9,7 @@ import lombok.Data;
 @Introspected
 @Serdeable
 public class HubDTO {
+    public Long id;
 
     public String name;
     public Integer quantity;
@@ -20,7 +21,8 @@ public class HubDTO {
 
     public HubDTO() {
     }
-    public HubDTO(String name, Integer quantity, String description, Double deviceValue, String brand, String ports, String volts) {
+    public HubDTO( Long id, String name, Integer quantity, String description, Double deviceValue, String brand, String ports, String volts) {
+        this.id = id;
         this.name = name;
         this.quantity = quantity;
         this.description = description;
