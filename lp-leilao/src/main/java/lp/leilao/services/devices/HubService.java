@@ -34,16 +34,20 @@ public class HubService {
         return toHubDTO(hubRepository.save(hub));
     }
 
-//    public Hub updateHub(Long id, Hub updatedHub) {
-//        Hub existingHub = hubRepository.findById(id).orElse(null);
-//        if (existingHub != null) {
-//            existingHub.setPorts(updatedHub.getPorts());
-//            existingHub.setVolts(updatedHub.getVolts());
-//
-//            return hubRepository.update(existingHub);
-//        }
-//        return null;
-//    }
+    public Hub updateHub(Long id, Hub updatedHub) {
+        Hub existingHub = hubRepository.findById(id).orElse(null);
+        if (existingHub != null) {
+            existingHub.setName(updatedHub.getName());
+            existingHub.setQuantity(updatedHub.getQuantity());
+            existingHub.setDeviceValue(updatedHub.getDeviceValue());
+            existingHub.setBrand(updatedHub.getBrand());
+            existingHub.setPorts(updatedHub.getPorts());
+            existingHub.setVolts(updatedHub.getVolts());
+
+            return hubRepository.update(existingHub);
+        }
+        return null;
+    }
 
     public void deleteHub(Long id) {
         hubRepository.deleteById(id);

@@ -3,6 +3,7 @@ package lp.leilao.services.devices;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lp.leilao.dtos.devices.MonitorDTO;
+import lp.leilao.entities.devices.Hub;
 import lp.leilao.entities.devices.Monitor;
 import lp.leilao.repositories.devices.MonitorRepository;
 
@@ -33,11 +34,24 @@ public class MonitorService {
         return toMonitorDTO(savedMonitor);
     }
 
+    public Monitor updateMonitor(Long id, Monitor updatedMonitor) {
+        Monitor existingMonitor = monitorRepository.findById(id).orElse(null);
+        if (existingMonitor != null) {
+            existingMonitor.setName(updatedMonitor.getName());
+            existingMonitor.setQuantity(updatedMonitor.getQuantity());
+            existingMonitor.setDeviceValue(updatedMonitor.getDeviceValue());
+            existingMonitor.setBrand(updatedMonitor.getBrand());
+            existingMonitor.setScreenSize(updatedMonitor.getScreenSize());
+            existingMonitor.setRefreshRate(updatedMonitor.getRefreshRate());
+
+            return monitorRepository.update(existingMonitor);
+        }
+        return null;
+    }
 
     public void deleteMonitor(Long id) {
         monitorRepository.deleteById(id);
     }
-
 
     private MonitorDTO toMonitorDTO(Monitor monitor) {
         MonitorDTO dto = new MonitorDTO();
@@ -54,4 +68,3 @@ public class MonitorService {
         return dtos;
     }
 }
-

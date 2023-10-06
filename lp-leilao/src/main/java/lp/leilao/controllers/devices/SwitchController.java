@@ -1,6 +1,6 @@
 package lp.leilao.controllers.devices;
 
-
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
@@ -34,6 +34,16 @@ public class SwitchController {
     @Status(HttpStatus.CREATED)
     public SwitchDTO createSwitch(@Body @Valid Switch switches) {
         return switchService.createSwitch(switches);
+    }
+
+    @Put("/{id}")
+    public HttpResponse<Switch> updateSwitch(@PathVariable Long id, @Body Switch updatedSwitch) {
+        Switch updated = switchService.updateSwitch(id, updatedSwitch);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
     }
 
     @Delete("/{id}")

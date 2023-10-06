@@ -1,5 +1,6 @@
 package lp.leilao.controllers.devices;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
@@ -13,7 +14,8 @@ public class RouterController {
 
     @Inject
     private final RouterService routerService;
-    public RouterController(RouterService routerService){
+
+    public RouterController(RouterService routerService) {
         this.routerService = routerService;
     }
 
@@ -32,6 +34,16 @@ public class RouterController {
     @Status(HttpStatus.CREATED)
     public RouterDTO createRouter(@Body @Valid Router router) {
         return routerService.createRouter(router);
+    }
+
+    @Put("/{id}")
+    public HttpResponse<Router> updateRouter(@PathVariable Long id, @Body Router updatedRouter) {
+        Router updated = routerService.updateRouter(id, updatedRouter);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
     }
 
     @Delete("/{id}")

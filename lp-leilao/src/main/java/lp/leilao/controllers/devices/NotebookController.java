@@ -1,5 +1,6 @@
 package lp.leilao.controllers.devices;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
@@ -34,6 +35,16 @@ public class NotebookController {
     public NotebookDTO createNotebook(@Body @Valid Notebook notebook) {
 
         return noteService.createNote(notebook);
+    }
+
+    @Put("/{id}")
+    public HttpResponse<Notebook> updateNotebook(@PathVariable Long id, @Body Notebook updatedNotebook) {
+        Notebook updated = noteService.updateNotebook(id, updatedNotebook);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
     }
 
     @Delete("/{id}")

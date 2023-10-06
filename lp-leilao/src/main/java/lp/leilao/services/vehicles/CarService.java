@@ -19,8 +19,7 @@ public class CarService {
     }
 
     public Iterable<CarDTO> getAllCars() {
-        return
-                toCarDTOList(carRepository.findAll());
+        return toCarDTOList(carRepository.findAll());
     }
 
     public CarDTO getCarById(Long id) {
@@ -31,6 +30,24 @@ public class CarService {
 
     public CarDTO createCar(Car car) {
         return toCarDTO(carRepository.save(car));
+    }
+
+    public Car updateCar(Long id, Car updatedCar) {
+        Car existingCar = carRepository.findById(id).orElse(null);
+        if (existingCar != null) {
+            existingCar.setBrand(updatedCar.getBrand());
+            existingCar.setManufactureYear(updatedCar.getManufactureYear());
+            existingCar.setModel(updatedCar.getModel());
+            existingCar.setDescription(updatedCar.getDescription());
+            existingCar.setPrice(updatedCar.getPrice());
+            existingCar.setColor(updatedCar.getColor());
+            existingCar.setSunroof(updatedCar.getSunroof());
+            existingCar.setYearLicensing(updatedCar.getYearLicensing());
+            existingCar.setResultPrecautionaryExpertise(updatedCar.getResultPrecautionaryExpertise());
+
+            return carRepository.update(existingCar);
+        }
+        return null;
     }
 
     public void deleteCar(Long id) {
@@ -52,5 +69,5 @@ public class CarService {
         }
         return dtos;
     }
-    
+
 }

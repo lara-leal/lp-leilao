@@ -33,6 +33,20 @@ public class RouterService {
         return toRouterDTO(savedRouter);
     }
 
+    public Router updateRouter(Long id, Router updatedRouter) {
+        Router existingRouter = routerRepository.findById(id).orElse(null);
+        if (existingRouter != null) {
+            existingRouter.setName(updatedRouter.getName());
+            existingRouter.setQuantity(updatedRouter.getQuantity());
+            existingRouter.setDeviceValue(updatedRouter.getDeviceValue());
+            existingRouter.setBrand(updatedRouter.getBrand());
+            existingRouter.setAntenna(updatedRouter.getAntenna());
+
+            return routerRepository.update(existingRouter);
+        }
+        return null;
+    }
+
     public void deleteRouter(Long id) {
         routerRepository.deleteById(id);
     }

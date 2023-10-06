@@ -37,16 +37,16 @@ public class HubController {
         return hubService.createHub(hub);
     }
 
+    @Put("/{id}")
+    public HttpResponse<Hub> updateHub(@PathVariable Long id, @Body Hub updatedHub) {
+        Hub updated = hubService.updateHub(id, updatedHub);
+        if (updated != null) {
+            return HttpResponse.ok(updated);
+        } else {
+            return HttpResponse.notFound();
+        }
+    }
 
-//    @Put("/{id}")
-//    public HttpResponse<Hub> updateHub(@PathVariable Long id, @Body Hub updatedHub) {
-//        Hub updated = hubService.updateHub(id, updatedHub);
-//        if (updated != null) {
-//            return HttpResponse.ok(updated);
-//        } else {
-//            return HttpResponse.notFound();
-//        }
-//    }
     @Delete("/{id}")
     @Status(HttpStatus.NO_CONTENT)
     public void deleteHub(Long id) {

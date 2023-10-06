@@ -33,6 +33,20 @@ public class NotebookService {
         return toNotebookDTO(noteRepository.save(notebook));
     }
 
+    public Notebook updateNotebook(Long id, Notebook updatedNotebook) {
+        Notebook existingNotebook = noteRepository.findById(id).orElse(null);
+        if (existingNotebook != null) {
+            existingNotebook.setName(updatedNotebook.getName());
+            existingNotebook.setQuantity(updatedNotebook.getQuantity());
+            existingNotebook.setDeviceValue(updatedNotebook.getDeviceValue());
+            existingNotebook.setBrand(updatedNotebook.getBrand());
+            existingNotebook.setSpecification(updatedNotebook.getSpecification());
+
+            return noteRepository.update(existingNotebook);
+        }
+        return null;
+    }
+
     public void deleteNote(Long id) {
         noteRepository.deleteById(id);
     }

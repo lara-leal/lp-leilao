@@ -32,6 +32,21 @@ public class SwitchService {
         Switch savedSwitch = switchRepository.save(switches);
         return toSwitchDTO(savedSwitch);
     }
+
+    public Switch updateSwitch(Long id, Switch updatedSwitch) {
+        Switch existingSwitch = switchRepository.findById(id).orElse(null);
+        if (existingSwitch != null) {
+            existingSwitch.setName(updatedSwitch.getName());
+            existingSwitch.setQuantity(updatedSwitch.getQuantity());
+            existingSwitch.setDeviceValue(updatedSwitch.getDeviceValue());
+            existingSwitch.setBrand(updatedSwitch.getBrand());
+            existingSwitch.setNumberOfPorts(updatedSwitch.getNumberOfPorts());
+            existingSwitch.setFirmwareVersion(updatedSwitch.getFirmwareVersion());
+            return switchRepository.update(existingSwitch);
+        }
+        return null;
+    }
+
     public void deleteSwitch(Long id) {
         switchRepository.deleteById(id);
     }
@@ -52,4 +67,3 @@ public class SwitchService {
     }
 
 }
-
