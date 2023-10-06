@@ -38,10 +38,10 @@ public class HubController {
     }
 
     @Put("/{id}")
-    public HttpResponse<Hub> updateHub(@PathVariable Long id, @Body Hub updatedHub) {
-        Hub updated = hubService.updateHub(id, updatedHub);
-        if (updated != null) {
-            return HttpResponse.ok(updated);
+    public HttpResponse<HubDTO> updateHub(@PathVariable Long id, @Body HubDTO updatedHubDTO) {
+        HubDTO updatedHub = hubService.updateHub(id, updatedHubDTO);
+        if (updatedHub != null) {
+            return HttpResponse.ok(updatedHubDTO); // Retorna o DTO atualizado
         } else {
             return HttpResponse.notFound();
         }
@@ -52,4 +52,5 @@ public class HubController {
     public void deleteHub(Long id) {
         hubService.deleteHub(id);
     }
+
 }
