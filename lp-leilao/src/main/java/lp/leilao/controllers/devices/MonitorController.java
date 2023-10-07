@@ -3,6 +3,7 @@ package lp.leilao.controllers.devices;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.dtos.devices.MonitorDTO;
@@ -10,6 +11,8 @@ import lp.leilao.entities.devices.Monitor;
 import lp.leilao.services.devices.MonitorService;
 
 @Controller("/devices/monitors")
+@Tag(name = "Devices/Monitors")
+
 public class MonitorController {
 
     @Inject

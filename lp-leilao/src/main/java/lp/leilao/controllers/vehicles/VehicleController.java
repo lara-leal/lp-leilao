@@ -2,12 +2,14 @@ package lp.leilao.controllers.vehicles;
 
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.entities.vehicles.Vehicle;
 import lp.leilao.services.vehicles.VehicleService;
 
 @Controller("/vehicles")
+@Tag(name = "Vehicles")
 public class VehicleController {
     @Inject
     private final VehicleService vehicleService;

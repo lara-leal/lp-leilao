@@ -1,5 +1,6 @@
 package lp.leilao.entities.devices;
 
+import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -8,6 +9,7 @@ import lombok.Data;
 @Table(name = "computing_device")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class ComputingDevice {
+    @Hidden
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

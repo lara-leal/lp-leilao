@@ -3,12 +3,14 @@ package lp.leilao.controllers;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.entities.Client;
 import lp.leilao.services.ClientService;
 
 @Controller("/clients")
+@Tag(name = "Clients")
 public class ClientController {
     @Inject
     private final ClientService clientService;

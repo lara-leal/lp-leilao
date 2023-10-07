@@ -3,12 +3,14 @@ package lp.leilao.controllers;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.entities.Bid;
 import lp.leilao.services.BidService;
 
 @Controller("/auction/bids")
+@Tag(name = "Bids")
 public class BidController {
     @Inject
     private final BidService bidService;

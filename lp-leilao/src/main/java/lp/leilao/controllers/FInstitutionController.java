@@ -3,12 +3,14 @@ package lp.leilao.controllers;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.entities.FinancialInstitution;
 import lp.leilao.services.FInstitutionService;
 
 @Controller("/financialInstitution")
+@Tag(name = "Financial Institutions")
 public class FInstitutionController {
 
     @Inject
@@ -44,8 +46,6 @@ public class FInstitutionController {
             return HttpResponse.notFound();
         }
     }
-
-
 
     @Delete("/{fi_id}")
     @Status(HttpStatus.NO_CONTENT)

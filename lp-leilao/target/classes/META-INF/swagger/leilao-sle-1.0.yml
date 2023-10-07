@@ -6,9 +6,9 @@ info:
 paths:
   /auction/bids/create:
     post:
+      tags:
+      - Bids
       operationId: createBid
-      tags: 
-        - Bids
       requestBody:
         content:
           application/json:
@@ -24,9 +24,9 @@ paths:
                 $ref: '#/components/schemas/Bid'
   /auction/bids/list:
     get:
-      operationId: listBids
       tags:
-        - Bids
+      - Bids
+      operationId: listBids
       responses:
         "200":
           description: listBids 200 response
@@ -38,9 +38,9 @@ paths:
                   $ref: '#/components/schemas/Bid'
   /auction/bids/{bid_id}:
     get:
+      tags:
+      - Bids
       operationId: getBids
-      tags: 
-        - Bids
       parameters:
       - name: bid_id
         in: path
@@ -56,9 +56,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Bid'
     put:
-      operationId: updateBid
       tags:
-        - Bids
+      - Bids
+      operationId: updateBid
       parameters:
       - name: bid_id
         in: path
@@ -80,9 +80,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Bid'
     delete:
-      operationId: deleteBid
       tags:
-        - Bids
+      - Bids
+      operationId: deleteBid
       parameters:
       - name: bid_id
         in: path
@@ -95,9 +95,9 @@ paths:
           description: deleteBid 204 response
   /auctions/create:
     post:
-      operationId: createAuction
       tags:
-        - Auctions
+      - Auctions
+      operationId: createAuction
       requestBody:
         content:
           application/json:
@@ -113,9 +113,9 @@ paths:
                 $ref: '#/components/schemas/Auction'
   /auctions/list:
     get:
-      operationId: listAuctions
       tags:
-        - Auctions
+      - Auctions
+      operationId: listAuctions
       responses:
         "200":
           description: listAuctions 200 response
@@ -127,9 +127,9 @@ paths:
                   $ref: '#/components/schemas/Auction'
   /auctions/{auction_id}:
     get:
-      operationId: getAuction
       tags:
-        - Auctions
+      - Auctions
+      operationId: getAuction
       parameters:
       - name: auction_id
         in: path
@@ -145,9 +145,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Auction'
     put:
-      operationId: updateAuction
       tags:
-        - Auctions
+      - Auctions
+      operationId: updateAuction
       parameters:
       - name: auction_id
         in: path
@@ -169,9 +169,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Auction'
     delete:
-      operationId: deleteAuction
       tags:
-        - Auctions
+      - Auctions
+      operationId: deleteAuction
       parameters:
       - name: auction_id
         in: path
@@ -184,9 +184,9 @@ paths:
           description: deleteAuction 204 response
   /clients/create:
     post:
-      operationId: createClient
       tags:
-        - Clients
+      - Clients
+      operationId: createClient
       requestBody:
         content:
           application/json:
@@ -202,9 +202,9 @@ paths:
                 $ref: '#/components/schemas/Client'
   /clients/list:
     get:
-      operationId: listClient      
       tags:
-        - Clients
+      - Clients
+      operationId: listClient
       responses:
         "200":
           description: listClient 200 response
@@ -216,9 +216,9 @@ paths:
                   $ref: '#/components/schemas/Client'
   /clients/{id_client}:
     get:
-      operationId: getClient
       tags:
-        - Clients
+      - Clients
+      operationId: getClient
       parameters:
       - name: id_client
         in: path
@@ -234,9 +234,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Client'
     put:
-      operationId: updateClient
       tags:
-        - Clients
+      - Clients
+      operationId: updateClient
       parameters:
       - name: id_client
         in: path
@@ -258,9 +258,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Client'
     delete:
-      operationId: deleteClient
       tags:
-        - Clients
+      - Clients
+      operationId: deleteClient
       parameters:
       - name: id_client
         in: path
@@ -271,26 +271,29 @@ paths:
       responses:
         "204":
           description: deleteClient 204 response
-  /devices/list:
-    get:
-      operationId: listDevices
+  /devices/create:
+    post:
       tags:
-        - Devices
+      - Devices
+      operationId: createDevice
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ComputingDevice'
+        required: true
       responses:
-        "200":
-          description: listDevices 200 response
+        "201":
+          description: createDevice 201 response
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/ComputingDevice'
-  
+                $ref: '#/components/schemas/ComputingDevice'
   /devices/hubs/create:
     post:
-      operationId: createHub
       tags:
-        - Devices/Hubs
+      - Devices/Hubs
+      operationId: createHub
       requestBody:
         content:
           application/json:
@@ -306,9 +309,9 @@ paths:
                 $ref: '#/components/schemas/HubDTO'
   /devices/hubs/list:
     get:
-      operationId: listHubs
       tags:
-        - Devices/Hubs
+      - Devices/Hubs
+      operationId: listHubs
       responses:
         "200":
           description: listHubs 200 response
@@ -320,9 +323,9 @@ paths:
                   $ref: '#/components/schemas/HubDTO'
   /devices/hubs/{id}:
     get:
-      operationId: getHubs
       tags:
-        - Devices/Hubs
+      - Devices/Hubs
+      operationId: getHubs
       parameters:
       - name: id
         in: path
@@ -338,9 +341,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HubDTO'
     put:
-      operationId: updateHub
       tags:
-        - Devices/Hubs
+      - Devices/Hubs
+      operationId: updateHub
       parameters:
       - name: id
         in: path
@@ -362,9 +365,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/HubDTO'
     delete:
-      operationId: deleteHub
       tags:
-        - Devices/Hubs
+      - Devices/Hubs
+      operationId: deleteHub
       parameters:
       - name: id
         in: path
@@ -375,11 +378,25 @@ paths:
       responses:
         "204":
           description: deleteHub 204 response
+  /devices/list:
+    get:
+      tags:
+      - Devices
+      operationId: listDevices
+      responses:
+        "200":
+          description: listDevices 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ComputingDevice'
   /devices/monitors/create:
     post:
-      operationId: createMonitor
       tags:
-        - Devices/Monitors
+      - Devices/Monitors
+      operationId: createMonitor
       requestBody:
         content:
           application/json:
@@ -395,9 +412,9 @@ paths:
                 $ref: '#/components/schemas/MonitorDTO'
   /devices/monitors/list:
     get:
-      operationId: listMonitors
       tags:
-        - Devices/Monitors
+      - Devices/Monitors
+      operationId: listMonitors
       responses:
         "200":
           description: listMonitors 200 response
@@ -409,9 +426,9 @@ paths:
                   $ref: '#/components/schemas/MonitorDTO'
   /devices/monitors/{id}:
     get:
-      operationId: getMonitor
       tags:
-        - Devices/Monitors
+      - Devices/Monitors
+      operationId: getMonitor
       parameters:
       - name: id
         in: path
@@ -427,9 +444,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/MonitorDTO'
     put:
-      operationId: updateMonitor
       tags:
-        - Devices/Monitors
+      - Devices/Monitors
+      operationId: updateMonitor
       parameters:
       - name: id
         in: path
@@ -451,9 +468,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/MonitorDTO'
     delete:
-      operationId: deleteMonitor
       tags:
-        - Devices/Monitors
+      - Devices/Monitors
+      operationId: deleteMonitor
       parameters:
       - name: id
         in: path
@@ -466,9 +483,9 @@ paths:
           description: deleteMonitor 204 response
   /devices/notebooks/create:
     post:
-      operationId: createNotebook
       tags:
-        - Devices/Notebooks
+      - Devices/Notebooks
+      operationId: createNotebook
       requestBody:
         content:
           application/json:
@@ -484,9 +501,9 @@ paths:
                 $ref: '#/components/schemas/NotebookDTO'
   /devices/notebooks/list:
     get:
-      operationId: listNotebooks
       tags:
-        - Devices/Notebooks
+      - Devices/Notebooks
+      operationId: listNotebooks
       responses:
         "200":
           description: listNotebooks 200 response
@@ -498,9 +515,9 @@ paths:
                   $ref: '#/components/schemas/NotebookDTO'
   /devices/notebooks/{id}:
     get:
-      operationId: getNotebook
       tags:
-        - Devices/Notebooks
+      - Devices/Notebooks
+      operationId: getNotebook
       parameters:
       - name: id
         in: path
@@ -516,9 +533,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/NotebookDTO'
     put:
-      operationId: updateNotebook
       tags:
-        - Devices/Notebooks
+      - Devices/Notebooks
+      operationId: updateNotebook
       parameters:
       - name: id
         in: path
@@ -540,9 +557,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/NotebookDTO'
     delete:
-      operationId: deleteNotebook
       tags:
-        - Devices/Notebooks
+      - Devices/Notebooks
+      operationId: deleteNotebook
       parameters:
       - name: id
         in: path
@@ -555,9 +572,9 @@ paths:
           description: deleteNotebook 204 response
   /devices/routers/create:
     post:
-      operationId: createRouter
       tags:
-        - Devices/Routers
+      - Devices/Routers
+      operationId: createRouter
       requestBody:
         content:
           application/json:
@@ -573,9 +590,9 @@ paths:
                 $ref: '#/components/schemas/RouterDTO'
   /devices/routers/list:
     get:
-      operationId: listRouter
       tags:
-        - Devices/Routers
+      - Devices/Routers
+      operationId: listRouter
       responses:
         "200":
           description: listRouter 200 response
@@ -587,9 +604,9 @@ paths:
                   $ref: '#/components/schemas/RouterDTO'
   /devices/routers/{id}:
     get:
-      operationId: getRouter
       tags:
-        - Devices/Routers
+      - Devices/Routers
+      operationId: getRouter
       parameters:
       - name: id
         in: path
@@ -605,9 +622,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/RouterDTO'
     put:
-      operationId: updateRouter
       tags:
-        - Devices/Routers
+      - Devices/Routers
+      operationId: updateRouter
       parameters:
       - name: id
         in: path
@@ -629,9 +646,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/RouterDTO'
     delete:
-      operationId: deleteRouter
       tags:
-        - Devices/Routers
+      - Devices/Routers
+      operationId: deleteRouter
       parameters:
       - name: id
         in: path
@@ -644,9 +661,9 @@ paths:
           description: deleteRouter 204 response
   /devices/switches/create:
     post:
-      operationId: createSwitch
       tags:
-        - Devices/Switches
+      - Devices/Switches
+      operationId: createSwitch
       requestBody:
         content:
           application/json:
@@ -662,9 +679,9 @@ paths:
                 $ref: '#/components/schemas/SwitchDTO'
   /devices/switches/list:
     get:
-      operationId: listSwitches
       tags:
-        - Devices/Switches
+      - Devices/Switches
+      operationId: listSwitches
       responses:
         "200":
           description: listSwitches 200 response
@@ -676,9 +693,9 @@ paths:
                   $ref: '#/components/schemas/SwitchDTO'
   /devices/switches/{id}:
     get:
-      operationId: getSwitches
       tags:
-        - Devices/Switches
+      - Devices/Switches
+      operationId: getSwitches
       parameters:
       - name: id
         in: path
@@ -694,9 +711,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/SwitchDTO'
     put:
-      operationId: updateSwitch
       tags:
-        - Devices/Switches
+      - Devices/Switches
+      operationId: updateSwitch
       parameters:
       - name: id
         in: path
@@ -718,9 +735,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/SwitchDTO'
     delete:
-      operationId: deleteSwitch
       tags:
-        - Devices/Switches
+      - Devices/Switches
+      operationId: deleteSwitch
       parameters:
       - name: id
         in: path
@@ -731,11 +748,44 @@ paths:
       responses:
         "204":
           description: deleteSwitch 204 response
+  /devices/{id}:
+    get:
+      tags:
+      - Devices
+      operationId: getDevice
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getDevice 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ComputingDevice'
+    delete:
+      tags:
+      - Devices
+      operationId: deleteDevice
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteDevice 204 response
   /financialInstitution/create:
     post:
-      operationId: createFI
       tags:
-        - Financial Institutions
+      - Financial Institutions
+      operationId: createFI
       requestBody:
         content:
           application/json:
@@ -751,9 +801,9 @@ paths:
                 $ref: '#/components/schemas/FinancialInstitution'
   /financialInstitution/list:
     get:
-      operationId: listFI
       tags:
-        - Financial Institutions
+      - Financial Institutions
+      operationId: listFI
       responses:
         "200":
           description: listFI 200 response
@@ -765,9 +815,9 @@ paths:
                   $ref: '#/components/schemas/FinancialInstitution'
   /financialInstitution/{fi_id}:
     get:
-      operationId: getFI
       tags:
-        - Financial Institutions
+      - Financial Institutions
+      operationId: getFI
       parameters:
       - name: fi_id
         in: path
@@ -783,9 +833,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/FinancialInstitution'
     put:
-      operationId: updateFI
       tags:
-        - Financial Institutions
+      - Financial Institutions
+      operationId: updateFI
       parameters:
       - name: fi_id
         in: path
@@ -807,9 +857,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/FinancialInstitution'
     delete:
-      operationId: deleteFI
       tags:
-        - Financial Institutions
+      - Financial Institutions
+      operationId: deleteFI
       parameters:
       - name: fi_id
         in: path
@@ -822,9 +872,9 @@ paths:
           description: deleteFI 204 response
   /products/create:
     post:
-      operationId: createProduct
       tags:
-        - Products
+      - Products
+      operationId: createProduct
       requestBody:
         content:
           application/json:
@@ -840,9 +890,9 @@ paths:
                 $ref: '#/components/schemas/Product'
   /products/list:
     get:
-      operationId: listProducts
       tags:
-        - Products
+      - Products
+      operationId: listProducts
       responses:
         "200":
           description: listProducts 200 response
@@ -854,9 +904,9 @@ paths:
                   $ref: '#/components/schemas/Product'
   /products/{prod_id}:
     get:
-      operationId: getProducts
       tags:
-        - Products
+      - Products
+      operationId: getProducts
       parameters:
       - name: prod_id
         in: path
@@ -872,9 +922,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Product'
     put:
-      operationId: updateProd
       tags:
-        - Products
+      - Products
+      operationId: updateProd
       parameters:
       - name: prod_id
         in: path
@@ -896,9 +946,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/Product'
     delete:
-      operationId: deleteProduct
       tags:
-        - Products
+      - Products
+      operationId: deleteProduct
       parameters:
       - name: prod_id
         in: path
@@ -909,25 +959,11 @@ paths:
       responses:
         "204":
           description: deleteProduct 204 response
-  /vehicles/list:
-    get:
-      operationId: listVehicles
-      tags:
-        - Vehicles
-      responses:
-        "200":
-          description: listVehicles 200 response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Vehicle'
   /vehicles/cars/create:
     post:
-      operationId: createCar
       tags:
-        - Vehicles/Car
+      - Vehicle/Cars
+      operationId: createCar
       requestBody:
         content:
           application/json:
@@ -943,9 +979,9 @@ paths:
                 $ref: '#/components/schemas/CarDTO'
   /vehicles/cars/list:
     get:
-      operationId: listCars
       tags:
-        - Vehicles/Car
+      - Vehicle/Cars
+      operationId: listCars
       responses:
         "200":
           description: listCars 200 response
@@ -957,9 +993,9 @@ paths:
                   $ref: '#/components/schemas/CarDTO'
   /vehicles/cars/{id}:
     get:
-      operationId: getCars
       tags:
-        - Vehicles/Car
+      - Vehicle/Cars
+      operationId: getCars
       parameters:
       - name: id
         in: path
@@ -975,9 +1011,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/CarDTO'
     put:
-      operationId: updateCar
       tags:
-        - Vehicles/Car
+      - Vehicle/Cars
+      operationId: updateCar
       parameters:
       - name: id
         in: path
@@ -999,9 +1035,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/CarDTO'
     delete:
-      operationId: deleteCar
       tags:
-        - Vehicles/Car
+      - Vehicle/Cars
+      operationId: deleteCar
       parameters:
       - name: id
         in: path
@@ -1012,11 +1048,43 @@ paths:
       responses:
         "204":
           description: deleteCar 204 response
+  /vehicles/create:
+    post:
+      tags:
+      - Vehicle
+      operationId: createVehicle
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Vehicle'
+        required: true
+      responses:
+        "201":
+          description: createVehicle 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vehicle'
+  /vehicles/list:
+    get:
+      tags:
+      - Vehicle
+      operationId: listVehicles
+      responses:
+        "200":
+          description: listVehicles 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vehicle'
   /vehicles/motorcycles/create:
     post:
-      operationId: createMotorcycle
       tags:
-        - Vehicles/Motorcycles
+      - Vehicle/Motorcycles
+      operationId: createMotorcycle
       requestBody:
         content:
           application/json:
@@ -1032,9 +1100,9 @@ paths:
                 $ref: '#/components/schemas/MotorcycleDTO'
   /vehicles/motorcycles/list:
     get:
-      operationId: listMotorcycles
       tags:
-        - Vehicles/Motorcycles
+      - Vehicle/Motorcycles
+      operationId: listMotorcycles
       responses:
         "200":
           description: listMotorcycles 200 response
@@ -1046,9 +1114,9 @@ paths:
                   $ref: '#/components/schemas/MotorcycleDTO'
   /vehicles/motorcycles/{id}:
     get:
-      operationId: getMotorcycles
       tags:
-        - Vehicles/Motorcycles
+      - Vehicle/Motorcycles
+      operationId: getMotorcycles
       parameters:
       - name: id
         in: path
@@ -1064,9 +1132,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/MotorcycleDTO'
     put:
-      operationId: updateMotorcycle
       tags:
-        - Vehicles/Motorcycles
+      - Vehicle/Motorcycles
+      operationId: updateMotorcycle
       parameters:
       - name: id
         in: path
@@ -1088,9 +1156,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/MotorcycleDTO'
     delete:
-      operationId: deleteMotorcycle
       tags:
-        - Vehicles/Motorcycles
+      - Vehicle/Motorcycles
+      operationId: deleteMotorcycle
       parameters:
       - name: id
         in: path
@@ -1103,9 +1171,9 @@ paths:
           description: deleteMotorcycle 204 response
   /vehicles/trucks/create:
     post:
-      operationId: createTruck
       tags:
-        - Vehicles/Trucks
+      - Vehicle/Trucks
+      operationId: createTruck
       requestBody:
         content:
           application/json:
@@ -1121,9 +1189,9 @@ paths:
                 $ref: '#/components/schemas/TruckDTO'
   /vehicles/trucks/list:
     get:
-      operationId: listTrucks
       tags:
-        - Vehicles/Trucks
+      - Vehicle/Trucks
+      operationId: listTrucks
       responses:
         "200":
           description: listTrucks 200 response
@@ -1135,9 +1203,9 @@ paths:
                   $ref: '#/components/schemas/TruckDTO'
   /vehicles/trucks/{id}:
     get:
-      operationId: getTrucks
       tags:
-        - Vehicles/Trucks
+      - Vehicle/Trucks
+      operationId: getTrucks
       parameters:
       - name: id
         in: path
@@ -1153,9 +1221,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/TruckDTO'
     put:
-      operationId: updateTruck
       tags:
-        - Vehicles/Trucks
+      - Vehicle/Trucks
+      operationId: updateTruck
       parameters:
       - name: id
         in: path
@@ -1177,9 +1245,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/TruckDTO'
     delete:
-      operationId: deleteTruck
       tags:
-        - Vehicles/Trucks
+      - Vehicle/Trucks
+      operationId: deleteTruck
       parameters:
       - name: id
         in: path
@@ -1192,9 +1260,9 @@ paths:
           description: deleteTruck 204 response
   /vehicles/utility-vehicles/create:
     post:
-      operationId: createUtilityVehicle
       tags:
-        - Vehicles/UtilityVehicles
+      - Vehicle/UtilityVehicles
+      operationId: createUtilityVehicle
       requestBody:
         content:
           application/json:
@@ -1210,9 +1278,9 @@ paths:
                 $ref: '#/components/schemas/UtilityVehicleDTO'
   /vehicles/utility-vehicles/list:
     get:
-      operationId: listUtilityVehicles
       tags:
-        - Vehicles/UtilityVehicles
+      - Vehicle/UtilityVehicles
+      operationId: listUtilityVehicles
       responses:
         "200":
           description: listUtilityVehicles 200 response
@@ -1224,9 +1292,9 @@ paths:
                   $ref: '#/components/schemas/UtilityVehicleDTO'
   /vehicles/utility-vehicles/{id}:
     get:
-      operationId: getUtilityVehicle
       tags:
-        - Vehicles/UtilityVehicles
+      - Vehicle/UtilityVehicles
+      operationId: getUtilityVehicle
       parameters:
       - name: id
         in: path
@@ -1242,9 +1310,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/UtilityVehicleDTO'
     put:
-      operationId: updateUtilityVehicle
       tags:
-        - Vehicles/UtilityVehicles
+      - Vehicle/UtilityVehicles
+      operationId: updateUtilityVehicle
       parameters:
       - name: id
         in: path
@@ -1266,9 +1334,9 @@ paths:
               schema:
                 $ref: '#/components/schemas/UtilityVehicleDTO'
     delete:
-      operationId: deleteUtilityVehicle
       tags:
-        - Vehicles/UtilityVehicles
+      - Vehicle/UtilityVehicles
+      operationId: deleteUtilityVehicle
       parameters:
       - name: id
         in: path
@@ -1279,7 +1347,39 @@ paths:
       responses:
         "204":
           description: deleteUtilityVehicle 204 response
- 
+  /vehicles/{id}:
+    get:
+      tags:
+      - Vehicle
+      operationId: getVehicle
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getVehicle 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Vehicle'
+    delete:
+      tags:
+      - Vehicle
+      operationId: deleteVehicle
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteVehicle 204 response
 components:
   schemas:
     Auction:
@@ -1302,7 +1402,6 @@ components:
           format: date-time
         address:
           type: string
-     
     Bid:
       type: object
       properties:
@@ -1366,10 +1465,6 @@ components:
     ComputingDevice:
       type: object
       properties:
-        id:
-          type: integer
-          format: int64
-          nullable: true
         name:
           type: string
         quantity:
@@ -1618,15 +1713,10 @@ components:
       - brand
       - color
       - description
-      - id
       - manufactureYear
       - model
       type: object
       properties:
-        id:
-          type: integer
-          format: int64
-          nullable: true
         brand:
           type: string
         manufactureYear:

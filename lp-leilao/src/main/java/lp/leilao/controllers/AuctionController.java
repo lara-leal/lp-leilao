@@ -3,12 +3,14 @@ package lp.leilao.controllers;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.entities.Auction;
 import lp.leilao.services.AuctionService;
 
 @Controller("/auctions")
+@Tag(name = "Auctions")
 public class AuctionController {
 
     @Inject
@@ -34,7 +36,6 @@ public class AuctionController {
     public Auction createAuction(@Body @Valid Auction auction) {
         return auctionService.createAuction(auction);
     }
-
 
     @Put("/{auction_id}")
     public HttpResponse<Auction> updateAuction(@PathVariable Long auction_id, @Body Auction updatedAuction) {

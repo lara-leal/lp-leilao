@@ -3,6 +3,7 @@ package lp.leilao.controllers.devices;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.dtos.devices.HubDTO;
@@ -10,6 +11,7 @@ import lp.leilao.entities.devices.Hub;
 import lp.leilao.services.devices.HubService;
 
 @Controller("/devices/hubs")
+@Tag(name = "Devices/Hubs")
 public class HubController {
 
     @Inject

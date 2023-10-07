@@ -1,38 +1,47 @@
 openapi: 3.0.1
 paths:
-  /auctions/create:
+  /vehicles/create:
     post:
-      operationId: createAuction
+      tags:
+      - Vehicle
+      - Vehicles
+      operationId: createVehicle
       requestBody:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/Auction'
+              $ref: '#/components/schemas/Vehicle'
         required: true
       responses:
         "201":
-          description: createAuction 201 response
+          description: createVehicle 201 response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Auction'
-  /auctions/list:
+                $ref: '#/components/schemas/Vehicle'
+  /vehicles/list:
     get:
-      operationId: listAuctions
+      tags:
+      - Vehicle
+      - Vehicles
+      operationId: listVehicles
       responses:
         "200":
-          description: listAuctions 200 response
+          description: listVehicles 200 response
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Auction'
-  /auctions/{auction_id}:
+                  $ref: '#/components/schemas/Vehicle'
+  /vehicles/{id}:
     get:
-      operationId: getAuction
+      tags:
+      - Vehicle
+      - Vehicles
+      operationId: getVehicle
       parameters:
-      - name: auction_id
+      - name: id
         in: path
         required: true
         schema:
@@ -40,37 +49,18 @@ paths:
           format: int64
       responses:
         "200":
-          description: getAuction 200 response
+          description: getVehicle 200 response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Auction'
-    put:
-      operationId: updateAuction
-      parameters:
-      - name: auction_id
-        in: path
-        required: true
-        schema:
-          type: integer
-          format: int64
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Auction'
-        required: true
-      responses:
-        "200":
-          description: updateAuction 200 response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Auction'
+                $ref: '#/components/schemas/Vehicle'
     delete:
-      operationId: deleteAuction
+      tags:
+      - Vehicle
+      - Vehicles
+      operationId: deleteVehicle
       parameters:
-      - name: auction_id
+      - name: id
         in: path
         required: true
         schema:
@@ -78,26 +68,19 @@ paths:
           format: int64
       responses:
         "204":
-          description: deleteAuction 204 response
+          description: deleteVehicle 204 response
 components:
   schemas:
-    Auction:
+    Vehicle:
       type: object
       properties:
-        address:
+        brand:
           type: string
-        auction_id:
-          type: integer
-          format: int64
-          nullable: true
-        finalDate:
+        color:
           type: string
-          format: date-time
-        financialInstitution:
+        description:
           type: string
-        initialDate:
+        manufactureYear:
           type: string
-          format: date-time
-        numAuction:
-          type: integer
-          format: int32
+        model:
+          type: string

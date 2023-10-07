@@ -3,12 +3,14 @@ package lp.leilao.controllers;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.entities.Product;
 import lp.leilao.services.ProductService;
 
 @Controller("/products")
+@Tag(name = "Products")
 public class ProductController {
     @Inject
     private final ProductService productService;
@@ -43,8 +45,6 @@ public class ProductController {
             return HttpResponse.notFound();
         }
     }
-
-
 
     @Delete("/{prod_id}")
     @Status(HttpStatus.NO_CONTENT)

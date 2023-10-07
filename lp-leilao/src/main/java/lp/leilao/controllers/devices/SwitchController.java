@@ -3,6 +3,7 @@ package lp.leilao.controllers.devices;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.dtos.devices.SwitchDTO;
@@ -10,6 +11,8 @@ import lp.leilao.entities.devices.Switch;
 import lp.leilao.services.devices.SwitchService;
 
 @Controller("/devices/switches")
+@Tag(name = "Devices/Switches")
+
 public class SwitchController {
 
     @Inject

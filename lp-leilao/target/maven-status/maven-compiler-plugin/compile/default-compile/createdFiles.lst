@@ -302,7 +302,6 @@ lp\leilao\controllers\$AuctionController$Definition.class
 lp\leilao\entities\vehicles\UtilityVehicle.class
 lp\leilao\repositories\vehicles\TruckRepository.class
 META-INF\micronaut\io.micronaut.inject.BeanDefinitionReference\lp.leilao.controllers.devices.$ComputingDeviceController$Definition$Reference
-META-INF\swagger\swagger.yml
 META-INF\micronaut\io.micronaut.inject.BeanDefinitionReference\lp.leilao.controllers.devices.$SwitchController$Definition$Reference
 lp\leilao\controllers\vehicles\$CarController$Definition$Exec.class
 lp\leilao\controllers\$BidController$Definition$Intercepted.class

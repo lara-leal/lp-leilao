@@ -3,6 +3,7 @@ package lp.leilao.controllers.vehicles;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.dtos.vehicles.CarDTO;
@@ -10,6 +11,7 @@ import lp.leilao.entities.vehicles.Car;
 import lp.leilao.services.vehicles.CarService;
 
 @Controller("/vehicles/cars")
+@Tag(name = "Vehicle/Cars")
 public class CarController {
 
     @Inject
