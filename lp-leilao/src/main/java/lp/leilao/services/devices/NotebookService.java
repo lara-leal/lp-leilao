@@ -33,16 +33,16 @@ public class NotebookService {
         return toNotebookDTO(noteRepository.save(notebook));
     }
 
-    public Notebook updateNotebook(Long id, Notebook updatedNotebook) {
+    public NotebookDTO updateNotebook(Long id, NotebookDTO updatedNotebookDTO) {
         Notebook existingNotebook = noteRepository.findById(id).orElse(null);
         if (existingNotebook != null) {
-            existingNotebook.setName(updatedNotebook.getName());
-            existingNotebook.setQuantity(updatedNotebook.getQuantity());
-            existingNotebook.setDeviceValue(updatedNotebook.getDeviceValue());
-            existingNotebook.setBrand(updatedNotebook.getBrand());
-            existingNotebook.setSpecification(updatedNotebook.getSpecification());
+            existingNotebook.setName(updatedNotebookDTO.getName());
+            existingNotebook.setQuantity(updatedNotebookDTO.getQuantity());
+            existingNotebook.setBrand(updatedNotebookDTO.getBrand());
+            existingNotebook.setSpecification(updatedNotebookDTO.getSpecification());
 
-            return noteRepository.update(existingNotebook);
+            Notebook updatedNotebook = noteRepository.update(existingNotebook);
+            return toNotebookDTO(updatedNotebook);
         }
         return null;
     }
@@ -53,6 +53,8 @@ public class NotebookService {
 
     private NotebookDTO toNotebookDTO(Notebook notebook) {
         NotebookDTO dto = new NotebookDTO();
+        dto.setName(notebook.getName());
+        dto.setQuantity(notebook.getQuantity());
         dto.setBrand(notebook.getBrand());
         dto.setSpecification(notebook.getSpecification());
         return dto;

@@ -32,20 +32,20 @@ public class CarService {
         return toCarDTO(carRepository.save(car));
     }
 
-    public Car updateCar(Long id, Car updatedCar) {
+    public CarDTO updateCar(Long id, CarDTO updatedCarDTO) {
         Car existingCar = carRepository.findById(id).orElse(null);
         if (existingCar != null) {
-            existingCar.setBrand(updatedCar.getBrand());
-            existingCar.setManufactureYear(updatedCar.getManufactureYear());
-            existingCar.setModel(updatedCar.getModel());
-            existingCar.setDescription(updatedCar.getDescription());
-            existingCar.setPrice(updatedCar.getPrice());
-            existingCar.setColor(updatedCar.getColor());
-            existingCar.setSunroof(updatedCar.getSunroof());
-            existingCar.setYearLicensing(updatedCar.getYearLicensing());
-            existingCar.setResultPrecautionaryExpertise(updatedCar.getResultPrecautionaryExpertise());
+            existingCar.setBrand(updatedCarDTO.getBrand());
+            existingCar.setManufactureYear(updatedCarDTO.getManufactureYear());
+            existingCar.setModel(updatedCarDTO.getModel());
+            existingCar.setDescription(updatedCarDTO.getDescription());
+            existingCar.setColor(updatedCarDTO.getColor());
+            existingCar.setSunroof(updatedCarDTO.getSunroof());
+            existingCar.setYearLicensing(updatedCarDTO.getYearLicensing());
+            existingCar.setResultPrecautionaryExpertise(updatedCarDTO.getResultPrecautionaryExpertise());
 
-            return carRepository.update(existingCar);
+            Car updatedCar = carRepository.update(existingCar);
+            return toCarDTO(updatedCar);
         }
         return null;
     }
@@ -56,6 +56,11 @@ public class CarService {
 
     private CarDTO toCarDTO(Car car) {
         CarDTO dto = new CarDTO();
+        dto.setBrand(car.getBrand());
+        dto.setManufactureYear(car.getManufactureYear());
+        dto.setModel(car.getModel());
+        dto.setDescription(car.getDescription());
+        dto.setColor(car.getColor());
         dto.setSunroof(car.getSunroof());
         dto.setYearLicensing(car.getYearLicensing());
         dto.setResultPrecautionaryExpertise(car.getResultPrecautionaryExpertise());

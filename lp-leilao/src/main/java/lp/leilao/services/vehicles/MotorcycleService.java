@@ -9,7 +9,6 @@ import lp.leilao.repositories.vehicles.MotorcycleRepository;
 import java.util.ArrayList;
 import java.util.List;
 
-
 @Singleton
 public class MotorcycleService {
     @Inject
@@ -33,12 +32,35 @@ public class MotorcycleService {
         return toMotorcycleDTO(motorcycleRepository.save(motorcycle));
     }
 
+    public MotorcycleDTO updateMotorcycle(Long id, MotorcycleDTO updatedMotorcycleDTO) {
+        Motorcycle existingMotorcycle = motorcycleRepository.findById(id).orElse(null);
+        if (existingMotorcycle != null) {
+            existingMotorcycle.setBrand(updatedMotorcycleDTO.getBrand());
+            existingMotorcycle.setManufactureYear(updatedMotorcycleDTO.getManufactureYear());
+            existingMotorcycle.setModel(updatedMotorcycleDTO.getModel());
+            existingMotorcycle.setDescription(updatedMotorcycleDTO.getDescription());
+            existingMotorcycle.setColor(updatedMotorcycleDTO.getColor());
+            existingMotorcycle.setYearLicensing(updatedMotorcycleDTO.getYearLicensing());
+            existingMotorcycle.setResultPrecautionaryExpertise(updatedMotorcycleDTO.getResultPrecautionaryExpertise());
+            existingMotorcycle.setFairingCondition(updatedMotorcycleDTO.getFairingCondition());
+
+            Motorcycle updatedMotorcycle = motorcycleRepository.update(existingMotorcycle);
+            return toMotorcycleDTO(updatedMotorcycle);
+        }
+        return null;
+    }
+
     public void deleteMotorcycle(Long id) {
         motorcycleRepository.deleteById(id);
     }
 
     private MotorcycleDTO toMotorcycleDTO(Motorcycle motorcycle) {
         MotorcycleDTO dto = new MotorcycleDTO();
+        dto.setBrand(motorcycle.getBrand());
+        dto.setManufactureYear(motorcycle.getManufactureYear());
+        dto.setModel(motorcycle.getModel());
+        dto.setDescription(motorcycle.getDescription());
+        dto.setColor(motorcycle.getColor());
         dto.setYearLicensing(motorcycle.getYearLicensing());
         dto.setResultPrecautionaryExpertise(motorcycle.getResultPrecautionaryExpertise());
         dto.setFairingCondition(motorcycle.getFairingCondition());

@@ -37,10 +37,10 @@ public class RouterController {
     }
 
     @Put("/{id}")
-    public HttpResponse<Router> updateRouter(@PathVariable Long id, @Body Router updatedRouter) {
-        Router updated = routerService.updateRouter(id, updatedRouter);
-        if (updated != null) {
-            return HttpResponse.ok(updated);
+    public HttpResponse<RouterDTO> updateRouter(@PathVariable Long id, @Body RouterDTO updatedRouterDTO) {
+        RouterDTO updatedRouter = routerService.updateRouter(id, updatedRouterDTO);
+        if (updatedRouter != null) {
+            return HttpResponse.ok(updatedRouterDTO);
         } else {
             return HttpResponse.notFound();
         }

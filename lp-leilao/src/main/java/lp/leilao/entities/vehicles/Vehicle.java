@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Serdeable
-@Table(name ="vehicle")
+@Table(name = "vehicle")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Vehicle {
     @Id
@@ -25,9 +25,7 @@ public abstract class Vehicle {
     public String model;
     @Column(name = "description")
     public String description;
-    @Column(name = "price")
-    public Double price;
-    @Column(name= "color")
+    @Column(name = "color")
     public String color;
 
 }

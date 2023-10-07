@@ -1,5 +1,7 @@
 package lp.leilao.entities;
 
+import java.util.List;
+
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

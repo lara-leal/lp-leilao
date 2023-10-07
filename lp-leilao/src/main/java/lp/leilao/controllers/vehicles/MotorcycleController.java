@@ -1,11 +1,12 @@
 package lp.leilao.controllers.vehicles;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.entities.vehicles.Motorcycle;
 import lp.leilao.dtos.vehicles.MotorcycleDTO;
+import lp.leilao.entities.vehicles.Motorcycle;
 import lp.leilao.services.vehicles.MotorcycleService;
 
 
@@ -34,6 +35,16 @@ public class MotorcycleController {
     @Status(HttpStatus.CREATED)
     public MotorcycleDTO createMotorcycle(@Body @Valid Motorcycle motorcycle) {
         return motorcycleService.createMotorcycle(motorcycle);
+    }
+
+    @Put("/{id}")
+    public HttpResponse<MotorcycleDTO> updateMotorcycle(@PathVariable Long id, @Body MotorcycleDTO updatedMotorcycleDTO) {
+        MotorcycleDTO updatedMotorcycle = motorcycleService.updateMotorcycle(id, updatedMotorcycleDTO);
+        if (updatedMotorcycle != null) {
+            return HttpResponse.ok(updatedMotorcycleDTO);
+        } else {
+            return HttpResponse.notFound();
+        }
     }
 
     @Delete("/{id}")

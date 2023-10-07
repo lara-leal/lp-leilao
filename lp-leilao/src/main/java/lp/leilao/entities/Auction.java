@@ -7,8 +7,6 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.util.Date;
-import java.util.List;
-import java.util.Set;
 
 @Data
 @NoArgsConstructor
@@ -30,4 +28,5 @@ public class Auction {
     private Date finalDate;
     @Column(name = "address")
     private String address;
+
 }

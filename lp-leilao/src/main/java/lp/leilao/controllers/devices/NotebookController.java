@@ -38,10 +38,10 @@ public class NotebookController {
     }
 
     @Put("/{id}")
-    public HttpResponse<Notebook> updateNotebook(@PathVariable Long id, @Body Notebook updatedNotebook) {
-        Notebook updated = noteService.updateNotebook(id, updatedNotebook);
-        if (updated != null) {
-            return HttpResponse.ok(updated);
+    public HttpResponse<NotebookDTO> updateNotebook(@PathVariable Long id, @Body NotebookDTO updatedNotebookDTO) {
+        NotebookDTO updatedNotebook = noteService.updateNotebook(id, updatedNotebookDTO);
+        if (updatedNotebook != null) {
+            return HttpResponse.ok(updatedNotebookDTO);
         } else {
             return HttpResponse.notFound();
         }

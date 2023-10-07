@@ -6,7 +6,6 @@ import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.dtos.devices.HubDTO;
-import lp.leilao.entities.Client;
 import lp.leilao.entities.devices.Hub;
 import lp.leilao.services.devices.HubService;
 
@@ -41,7 +40,7 @@ public class HubController {
     public HttpResponse<HubDTO> updateHub(@PathVariable Long id, @Body HubDTO updatedHubDTO) {
         HubDTO updatedHub = hubService.updateHub(id, updatedHubDTO);
         if (updatedHub != null) {
-            return HttpResponse.ok(updatedHubDTO); // Retorna o DTO atualizado
+            return HttpResponse.ok(updatedHubDTO);
         } else {
             return HttpResponse.notFound();
         }

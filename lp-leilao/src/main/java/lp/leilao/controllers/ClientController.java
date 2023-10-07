@@ -5,7 +5,6 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.entities.Bid;
 import lp.leilao.entities.Client;
 import lp.leilao.services.ClientService;
 

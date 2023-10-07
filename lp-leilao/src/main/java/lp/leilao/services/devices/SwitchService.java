@@ -33,16 +33,17 @@ public class SwitchService {
         return toSwitchDTO(savedSwitch);
     }
 
-    public Switch updateSwitch(Long id, Switch updatedSwitch) {
+    public SwitchDTO updateSwitch(Long id, SwitchDTO updatedSwitchDTO) {
         Switch existingSwitch = switchRepository.findById(id).orElse(null);
         if (existingSwitch != null) {
-            existingSwitch.setName(updatedSwitch.getName());
-            existingSwitch.setQuantity(updatedSwitch.getQuantity());
-            existingSwitch.setDeviceValue(updatedSwitch.getDeviceValue());
-            existingSwitch.setBrand(updatedSwitch.getBrand());
-            existingSwitch.setNumberOfPorts(updatedSwitch.getNumberOfPorts());
-            existingSwitch.setFirmwareVersion(updatedSwitch.getFirmwareVersion());
-            return switchRepository.update(existingSwitch);
+            existingSwitch.setName(updatedSwitchDTO.getName());
+            existingSwitch.setQuantity(updatedSwitchDTO.getQuantity());
+            existingSwitch.setBrand(updatedSwitchDTO.getBrand());
+            existingSwitch.setNumberOfPorts(updatedSwitchDTO.getNumberOfPorts());
+            existingSwitch.setFirmwareVersion(updatedSwitchDTO.getFirmwareVersion());
+
+            Switch updatedSwitch = switchRepository.update(existingSwitch);
+            return toSwitchDTO(updatedSwitch);
         }
         return null;
     }
@@ -53,6 +54,9 @@ public class SwitchService {
 
     private SwitchDTO toSwitchDTO(Switch swi) {
         SwitchDTO dto = new SwitchDTO();
+        dto.setName(swi.getName());
+        dto.setQuantity(swi.getQuantity());
+        dto.setBrand(swi.getBrand());
         dto.setNumberOfPorts(swi.getNumberOfPorts());
         dto.setFirmwareVersion(swi.getFirmwareVersion());
         return dto;

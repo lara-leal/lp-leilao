@@ -37,10 +37,10 @@ public class CarController {
     }
 
     @Put("/{id}")
-    public HttpResponse<Car> updateCar(@PathVariable Long id, @Body Car updatedCar) {
-        Car updated = carService.updateCar(id, updatedCar);
-        if (updated != null) {
-            return HttpResponse.ok(updated);
+    public HttpResponse<CarDTO> updateCar(@PathVariable Long id, @Body CarDTO updatedCarDTO) {
+        CarDTO updatedCar = carService.updateCar(id, updatedCarDTO);
+        if (updatedCar != null) {
+            return HttpResponse.ok(updatedCarDTO);
         } else {
             return HttpResponse.notFound();
         }

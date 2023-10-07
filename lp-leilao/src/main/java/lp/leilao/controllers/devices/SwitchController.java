@@ -37,10 +37,10 @@ public class SwitchController {
     }
 
     @Put("/{id}")
-    public HttpResponse<Switch> updateSwitch(@PathVariable Long id, @Body Switch updatedSwitch) {
-        Switch updated = switchService.updateSwitch(id, updatedSwitch);
-        if (updated != null) {
-            return HttpResponse.ok(updated);
+    public HttpResponse<SwitchDTO> updateSwitch(@PathVariable Long id, @Body SwitchDTO updatedSwitchDTO) {
+        SwitchDTO updatedSwitch = switchService.updateSwitch(id, updatedSwitchDTO);
+        if (updatedSwitch != null) {
+            return HttpResponse.ok(updatedSwitchDTO);
         } else {
             return HttpResponse.notFound();
         }

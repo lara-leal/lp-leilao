@@ -33,16 +33,16 @@ public class RouterService {
         return toRouterDTO(savedRouter);
     }
 
-    public Router updateRouter(Long id, Router updatedRouter) {
+    public RouterDTO updateRouter(Long id, RouterDTO updatedRouterDTO) {
         Router existingRouter = routerRepository.findById(id).orElse(null);
         if (existingRouter != null) {
-            existingRouter.setName(updatedRouter.getName());
-            existingRouter.setQuantity(updatedRouter.getQuantity());
-            existingRouter.setDeviceValue(updatedRouter.getDeviceValue());
-            existingRouter.setBrand(updatedRouter.getBrand());
-            existingRouter.setAntenna(updatedRouter.getAntenna());
+            existingRouter.setName(updatedRouterDTO.getName());
+            existingRouter.setQuantity(updatedRouterDTO.getQuantity());
+            existingRouter.setBrand(updatedRouterDTO.getBrand());
+            existingRouter.setAntenna(updatedRouterDTO.getAntenna());
 
-            return routerRepository.update(existingRouter);
+            Router updatedRouter = routerRepository.update(existingRouter);
+            return toRouterDTO(updatedRouter);
         }
         return null;
     }
@@ -53,6 +53,9 @@ public class RouterService {
 
     private RouterDTO toRouterDTO(Router router) {
         RouterDTO dto = new RouterDTO();
+        dto.setName(router.getName());
+        dto.setQuantity(router.getQuantity());
+        dto.setBrand(router.getBrand());
         dto.setAntenna(router.getAntenna());
         return dto;
     }

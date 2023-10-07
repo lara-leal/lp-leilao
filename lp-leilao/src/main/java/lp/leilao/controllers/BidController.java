@@ -5,7 +5,6 @@ import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
-import lp.leilao.entities.Auction;
 import lp.leilao.entities.Bid;
 import lp.leilao.services.BidService;
 
@@ -45,10 +44,9 @@ public class BidController {
         }
     }
 
-
     @Delete("/{bid_id}")
     @Status(HttpStatus.NO_CONTENT)
-    public void deleteCar(Long bid_id) {
+    public void deleteBid(Long bid_id) {
         bidService.deleteBid(bid_id);
     }
 

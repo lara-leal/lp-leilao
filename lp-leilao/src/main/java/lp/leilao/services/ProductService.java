@@ -2,7 +2,6 @@ package lp.leilao.services;
 
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.entities.FinancialInstitution;
 import lp.leilao.entities.Product;
 import lp.leilao.repositories.ProductRepository;
 

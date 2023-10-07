@@ -1,7 +1,6 @@
 package lp.leilao.services;
 
 import jakarta.inject.Inject;
-import lp.leilao.entities.Bid;
 import lp.leilao.entities.Client;
 import lp.leilao.repositories.ClientRepository;
 

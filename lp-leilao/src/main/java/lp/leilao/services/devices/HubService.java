@@ -3,7 +3,6 @@ package lp.leilao.services.devices;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lp.leilao.dtos.devices.HubDTO;
-import lp.leilao.entities.Client;
 import lp.leilao.entities.devices.Hub;
 import lp.leilao.repositories.devices.HubRepository;
 
@@ -39,7 +38,6 @@ public class HubService {
         if (existingHub != null) {
             existingHub.setName(updatedHubDTO.getName());
             existingHub.setQuantity(updatedHubDTO.getQuantity());
-            existingHub.setDeviceValue(updatedHubDTO.getDeviceValue());
             existingHub.setBrand(updatedHubDTO.getBrand());
             existingHub.setPorts(updatedHubDTO.getPorts());
             existingHub.setVolts(updatedHubDTO.getVolts());
@@ -57,6 +55,9 @@ public class HubService {
 
     private HubDTO toHubDTO(Hub hub) {
         HubDTO dto = new HubDTO();
+        dto.setName(hub.getName());
+        dto.setQuantity(hub.getQuantity());
+        dto.setBrand(hub.getBrand());
         dto.setPorts(hub.getPorts());
         dto.setVolts(hub.getVolts());
         return dto;

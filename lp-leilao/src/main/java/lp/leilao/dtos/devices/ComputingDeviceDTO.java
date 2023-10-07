@@ -12,7 +12,6 @@ public class ComputingDeviceDTO {
     public ComputingDevice name;
     public ComputingDevice quantity;
     public ComputingDevice description;
-    public ComputingDevice deviceValue;
     public ComputingDevice brand;
     public String ports;
     public String volts;
@@ -26,11 +25,12 @@ public class ComputingDeviceDTO {
     public ComputingDeviceDTO() {
     }
 
-    public ComputingDeviceDTO(ComputingDevice name, ComputingDevice quantity, ComputingDevice description, ComputingDevice deviceValue, ComputingDevice brand, String ports, String volts, String specification, Boolean antenna, String screenSize, String refreshRate, Integer numberOfPorts, String firmwareVersion) {
+    public ComputingDeviceDTO(ComputingDevice name, ComputingDevice quantity, ComputingDevice description,
+            ComputingDevice brand, String ports, String volts, String specification,
+            Boolean antenna, String screenSize, String refreshRate, Integer numberOfPorts, String firmwareVersion) {
         this.name = name;
         this.quantity = quantity;
         this.description = description;
-        this.deviceValue = deviceValue;
         this.brand = brand;
         this.ports = ports;
         this.volts = volts;

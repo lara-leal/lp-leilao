@@ -6,7 +6,6 @@ import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
 import lp.leilao.dtos.devices.MonitorDTO;
-import lp.leilao.entities.devices.Hub;
 import lp.leilao.entities.devices.Monitor;
 import lp.leilao.services.devices.MonitorService;
 
@@ -38,10 +37,10 @@ public class MonitorController {
     }
 
     @Put("/{id}")
-    public HttpResponse<Monitor> updateMonitor(@PathVariable Long id, @Body Monitor updatedMonitor) {
-        Monitor updated = monitorService.updateMonitor(id, updatedMonitor);
-        if (updated != null) {
-            return HttpResponse.ok(updated);
+    public HttpResponse<MonitorDTO> updateMonitor(@PathVariable Long id, @Body MonitorDTO updatedMonitorDTO) {
+        MonitorDTO updatedMonitor = monitorService.updateMonitor(id, updatedMonitorDTO);
+        if (updatedMonitor != null) {
+            return HttpResponse.ok(updatedMonitorDTO);
         } else {
             return HttpResponse.notFound();
         }

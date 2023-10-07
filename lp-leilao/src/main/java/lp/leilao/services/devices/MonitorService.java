@@ -3,7 +3,6 @@ package lp.leilao.services.devices;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lp.leilao.dtos.devices.MonitorDTO;
-import lp.leilao.entities.devices.Hub;
 import lp.leilao.entities.devices.Monitor;
 import lp.leilao.repositories.devices.MonitorRepository;
 
@@ -34,17 +33,17 @@ public class MonitorService {
         return toMonitorDTO(savedMonitor);
     }
 
-    public Monitor updateMonitor(Long id, Monitor updatedMonitor) {
+    public MonitorDTO updateMonitor(Long id, MonitorDTO updatedMonitorDTO) {
         Monitor existingMonitor = monitorRepository.findById(id).orElse(null);
         if (existingMonitor != null) {
-            existingMonitor.setName(updatedMonitor.getName());
-            existingMonitor.setQuantity(updatedMonitor.getQuantity());
-            existingMonitor.setDeviceValue(updatedMonitor.getDeviceValue());
-            existingMonitor.setBrand(updatedMonitor.getBrand());
-            existingMonitor.setScreenSize(updatedMonitor.getScreenSize());
-            existingMonitor.setRefreshRate(updatedMonitor.getRefreshRate());
+            existingMonitor.setName(updatedMonitorDTO.getName());
+            existingMonitor.setQuantity(updatedMonitorDTO.getQuantity());
+            existingMonitor.setBrand(updatedMonitorDTO.getBrand());
+            existingMonitor.setScreenSize(updatedMonitorDTO.getScreenSize());
+            existingMonitor.setRefreshRate(updatedMonitorDTO.getRefreshRate());
 
-            return monitorRepository.update(existingMonitor);
+            Monitor updatedMonitor = monitorRepository.update(existingMonitor);
+            return toMonitorDTO(updatedMonitor);
         }
         return null;
     }
@@ -55,6 +54,9 @@ public class MonitorService {
 
     private MonitorDTO toMonitorDTO(Monitor monitor) {
         MonitorDTO dto = new MonitorDTO();
+        dto.setName(monitor.getName());
+        dto.setQuantity(monitor.getQuantity());
+        dto.setBrand(monitor.getBrand());
         dto.setScreenSize(monitor.getScreenSize());
         dto.setRefreshRate(monitor.getRefreshRate());
         return dto;

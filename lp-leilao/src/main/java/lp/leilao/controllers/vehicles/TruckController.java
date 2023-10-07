@@ -1,5 +1,6 @@
 package lp.leilao.controllers.vehicles;
 
+import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
 import io.micronaut.http.annotation.*;
 import jakarta.inject.Inject;
@@ -25,7 +26,6 @@ public class TruckController {
 
     @Get("/{id}")
     public TruckDTO getTrucks(Long id) {
-
         return truckService.getTruckById(id);
     }
 
@@ -34,7 +34,15 @@ public class TruckController {
     public TruckDTO createTruck(@Body @Valid Truck truck) {
         return truckService.createTruck(truck);
     }
-
+    @Put("/{id}")
+    public HttpResponse<TruckDTO> updateTruck(@PathVariable Long id, @Body TruckDTO updatedTruckDTO) {
+        TruckDTO updatedTruck = truckService.updateTruck(id, updatedTruckDTO);
+        if (updatedTruck != null) {
+            return HttpResponse.ok(updatedTruckDTO);
+        } else {
+            return HttpResponse.notFound();
+        }
+    }
     @Delete("/{id}")
     @Status(HttpStatus.NO_CONTENT)
     public void deleteTruck(Long id) {

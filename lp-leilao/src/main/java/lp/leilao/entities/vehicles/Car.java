@@ -2,7 +2,6 @@ package lp.leilao.entities.vehicles;
 
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.Column;
-import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
