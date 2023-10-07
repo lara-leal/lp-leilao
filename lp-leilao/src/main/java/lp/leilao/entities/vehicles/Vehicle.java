@@ -2,11 +2,12 @@ package lp.leilao.entities.vehicles;
 
 import io.micronaut.serde.annotation.Serdeable;
 import io.swagger.v3.oas.annotations.Hidden;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lp.leilao.entities.Auction;
+import lp.leilao.entities.Product;
 
 @Data
 @Entity
@@ -16,7 +17,6 @@ import lombok.NoArgsConstructor;
 @Table(name = "vehicle")
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Vehicle {
-    @Hidden
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
@@ -30,5 +30,13 @@ public abstract class Vehicle {
     public String description;
     @Column(name = "color")
     public String color;
+
+    @ManyToOne
+    @JoinColumn(name = "auction_id")
+    private Auction auction;
+
+    @ManyToOne
+    @JoinColumn(name = "prod_id")
+    private Product product;
 
 }

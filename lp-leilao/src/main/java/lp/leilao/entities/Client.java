@@ -1,5 +1,9 @@
 package lp.leilao.entities;
 
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -24,5 +28,9 @@ public class Client {
     private String cpf;
     @Column(name = "digitalCertificate")
     private String digitalCertificate;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "clients")
+    private List<Bid> bids;
 
 }

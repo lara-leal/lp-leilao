@@ -1051,7 +1051,7 @@ paths:
   /vehicles/create:
     post:
       tags:
-      - Vehicle
+      - Vehicles
       operationId: createVehicle
       requestBody:
         content:
@@ -1069,7 +1069,7 @@ paths:
   /vehicles/list:
     get:
       tags:
-      - Vehicle
+      - Vehicles
       operationId: listVehicles
       responses:
         "200":
@@ -1350,7 +1350,7 @@ paths:
   /vehicles/{id}:
     get:
       tags:
-      - Vehicle
+      - Vehicles
       operationId: getVehicle
       parameters:
       - name: id
@@ -1368,7 +1368,7 @@ paths:
                 $ref: '#/components/schemas/Vehicle'
     delete:
       tags:
-      - Vehicle
+      - Vehicles
       operationId: deleteVehicle
       parameters:
       - name: id
@@ -1415,6 +1415,14 @@ components:
         data:
           type: string
           format: date-time
+        clients:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/Client'
+        auction:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/Auction'
     Car:
       type: object
       allOf:
@@ -1463,6 +1471,13 @@ components:
         digitalCertificate:
           type: string
     ComputingDevice:
+      required:
+      - auction
+      - brand
+      - description
+      - name
+      - product
+      - quantity
       type: object
       properties:
         name:
@@ -1474,6 +1489,14 @@ components:
           type: string
         brand:
           type: string
+        auction:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/Auction'
+        product:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/Product'
     FinancialInstitution:
       type: object
       properties:
@@ -1604,6 +1627,18 @@ components:
         initialValue:
           type: number
           format: double
+        auction:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/Auction'
+        vehicles:
+          type: array
+          items:
+            $ref: '#/components/schemas/Vehicle'
+        computingDevices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ComputingDevice'
     Router:
       type: object
       allOf:
@@ -1710,13 +1745,20 @@ components:
           type: string
     Vehicle:
       required:
+      - auction
       - brand
       - color
       - description
+      - id
       - manufactureYear
       - model
+      - product
       type: object
       properties:
+        id:
+          type: integer
+          format: int64
+          nullable: true
         brand:
           type: string
         manufactureYear:
@@ -1727,3 +1769,11 @@ components:
           type: string
         color:
           type: string
+        auction:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/Auction'
+        product:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/Product'
