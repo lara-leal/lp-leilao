@@ -1,0 +1,103 @@
+openapi: 3.0.1
+paths:
+  /auctions/create:
+    post:
+      operationId: createAuction
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auction'
+        required: true
+      responses:
+        "201":
+          description: createAuction 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auction'
+  /auctions/list:
+    get:
+      operationId: listAuctions
+      responses:
+        "200":
+          description: listAuctions 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Auction'
+  /auctions/{auction_id}:
+    get:
+      operationId: getAuction
+      parameters:
+      - name: auction_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getAuction 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auction'
+    put:
+      operationId: updateAuction
+      parameters:
+      - name: auction_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auction'
+        required: true
+      responses:
+        "200":
+          description: updateAuction 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auction'
+    delete:
+      operationId: deleteAuction
+      parameters:
+      - name: auction_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteAuction 204 response
+components:
+  schemas:
+    Auction:
+      type: object
+      properties:
+        address:
+          type: string
+        auction_id:
+          type: integer
+          format: int64
+          nullable: true
+        finalDate:
+          type: string
+          format: date-time
+        financialInstitution:
+          type: string
+        initialDate:
+          type: string
+          format: date-time
+        numAuction:
+          type: integer
+          format: int32

@@ -1,0 +1,1639 @@
+openapi: 3.0.1
+info:
+  title: Leilao SLE
+  description: API usando Micronaut
+  version: "1.0"
+paths:
+  /auction/bids/create:
+    post:
+      operationId: createBid
+      tags: 
+        - Bids
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bid'
+        required: true
+      responses:
+        "201":
+          description: createBid 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bid'
+  /auction/bids/list:
+    get:
+      operationId: listBids
+      tags:
+        - Bids
+      responses:
+        "200":
+          description: listBids 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bid'
+  /auction/bids/{bid_id}:
+    get:
+      operationId: getBids
+      tags: 
+        - Bids
+      parameters:
+      - name: bid_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getBids 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bid'
+    put:
+      operationId: updateBid
+      tags:
+        - Bids
+      parameters:
+      - name: bid_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bid'
+        required: true
+      responses:
+        "200":
+          description: updateBid 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bid'
+    delete:
+      operationId: deleteBid
+      tags:
+        - Bids
+      parameters:
+      - name: bid_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteBid 204 response
+  /auctions/create:
+    post:
+      operationId: createAuction
+      tags:
+        - Auctions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auction'
+        required: true
+      responses:
+        "201":
+          description: createAuction 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auction'
+  /auctions/list:
+    get:
+      operationId: listAuctions
+      tags:
+        - Auctions
+      responses:
+        "200":
+          description: listAuctions 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Auction'
+  /auctions/{auction_id}:
+    get:
+      operationId: getAuction
+      tags:
+        - Auctions
+      parameters:
+      - name: auction_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getAuction 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auction'
+    put:
+      operationId: updateAuction
+      tags:
+        - Auctions
+      parameters:
+      - name: auction_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Auction'
+        required: true
+      responses:
+        "200":
+          description: updateAuction 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Auction'
+    delete:
+      operationId: deleteAuction
+      tags:
+        - Auctions
+      parameters:
+      - name: auction_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteAuction 204 response
+  /clients/create:
+    post:
+      operationId: createClient
+      tags:
+        - Clients
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Client'
+        required: true
+      responses:
+        "201":
+          description: createClient 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Client'
+  /clients/list:
+    get:
+      operationId: listClient      
+      tags:
+        - Clients
+      responses:
+        "200":
+          description: listClient 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Client'
+  /clients/{id_client}:
+    get:
+      operationId: getClient
+      tags:
+        - Clients
+      parameters:
+      - name: id_client
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getClient 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Client'
+    put:
+      operationId: updateClient
+      tags:
+        - Clients
+      parameters:
+      - name: id_client
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Client'
+        required: true
+      responses:
+        "200":
+          description: updateClient 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Client'
+    delete:
+      operationId: deleteClient
+      tags:
+        - Clients
+      parameters:
+      - name: id_client
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteClient 204 response
+  /devices/list:
+    get:
+      operationId: listDevices
+      tags:
+        - Devices
+      responses:
+        "200":
+          description: listDevices 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/ComputingDevice'
+  
+  /devices/hubs/create:
+    post:
+      operationId: createHub
+      tags:
+        - Devices/Hubs
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Hub'
+        required: true
+      responses:
+        "201":
+          description: createHub 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HubDTO'
+  /devices/hubs/list:
+    get:
+      operationId: listHubs
+      tags:
+        - Devices/Hubs
+      responses:
+        "200":
+          description: listHubs 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/HubDTO'
+  /devices/hubs/{id}:
+    get:
+      operationId: getHubs
+      tags:
+        - Devices/Hubs
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getHubs 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HubDTO'
+    put:
+      operationId: updateHub
+      tags:
+        - Devices/Hubs
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HubDTO'
+        required: true
+      responses:
+        "200":
+          description: updateHub 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HubDTO'
+    delete:
+      operationId: deleteHub
+      tags:
+        - Devices/Hubs
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteHub 204 response
+  /devices/monitors/create:
+    post:
+      operationId: createMonitor
+      tags:
+        - Devices/Monitors
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Monitor'
+        required: true
+      responses:
+        "201":
+          description: createMonitor 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonitorDTO'
+  /devices/monitors/list:
+    get:
+      operationId: listMonitors
+      tags:
+        - Devices/Monitors
+      responses:
+        "200":
+          description: listMonitors 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MonitorDTO'
+  /devices/monitors/{id}:
+    get:
+      operationId: getMonitor
+      tags:
+        - Devices/Monitors
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getMonitor 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonitorDTO'
+    put:
+      operationId: updateMonitor
+      tags:
+        - Devices/Monitors
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MonitorDTO'
+        required: true
+      responses:
+        "200":
+          description: updateMonitor 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MonitorDTO'
+    delete:
+      operationId: deleteMonitor
+      tags:
+        - Devices/Monitors
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteMonitor 204 response
+  /devices/notebooks/create:
+    post:
+      operationId: createNotebook
+      tags:
+        - Devices/Notebooks
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Notebook'
+        required: true
+      responses:
+        "201":
+          description: createNotebook 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotebookDTO'
+  /devices/notebooks/list:
+    get:
+      operationId: listNotebooks
+      tags:
+        - Devices/Notebooks
+      responses:
+        "200":
+          description: listNotebooks 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/NotebookDTO'
+  /devices/notebooks/{id}:
+    get:
+      operationId: getNotebook
+      tags:
+        - Devices/Notebooks
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getNotebook 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotebookDTO'
+    put:
+      operationId: updateNotebook
+      tags:
+        - Devices/Notebooks
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/NotebookDTO'
+        required: true
+      responses:
+        "200":
+          description: updateNotebook 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/NotebookDTO'
+    delete:
+      operationId: deleteNotebook
+      tags:
+        - Devices/Notebooks
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteNotebook 204 response
+  /devices/routers/create:
+    post:
+      operationId: createRouter
+      tags:
+        - Devices/Routers
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Router'
+        required: true
+      responses:
+        "201":
+          description: createRouter 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouterDTO'
+  /devices/routers/list:
+    get:
+      operationId: listRouter
+      tags:
+        - Devices/Routers
+      responses:
+        "200":
+          description: listRouter 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/RouterDTO'
+  /devices/routers/{id}:
+    get:
+      operationId: getRouter
+      tags:
+        - Devices/Routers
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getRouter 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouterDTO'
+    put:
+      operationId: updateRouter
+      tags:
+        - Devices/Routers
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RouterDTO'
+        required: true
+      responses:
+        "200":
+          description: updateRouter 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RouterDTO'
+    delete:
+      operationId: deleteRouter
+      tags:
+        - Devices/Routers
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteRouter 204 response
+  /devices/switches/create:
+    post:
+      operationId: createSwitch
+      tags:
+        - Devices/Switches
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Switch'
+        required: true
+      responses:
+        "201":
+          description: createSwitch 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SwitchDTO'
+  /devices/switches/list:
+    get:
+      operationId: listSwitches
+      tags:
+        - Devices/Switches
+      responses:
+        "200":
+          description: listSwitches 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/SwitchDTO'
+  /devices/switches/{id}:
+    get:
+      operationId: getSwitches
+      tags:
+        - Devices/Switches
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getSwitches 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SwitchDTO'
+    put:
+      operationId: updateSwitch
+      tags:
+        - Devices/Switches
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SwitchDTO'
+        required: true
+      responses:
+        "200":
+          description: updateSwitch 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SwitchDTO'
+    delete:
+      operationId: deleteSwitch
+      tags:
+        - Devices/Switches
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteSwitch 204 response
+  /financialInstitution/create:
+    post:
+      operationId: createFI
+      tags:
+        - Financial Institutions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FinancialInstitution'
+        required: true
+      responses:
+        "201":
+          description: createFI 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinancialInstitution'
+  /financialInstitution/list:
+    get:
+      operationId: listFI
+      tags:
+        - Financial Institutions
+      responses:
+        "200":
+          description: listFI 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/FinancialInstitution'
+  /financialInstitution/{fi_id}:
+    get:
+      operationId: getFI
+      tags:
+        - Financial Institutions
+      parameters:
+      - name: fi_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getFI 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinancialInstitution'
+    put:
+      operationId: updateFI
+      tags:
+        - Financial Institutions
+      parameters:
+      - name: fi_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FinancialInstitution'
+        required: true
+      responses:
+        "200":
+          description: updateFI 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FinancialInstitution'
+    delete:
+      operationId: deleteFI
+      tags:
+        - Financial Institutions
+      parameters:
+      - name: fi_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteFI 204 response
+  /products/create:
+    post:
+      operationId: createProduct
+      tags:
+        - Products
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+        required: true
+      responses:
+        "201":
+          description: createProduct 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+  /products/list:
+    get:
+      operationId: listProducts
+      tags:
+        - Products
+      responses:
+        "200":
+          description: listProducts 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+  /products/{prod_id}:
+    get:
+      operationId: getProducts
+      tags:
+        - Products
+      parameters:
+      - name: prod_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getProducts 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    put:
+      operationId: updateProd
+      tags:
+        - Products
+      parameters:
+      - name: prod_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+        required: true
+      responses:
+        "200":
+          description: updateProd 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+    delete:
+      operationId: deleteProduct
+      tags:
+        - Products
+      parameters:
+      - name: prod_id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteProduct 204 response
+  /vehicles/list:
+    get:
+      operationId: listVehicles
+      tags:
+        - Vehicles
+      responses:
+        "200":
+          description: listVehicles 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Vehicle'
+  /vehicles/cars/create:
+    post:
+      operationId: createCar
+      tags:
+        - Vehicles/Car
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Car'
+        required: true
+      responses:
+        "201":
+          description: createCar 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CarDTO'
+  /vehicles/cars/list:
+    get:
+      operationId: listCars
+      tags:
+        - Vehicles/Car
+      responses:
+        "200":
+          description: listCars 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CarDTO'
+  /vehicles/cars/{id}:
+    get:
+      operationId: getCars
+      tags:
+        - Vehicles/Car
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getCars 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CarDTO'
+    put:
+      operationId: updateCar
+      tags:
+        - Vehicles/Car
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CarDTO'
+        required: true
+      responses:
+        "200":
+          description: updateCar 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CarDTO'
+    delete:
+      operationId: deleteCar
+      tags:
+        - Vehicles/Car
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteCar 204 response
+  /vehicles/motorcycles/create:
+    post:
+      operationId: createMotorcycle
+      tags:
+        - Vehicles/Motorcycles
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Motorcycle'
+        required: true
+      responses:
+        "201":
+          description: createMotorcycle 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MotorcycleDTO'
+  /vehicles/motorcycles/list:
+    get:
+      operationId: listMotorcycles
+      tags:
+        - Vehicles/Motorcycles
+      responses:
+        "200":
+          description: listMotorcycles 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/MotorcycleDTO'
+  /vehicles/motorcycles/{id}:
+    get:
+      operationId: getMotorcycles
+      tags:
+        - Vehicles/Motorcycles
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getMotorcycles 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MotorcycleDTO'
+    put:
+      operationId: updateMotorcycle
+      tags:
+        - Vehicles/Motorcycles
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MotorcycleDTO'
+        required: true
+      responses:
+        "200":
+          description: updateMotorcycle 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/MotorcycleDTO'
+    delete:
+      operationId: deleteMotorcycle
+      tags:
+        - Vehicles/Motorcycles
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteMotorcycle 204 response
+  /vehicles/trucks/create:
+    post:
+      operationId: createTruck
+      tags:
+        - Vehicles/Trucks
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Truck'
+        required: true
+      responses:
+        "201":
+          description: createTruck 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TruckDTO'
+  /vehicles/trucks/list:
+    get:
+      operationId: listTrucks
+      tags:
+        - Vehicles/Trucks
+      responses:
+        "200":
+          description: listTrucks 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/TruckDTO'
+  /vehicles/trucks/{id}:
+    get:
+      operationId: getTrucks
+      tags:
+        - Vehicles/Trucks
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getTrucks 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TruckDTO'
+    put:
+      operationId: updateTruck
+      tags:
+        - Vehicles/Trucks
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TruckDTO'
+        required: true
+      responses:
+        "200":
+          description: updateTruck 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TruckDTO'
+    delete:
+      operationId: deleteTruck
+      tags:
+        - Vehicles/Trucks
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteTruck 204 response
+  /vehicles/utility-vehicles/create:
+    post:
+      operationId: createUtilityVehicle
+      tags:
+        - Vehicles/UtilityVehicles
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UtilityVehicle'
+        required: true
+      responses:
+        "201":
+          description: createUtilityVehicle 201 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UtilityVehicleDTO'
+  /vehicles/utility-vehicles/list:
+    get:
+      operationId: listUtilityVehicles
+      tags:
+        - Vehicles/UtilityVehicles
+      responses:
+        "200":
+          description: listUtilityVehicles 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/UtilityVehicleDTO'
+  /vehicles/utility-vehicles/{id}:
+    get:
+      operationId: getUtilityVehicle
+      tags:
+        - Vehicles/UtilityVehicles
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: getUtilityVehicle 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UtilityVehicleDTO'
+    put:
+      operationId: updateUtilityVehicle
+      tags:
+        - Vehicles/UtilityVehicles
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UtilityVehicleDTO'
+        required: true
+      responses:
+        "200":
+          description: updateUtilityVehicle 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UtilityVehicleDTO'
+    delete:
+      operationId: deleteUtilityVehicle
+      tags:
+        - Vehicles/UtilityVehicles
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "204":
+          description: deleteUtilityVehicle 204 response
+ 
+components:
+  schemas:
+    Auction:
+      type: object
+      properties:
+        auction_id:
+          type: integer
+          format: int64
+          nullable: true
+        numAuction:
+          type: integer
+          format: int32
+        financialInstitution:
+          type: string
+        initialDate:
+          type: string
+          format: date-time
+        finalDate:
+          type: string
+          format: date-time
+        address:
+          type: string
+     
+    Bid:
+      type: object
+      properties:
+        bid_id:
+          type: integer
+          format: int64
+          nullable: true
+        bid_value:
+          type: number
+          format: double
+        data:
+          type: string
+          format: date-time
+    Car:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/Vehicle'
+      - properties:
+          sunroof:
+            type: boolean
+          yearLicensing:
+            type: integer
+            format: int32
+          resultPrecautionaryExpertise:
+            type: string
+    CarDTO:
+      type: object
+      properties:
+        brand:
+          type: string
+        manufactureYear:
+          type: string
+        model:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
+        sunroof:
+          type: boolean
+        yearLicensing:
+          type: integer
+          format: int32
+        resultPrecautionaryExpertise:
+          type: string
+    Client:
+      type: object
+      properties:
+        id_client:
+          type: integer
+          format: int64
+          nullable: true
+        name:
+          type: string
+        email:
+          type: string
+        cpf:
+          type: string
+        digitalCertificate:
+          type: string
+    ComputingDevice:
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          nullable: true
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        description:
+          type: string
+        brand:
+          type: string
+    FinancialInstitution:
+      type: object
+      properties:
+        fi_id:
+          type: integer
+          format: int64
+          nullable: true
+        cnpj:
+          type: string
+        name:
+          type: string
+        address:
+          type: string
+    Hub:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ComputingDevice'
+      - properties:
+          ports:
+            type: string
+          volts:
+            type: string
+    HubDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        description:
+          type: string
+        brand:
+          type: string
+        ports:
+          type: string
+        volts:
+          type: string
+    Monitor:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ComputingDevice'
+      - properties:
+          screenSize:
+            type: string
+          refreshRate:
+            type: string
+    MonitorDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        description:
+          type: string
+        brand:
+          type: string
+        screenSize:
+          type: string
+        refreshRate:
+          type: string
+    Motorcycle:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/Vehicle'
+      - properties:
+          yearLicensing:
+            type: integer
+            format: int32
+          resultPrecautionaryExpertise:
+            type: string
+          fairingCondition:
+            type: string
+    MotorcycleDTO:
+      type: object
+      properties:
+        brand:
+          type: string
+        manufactureYear:
+          type: string
+        model:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
+        yearLicensing:
+          type: integer
+          format: int32
+        resultPrecautionaryExpertise:
+          type: string
+        fairingCondition:
+          type: string
+    Notebook:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ComputingDevice'
+      - properties:
+          specification:
+            type: string
+    NotebookDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        description:
+          type: string
+        brand:
+          type: string
+        specification:
+          type: string
+    Product:
+      type: object
+      properties:
+        prod_id:
+          type: integer
+          format: int64
+          nullable: true
+        name:
+          type: string
+        description:
+          type: string
+        initialValue:
+          type: number
+          format: double
+    Router:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ComputingDevice'
+      - properties:
+          antenna:
+            type: boolean
+    RouterDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        description:
+          type: string
+        brand:
+          type: string
+        antenna:
+          type: boolean
+    Switch:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/ComputingDevice'
+      - properties:
+          numberOfPorts:
+            type: integer
+            format: int32
+          firmwareVersion:
+            type: string
+    SwitchDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        quantity:
+          type: integer
+          format: int32
+        description:
+          type: string
+        brand:
+          type: string
+        numberOfPorts:
+          type: integer
+          format: int32
+        firmwareVersion:
+          type: string
+    Truck:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/Vehicle'
+      - properties:
+          cargoCapacity:
+            type: number
+            format: double
+          engineType:
+            type: string
+    TruckDTO:
+      type: object
+      properties:
+        brand:
+          type: string
+        manufactureYear:
+          type: string
+        model:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
+        cargoCapacity:
+          type: number
+          format: double
+        engineType:
+          type: string
+    UtilityVehicle:
+      type: object
+      allOf:
+      - $ref: '#/components/schemas/Vehicle'
+      - properties:
+          groundClearance:
+            type: number
+            format: double
+          tractionType:
+            type: string
+    UtilityVehicleDTO:
+      type: object
+      properties:
+        brand:
+          type: string
+        manufactureYear:
+          type: string
+        model:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
+        groundClearance:
+          type: number
+          format: double
+        tractionType:
+          type: string
+    Vehicle:
+      required:
+      - brand
+      - color
+      - description
+      - id
+      - manufactureYear
+      - model
+      type: object
+      properties:
+        id:
+          type: integer
+          format: int64
+          nullable: true
+        brand:
+          type: string
+        manufactureYear:
+          type: string
+        model:
+          type: string
+        description:
+          type: string
+        color:
+          type: string
