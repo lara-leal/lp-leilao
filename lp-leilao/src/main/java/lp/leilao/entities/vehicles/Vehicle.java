@@ -1,5 +1,9 @@
 package lp.leilao.entities.vehicles;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 import io.micronaut.serde.annotation.Serdeable;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
@@ -16,7 +20,7 @@ import lp.leilao.entities.Product;
 @Serdeable
 @Table(name = "vehicle")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class Vehicle {
+public class Vehicle {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     public Long id;
@@ -31,11 +35,8 @@ public abstract class Vehicle {
     @Column(name = "color")
     public String color;
 
-    @ManyToOne
-    @JoinColumn(name = "auction_id")
-    private Auction auction;
-
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "prod_id")
     private Product product;
 

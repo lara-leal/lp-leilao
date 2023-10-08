@@ -1,12 +1,12 @@
 package lp.leilao.services.devices;
 
+import java.util.*;
+
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lp.leilao.dtos.devices.SwitchDTO;
 import lp.leilao.entities.devices.Switch;
 import lp.leilao.repositories.devices.SwitchRepository;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Singleton

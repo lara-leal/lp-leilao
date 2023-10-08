@@ -13,6 +13,7 @@ public class VehicleService {
     public VehicleService(VehicleRepository vehicleRepository) {
         this.vehicleRepository = vehicleRepository;
     }
+
     public Iterable<Vehicle> getAllVehicles() {
         return vehicleRepository.findAll();
     }

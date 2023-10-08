@@ -1402,6 +1402,14 @@ components:
           format: date-time
         address:
           type: string
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+        fInstitutions:
+          type: array
+          items:
+            $ref: '#/components/schemas/FinancialInstitution'
     Bid:
       type: object
       properties:
@@ -1472,14 +1480,17 @@ components:
           type: string
     ComputingDevice:
       required:
-      - auction
       - brand
       - description
+      - id
       - name
-      - product
       - quantity
       type: object
       properties:
+        id:
+          type: integer
+          format: int64
+          nullable: true
         name:
           type: string
         quantity:
@@ -1489,14 +1500,6 @@ components:
           type: string
         brand:
           type: string
-        auction:
-          nullable: true
-          allOf:
-          - $ref: '#/components/schemas/Auction'
-        product:
-          nullable: true
-          allOf:
-          - $ref: '#/components/schemas/Product'
     FinancialInstitution:
       type: object
       properties:
@@ -1627,10 +1630,6 @@ components:
         initialValue:
           type: number
           format: double
-        auction:
-          nullable: true
-          allOf:
-          - $ref: '#/components/schemas/Auction'
         vehicles:
           type: array
           items:
@@ -1745,14 +1744,12 @@ components:
           type: string
     Vehicle:
       required:
-      - auction
       - brand
       - color
       - description
       - id
       - manufactureYear
       - model
-      - product
       type: object
       properties:
         id:
@@ -1769,11 +1766,3 @@ components:
           type: string
         color:
           type: string
-        auction:
-          nullable: true
-          allOf:
-          - $ref: '#/components/schemas/Auction'
-        product:
-          nullable: true
-          allOf:
-          - $ref: '#/components/schemas/Product'

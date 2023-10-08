@@ -23,11 +23,11 @@ public class Bid {
     public Double bid_value;
     public Date data;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_client")
     private Client clients;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "auction_id")
     private Auction auction;
 }

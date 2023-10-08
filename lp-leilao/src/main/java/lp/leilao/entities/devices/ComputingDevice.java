@@ -1,12 +1,12 @@
 package lp.leilao.entities.devices;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import io.micronaut.serde.annotation.Serdeable;
-import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lp.leilao.entities.Auction;
 import lp.leilao.entities.Product;
 
 @Data
@@ -16,10 +16,9 @@ import lp.leilao.entities.Product;
 @Serdeable
 @Table(name = "computing_device")
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract class ComputingDevice {
-    @Hidden
+public class ComputingDevice {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name")
@@ -34,11 +33,8 @@ public abstract class ComputingDevice {
     @Column(name = "brand")
     private String brand;
 
-    @ManyToOne
-    @JoinColumn(name = "auction_id")
-    private Auction auction;
-
-    @ManyToOne
+    @JsonIgnore
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "prod_id")
     private Product product;
 

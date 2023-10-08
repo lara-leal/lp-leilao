@@ -6,9 +6,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lp.leilao.entities.devices.ComputingDevice;
-import lp.leilao.entities.vehicles.Vehicle;
-
 import java.util.Date;
 import java.util.List;
 
@@ -35,20 +32,15 @@ public class Auction {
     @Column(name = "address")
     private String address;
 
-    @JsonIgnore
-    @OneToMany(mappedBy = "auction")
+    @OneToMany(mappedBy = "auction", fetch = FetchType.EAGER)
     private List<Product> products;
 
     @JsonIgnore
-    @OneToMany(mappedBy = "auction")
-    private List<ComputingDevice> computingDevice;
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "auction")
-    private List<Vehicle> vehicles;
-
-    @JsonIgnore
-    @OneToMany(mappedBy = "auction")
+    @OneToMany(mappedBy = "auction", fetch = FetchType.EAGER)
     private List<Bid> bids;
+
+    @ManyToMany(fetch = FetchType.EAGER)
+    @JoinTable(name = "financialInstitution_auction", joinColumns = @JoinColumn(name = "auction_id"), inverseJoinColumns = @JoinColumn(name = "fi_id"))
+    private List<FinancialInstitution> fInstitutions;
 
 }
