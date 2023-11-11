@@ -1,72 +1,80 @@
 package lp.leilao.services.devices;
 
-import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.devices.MonitorDTO;
-import lp.leilao.entities.devices.Monitor;
-import lp.leilao.repositories.devices.MonitorRepository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Singleton
 public class MonitorService {
-    @Inject
-    private final MonitorRepository monitorRepository;
-
-    public MonitorService(MonitorRepository monitorRepository) {
-        this.monitorRepository = monitorRepository;
-    }
-
-    public Iterable<MonitorDTO> getAllMonitor() {
-        return toMonitorDTOList(monitorRepository.findAll());
-    }
-
-    public MonitorDTO getMonitorById(Long id) {
-        return monitorRepository.findById(id)
-                .map(this::toMonitorDTO)
-                .orElse(null);
-    }
-
-    public MonitorDTO createMonitor(Monitor monitor) {
-        Monitor savedMonitor = monitorRepository.save(monitor);
-        return toMonitorDTO(savedMonitor);
-    }
-
-    public MonitorDTO updateMonitor(Long id, MonitorDTO updatedMonitorDTO) {
-        Monitor existingMonitor = monitorRepository.findById(id).orElse(null);
-        if (existingMonitor != null) {
-            existingMonitor.setName(updatedMonitorDTO.getName());
-            existingMonitor.setQuantity(updatedMonitorDTO.getQuantity());
-            existingMonitor.setBrand(updatedMonitorDTO.getBrand());
-            existingMonitor.setScreenSize(updatedMonitorDTO.getScreenSize());
-            existingMonitor.setRefreshRate(updatedMonitorDTO.getRefreshRate());
-
-            Monitor updatedMonitor = monitorRepository.update(existingMonitor);
-            return toMonitorDTO(updatedMonitor);
-        }
-        return null;
-    }
-
-    public void deleteMonitor(Long id) {
-        monitorRepository.deleteById(id);
-    }
-
-    private MonitorDTO toMonitorDTO(Monitor monitor) {
-        MonitorDTO dto = new MonitorDTO();
-        dto.setName(monitor.getName());
-        dto.setQuantity(monitor.getQuantity());
-        dto.setBrand(monitor.getBrand());
-        dto.setScreenSize(monitor.getScreenSize());
-        dto.setRefreshRate(monitor.getRefreshRate());
-        return dto;
-    }
-
-    private Iterable<MonitorDTO> toMonitorDTOList(Iterable<Monitor> monitors) {
-        List<MonitorDTO> dtos = new ArrayList<>();
-        for (Monitor monitor : monitors) {
-            dtos.add(toMonitorDTO(monitor));
-        }
-        return dtos;
-    }
+//    private final MonitorRepository monitorRepository;
+//
+//    private final AuctionService auctionService;
+//
+//    @Inject
+//    public MonitorService(MonitorRepository monitorRepository, AuctionService auctionService) {
+//        this.monitorRepository = monitorRepository;
+//        this.auctionService = auctionService;
+//    }
+//
+//    public List<Monitor> getAllMonitor() {
+//        try {
+//            List<Monitor> monitor = monitorRepository.findAll();
+//            if (monitor.isEmpty()){
+//                throw new NoResultsFound();
+//            }
+//            return monitor;
+//        } catch (NoResultsFound e) {
+//            throw new RuntimeException(e);
+//        }
+//    }
+//
+//    public Monitor getMonitorById(Long id) {
+//        try {
+//            return monitorRepository.findById(id)
+//                    .orElseThrow(NoResultException::new);
+//        }catch (RuntimeException e) {
+//            throw new NoResultsFound();
+//        }
+//    }
+//
+//    public void createMonitor(Monitor monitor) {
+//        try{
+//            //auctionService.getAuctionById(null);
+//            monitorRepository.save(monitor);
+//        }catch (RuntimeException e) {
+//            throw new NoAuctionFoundException();
+//        }
+//
+//    }
+//
+//    public void updateMonitor(Long id, Monitor updatedMonitor) {
+//        try {
+//            Monitor existingMonitor = monitorRepository.findById(id).orElseThrow(NoResultsFound::new);
+//            updateMapper(existingMonitor, updatedMonitor);
+//
+//            monitorRepository.update(existingMonitor);
+//        }catch (RuntimeException e){
+//            throw new NoResultsFound();
+//        }
+//    }
+//
+//    public void deleteMonitor(Long id) {
+//        try{
+//            monitorRepository.deleteById(id);
+//        }catch (FailDeleteException e){
+//            throw new RuntimeException() ;
+//        }
+//    }
+//
+//
+//
+//    private Monitor updateMapper(Monitor existingMonitor, Monitor monitor) {
+//        try {
+//            existingMonitor.setRefreshRate(monitor.getRefreshRate() != null ? monitor.getRefreshRate() : existingMonitor.getRefreshRate());
+//            existingMonitor.setScreenSize(monitor.getScreenSize() != null ? monitor.getScreenSize()  : existingMonitor.getScreenSize());
+//
+//            return existingMonitor;
+//        }catch (RuntimeException e){
+//            throw new UpdateObjectException();
+//        }
+//
+//    }
 }

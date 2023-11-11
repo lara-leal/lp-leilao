@@ -1,78 +1,92 @@
 package lp.leilao.services.vehicles;
 
-import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.vehicles.MotorcycleDTO;
-import lp.leilao.entities.vehicles.Motorcycle;
-import lp.leilao.repositories.vehicles.MotorcycleRepository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Singleton
 public class MotorcycleService {
-    @Inject
-    private final MotorcycleRepository motorcycleRepository;
 
-    public MotorcycleService(MotorcycleRepository motorcycleRepository) {
-        this.motorcycleRepository = motorcycleRepository;
-    }
-
-    public Iterable<MotorcycleDTO> getAllMotorcycles() {
-        return toMotorcycleDTOList(motorcycleRepository.findAll());
-    }
-
-    public MotorcycleDTO getMotorcycleById(Long id) {
-        return motorcycleRepository.findById(id)
-                .map(this::toMotorcycleDTO)
-                .orElse(null);
-    }
-
-    public MotorcycleDTO createMotorcycle(Motorcycle motorcycle) {
-        return toMotorcycleDTO(motorcycleRepository.save(motorcycle));
-    }
-
-    public MotorcycleDTO updateMotorcycle(Long id, MotorcycleDTO updatedMotorcycleDTO) {
-        Motorcycle existingMotorcycle = motorcycleRepository.findById(id).orElse(null);
-        if (existingMotorcycle != null) {
-            existingMotorcycle.setBrand(updatedMotorcycleDTO.getBrand());
-            existingMotorcycle.setManufactureYear(updatedMotorcycleDTO.getManufactureYear());
-            existingMotorcycle.setModel(updatedMotorcycleDTO.getModel());
-            existingMotorcycle.setDescription(updatedMotorcycleDTO.getDescription());
-            existingMotorcycle.setColor(updatedMotorcycleDTO.getColor());
-            existingMotorcycle.setYearLicensing(updatedMotorcycleDTO.getYearLicensing());
-            existingMotorcycle.setResultPrecautionaryExpertise(updatedMotorcycleDTO.getResultPrecautionaryExpertise());
-            existingMotorcycle.setFairingCondition(updatedMotorcycleDTO.getFairingCondition());
-
-            Motorcycle updatedMotorcycle = motorcycleRepository.update(existingMotorcycle);
-            return toMotorcycleDTO(updatedMotorcycle);
-        }
-        return null;
-    }
-
-    public void deleteMotorcycle(Long id) {
-        motorcycleRepository.deleteById(id);
-    }
-
-    private MotorcycleDTO toMotorcycleDTO(Motorcycle motorcycle) {
-        MotorcycleDTO dto = new MotorcycleDTO();
-        dto.setBrand(motorcycle.getBrand());
-        dto.setManufactureYear(motorcycle.getManufactureYear());
-        dto.setModel(motorcycle.getModel());
-        dto.setDescription(motorcycle.getDescription());
-        dto.setColor(motorcycle.getColor());
-        dto.setYearLicensing(motorcycle.getYearLicensing());
-        dto.setResultPrecautionaryExpertise(motorcycle.getResultPrecautionaryExpertise());
-        dto.setFairingCondition(motorcycle.getFairingCondition());
-
-        return dto;
-    }
-
-    private Iterable<MotorcycleDTO> toMotorcycleDTOList(Iterable<Motorcycle> motorcycles) {
-        List<MotorcycleDTO> dtos = new ArrayList<>();
-        for (Motorcycle motorcycle : motorcycles) {
-            dtos.add(toMotorcycleDTO(motorcycle));
-        }
-        return dtos;
-    }
+//    private final MotorcycleRepository motorcycleRepository;
+//    private final AuctionService auctionService;
+//
+//    public MotorcycleService(MotorcycleRepository motorcycleRepository, AuctionService auctionService) {
+//        this.motorcycleRepository = motorcycleRepository;
+//        this.auctionService = auctionService;
+//    }
+//
+//    public List<Motorcycle> getAllMotorcycle() {
+//        try {
+//            List<Motorcycle> motorcycles = motorcycleRepository.findAll();
+//            if (motorcycles.isEmpty()){
+//                throw new NoResultsFound();
+//            }
+//
+//            return motorcycles;
+//        }catch (RuntimeException e){
+//            throw new NoResultsFound();
+//        }
+//    }
+//
+//    public Motorcycle getMotorcycleById(Long id) {
+//        try {
+//            return motorcycleRepository.findById(id).orElseThrow(NoResultsFound::new);
+//        } catch (NoResultsFound e) {
+//            throw new NoResultsFound();
+//        }
+//
+//    }
+//
+//    public void createMotorcycle(Motorcycle motorcycle) {
+//        try{
+//            Auction auction = auctionService.getAuctionById(null);
+//            if (auction.equals(null)){
+//                throw new NoAuctionFoundException();
+//            }
+//            motorcycleRepository.save(motorcycle);
+//        }catch (RuntimeException e) {
+//            throw new NoAuctionFoundException();
+//        }
+//    }
+//
+//    public void updateMotorcycle(Long id, Motorcycle motorcycle) {
+//        try {
+//            Motorcycle existingMotorcycle = getMotorcycleById(id);
+//            Motorcycle updateMotorcycle = updateMapper(existingMotorcycle, motorcycle);
+//
+//            motorcycleRepository.update(updateMotorcycle);
+//        } catch (RuntimeException e) {
+//            throw new NoResultsFound();
+//        }
+//    }
+//
+//    public void deleteMotorcycle(Long id) {
+//        try{
+//            motorcycleRepository.deleteById(id);
+//        }catch (FailDeleteException e){
+//            throw new RuntimeException() ;
+//        }
+//    }
+//
+//    private Motorcycle updateMapper(Motorcycle existingMotorcycle, Motorcycle motorcycle) {
+//        try {
+//            existingMotorcycle.setYearLicensing(motorcycle.getYearLicensing() != null ?
+//                    motorcycle.getYearLicensing() : existingMotorcycle.getYearLicensing());
+//            existingMotorcycle.setFairingCondition(motorcycle.getFairingCondition() != null ?
+//                    motorcycle.getFairingCondition()  :existingMotorcycle.getFairingCondition());
+//            existingMotorcycle.setColor(motorcycle.getColor() != null ?
+//                    motorcycle.getColor() :existingMotorcycle.getColor());
+//            existingMotorcycle.setDescription(motorcycle.getDescription() != null ?
+//                    motorcycle.getDescription() :existingMotorcycle.getDescription());
+//            existingMotorcycle.setResultPrecautionaryExpertise(motorcycle.getResultPrecautionaryExpertise() != null ?
+//                    motorcycle.getResultPrecautionaryExpertise() :existingMotorcycle.getResultPrecautionaryExpertise());
+//            existingMotorcycle.setManufactureYear(motorcycle.getManufactureYear() != null ?
+//                    motorcycle.getManufactureYear() :existingMotorcycle.getManufactureYear());
+//            existingMotorcycle.setInitialValue(motorcycle.getInitialValue() != null ?
+//                    motorcycle.getInitialValue() :existingMotorcycle.getInitialValue());
+//
+//            return existingMotorcycle;
+//        }catch (RuntimeException e){
+//            throw new UpdateObjectException();
+//        }
+//
+//    }
 }

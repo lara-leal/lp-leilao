@@ -1,70 +1,83 @@
 package lp.leilao.services.devices;
 
-import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.devices.NotebookDTO;
-import lp.leilao.entities.devices.Notebook;
-import lp.leilao.repositories.devices.NotebookRepository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Singleton
 public class NotebookService {
-    @Inject
-    private final NotebookRepository noteRepository;
 
-    public NotebookService(NotebookRepository noteRepository) {
-        this.noteRepository = noteRepository;
-    }
-
-    public Iterable<NotebookDTO> getAllNote() {
-
-        return toNotebookDTOList(noteRepository.findAll());
-    }
-
-    public NotebookDTO getNoteById(Long id) {
-        return noteRepository.findById(id)
-                .map(this::toNotebookDTO)
-                .orElse(null);
-    }
-
-    public NotebookDTO createNote(Notebook notebook) {
-        return toNotebookDTO(noteRepository.save(notebook));
-    }
-
-    public NotebookDTO updateNotebook(Long id, NotebookDTO updatedNotebookDTO) {
-        Notebook existingNotebook = noteRepository.findById(id).orElse(null);
-        if (existingNotebook != null) {
-            existingNotebook.setName(updatedNotebookDTO.getName());
-            existingNotebook.setQuantity(updatedNotebookDTO.getQuantity());
-            existingNotebook.setBrand(updatedNotebookDTO.getBrand());
-            existingNotebook.setSpecification(updatedNotebookDTO.getSpecification());
-
-            Notebook updatedNotebook = noteRepository.update(existingNotebook);
-            return toNotebookDTO(updatedNotebook);
-        }
-        return null;
-    }
-
-    public void deleteNote(Long id) {
-        noteRepository.deleteById(id);
-    }
-
-    private NotebookDTO toNotebookDTO(Notebook notebook) {
-        NotebookDTO dto = new NotebookDTO();
-        dto.setName(notebook.getName());
-        dto.setQuantity(notebook.getQuantity());
-        dto.setBrand(notebook.getBrand());
-        dto.setSpecification(notebook.getSpecification());
-        return dto;
-    }
-
-    private Iterable<NotebookDTO> toNotebookDTOList(Iterable<Notebook> notebooks) {
-        List<NotebookDTO> dtos = new ArrayList<>();
-        for (Notebook notebook : notebooks) {
-            dtos.add(toNotebookDTO(notebook));
-        }
-        return dtos;
-    }
+//    private final NotebookRepository notebookRepository;
+//
+//    private final AuctionService auctionService;
+//
+//    @Inject
+//    public NotebookService(NotebookRepository notebookRepository, AuctionService auctionService) {
+//        this.notebookRepository = notebookRepository;
+//        this.auctionService = auctionService;
+//    }
+//
+//    public List<Notebook> getAllNotebook() {
+//        try {
+//            List<Notebook> notebooks = notebookRepository.findAll();
+//            if (notebooks.isEmpty()){
+//                throw new NoResultsFound();
+//            }
+//
+//            return notebooks;
+//        }catch (NoResultsFound e){
+//            throw new RuntimeException();
+//        }
+//
+//    }
+//
+//    public Notebook getNotebookById(Long id) {
+//        try {
+//            return notebookRepository.findById(id).orElseThrow(NoResultsFound::new);
+//        }catch (NoResultsFound e){
+//            throw new NoResultsFound();
+//        }
+//    }
+//
+//    public void createNote(Notebook notebook) {
+//        try {
+//            //TODO: AJUSTAR LOGICA DE VERIFICAÇÃO DE LEILAO EXISTENTE
+//            Auction auction = auctionService.getAuctionById(null);
+//
+//            notebookRepository.save(notebook);
+//        }catch (NoAuctionFoundException e){
+//            throw new NoAuctionFoundException();
+//        }
+//    }
+//
+//    public void updateNotebook(Long id, Notebook updateNotebook) {
+//        try {
+//            Notebook existingNotebook = notebookRepository.findById(id).orElseThrow(NoResultsFound::new);
+//            updateMapper(existingNotebook, updateNotebook);
+//        }catch (RuntimeException e){
+//            throw new RuntimeException();
+//        }
+//
+//    }
+//
+//    public void deleteNote(Long id) {
+//        try{
+//            notebookRepository.deleteById(id);
+//        }catch (FailDeleteException e){
+//            throw new RuntimeException() ;
+//        }
+//    }
+//
+//
+//    private Notebook updateMapper(Notebook existingNotebook, Notebook notebook) {
+//        try {
+//            existingNotebook.setBrand(notebook.getBrand() != null ? notebook.getBrand() : existingNotebook.getBrand());
+//            existingNotebook.setSpecification(notebook.getSpecification() != null ?
+//                    notebook.getSpecification()  : existingNotebook.getSpecification());
+//            existingNotebook.setInitialValue(notebook.getInitialValue() != null ? notebook.getInitialValue() : existingNotebook.getInitialValue());
+//
+//            return existingNotebook;
+//        }catch (RuntimeException e){
+//            throw new UpdateObjectException();
+//        }
+//
+//    }
 }

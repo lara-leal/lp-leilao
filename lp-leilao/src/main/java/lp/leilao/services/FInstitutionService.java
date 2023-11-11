@@ -3,7 +3,10 @@ package lp.leilao.services;
 import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lp.leilao.entities.FinancialInstitution;
+import lp.leilao.exceptions.NoInstitutionFinancialFindException;
 import lp.leilao.repositories.FInstitutionRepository;
+
+import java.util.List;
 
 @Singleton
 public class FInstitutionService {
@@ -14,12 +17,12 @@ public class FInstitutionService {
         this.financialRepository = financialRepository;
     }
 
-    public Iterable<FinancialInstitution> getAllFI() {
+    public List<FinancialInstitution> getAllFI() {
         return financialRepository.findAll();
     }
 
     public FinancialInstitution getFIById(Long fi_id) {
-        return financialRepository.findById(fi_id).orElse(null);
+        return financialRepository.findById(fi_id).orElseThrow(NoInstitutionFinancialFindException::new);
     }
 
     public FinancialInstitution createFI(FinancialInstitution financial) {

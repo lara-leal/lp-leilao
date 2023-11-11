@@ -19,9 +19,11 @@ public class Bid {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    public Long bid_id;
-    public Double bid_value;
-    public Date data;
+    private Long bid_id;
+
+    private Double bid_value;
+
+    private Date date;
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "id_client")

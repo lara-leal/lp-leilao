@@ -17,19 +17,23 @@ import lombok.NoArgsConstructor;
 @Serdeable
 @Table(name = "client")
 public class Client {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id_client;
+
     @Column(name = "name")
     private String name;
+
     @Column(name = "email")
     private String email;
+
     @Column(name = "cpf")
     private String cpf;
+
     @Column(name = "digitalCertificate")
     private String digitalCertificate;
 
-    @JsonIgnore
     @OneToMany(mappedBy = "clients")
     private List<Bid> bids;
 

@@ -4,6 +4,7 @@ import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
 import lp.leilao.entities.Bid;
 import lp.leilao.repositories.BidRepository;
+
 @Singleton
 public class BidService {
     @Inject
@@ -25,16 +26,16 @@ public class BidService {
         return bidRepository.save(bid);
     }
 
-    public Bid updateBid(Long bid_id, Bid updatedBid) {
-        Bid existingBid = bidRepository.findById(bid_id).orElse(null);
-        if (existingBid != null) {
-            existingBid.setBid_value(updatedBid.getBid_value());
-            existingBid.setData(updatedBid.getData());
-
-            return bidRepository.update(existingBid);
-        }
-        return null;
-    }
+//    public  updateBid(Long bid_id, Bid updatedBid) {
+//        Bid existingBid = bidRepository.findById(bid_id).orElse(null);
+//        if (existingBid != null) {
+//            existingBid.setBid_value(updatedBid.getBid_value());
+//            existingBid.setData(updatedBid.getData());
+//
+//            return bidRepository.update(existingBid);
+//        }
+//        return null;
+//    }
 
     public void deleteBid(Long bid_id) {
         bidRepository.deleteById(bid_id);

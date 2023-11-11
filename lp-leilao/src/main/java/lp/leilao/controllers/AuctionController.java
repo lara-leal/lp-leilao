@@ -1,7 +1,10 @@
 package lp.leilao.controllers;
 
+import io.micronaut.context.annotation.Parameter;
+import io.micronaut.core.annotation.Nullable;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;
+import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
@@ -9,48 +12,47 @@ import jakarta.validation.Valid;
 import lp.leilao.entities.Auction;
 import lp.leilao.services.AuctionService;
 
+import java.util.List;
+import java.util.Optional;
+
 @Controller("/auctions")
 @Tag(name = "Auctions")
 public class AuctionController {
 
-    @Inject
     private final AuctionService auctionService;
 
+    @Inject
     public AuctionController(AuctionService auctionService) {
         this.auctionService = auctionService;
     }
 
-    @Get("/list")
-    public Iterable<Auction> listAuctions() {
+    @Get("/all-auctions")
+    public List<Auction> listAuctions() {
         return auctionService.getAllAuctions();
     }
 
-    @Get("/{auction_id}")
-    public Auction getAuction(Long auction_id) {
-
-        return auctionService.getAuctionById(auction_id);
+    @Get("/find-by-category")
+    public HttpResponse<List<Auction>> getAuction(@Parameter String category) {
+        List<Auction> auction = auctionService.getAuctionByType(category);
+        return HttpResponse.ok(auction);
     }
 
     @Post("/create")
-    @Status(HttpStatus.CREATED)
-    public Auction createAuction(@Body @Valid Auction auction) {
-        return auctionService.createAuction(auction);
+    public HttpResponse<?> createAuction(@Body @Valid Auction auction) {
+        auctionService.createAuction(auction);
+        return HttpResponse.created("Auction successfully created");
     }
 
     @Put("/{auction_id}")
-    public HttpResponse<Auction> updateAuction(@PathVariable Long auction_id, @Body Auction updatedAuction) {
-        Auction updated = auctionService.updateAuction(auction_id, updatedAuction);
-        if (updated != null) {
-            return HttpResponse.ok(updated);
-        } else {
-            return HttpResponse.notFound();
-        }
+    public HttpResponse<?> updateAuction(@PathVariable Long auction_id, @Body Auction updatedAuction) {
+         auctionService.updateAuction(auction_id, updatedAuction);
+         return HttpResponse.ok();
     }
 
     @Delete("/{auction_id}")
-    @Status(HttpStatus.NO_CONTENT)
-    public void deleteAuction(Long auction_id) {
+    public HttpResponse<?> deleteAuction(Long auction_id) {
         auctionService.deleteAuction(auction_id);
+        return HttpResponse.ok("successful delete");
     }
 
 }

@@ -5,5 +5,5 @@ import io.micronaut.data.repository.CrudRepository;
 import lp.leilao.entities.FinancialInstitution;
 
 @Repository
-public interface FInstitutionRepository extends CrudRepository<FinancialInstitution,Long> {
+public interface FInstitutionRepository extends CrudRepository<FinancialInstitution, Long> {
 }

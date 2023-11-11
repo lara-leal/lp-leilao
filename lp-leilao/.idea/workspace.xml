@@ -5,48 +5,90 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c9a99671-1dad-493b-a8b5-9528b6c41cc6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/VehicleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-client.cookies" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/lp-leilao.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/SwaggerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/SwaggerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/AuctionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/BidController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/BidController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/FInstitutionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/FInstitutionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/HubController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/HubController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/MonitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/MonitorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/NotebookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/NotebookController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/RouterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/RouterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/SwitchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/SwitchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/CarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/CarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/MotorcycleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/MotorcycleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/TruckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/TruckController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/UtilityVehicleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/UtilityVehicleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/HubDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/HubDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/NotebookDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/NotebookDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/SwitchDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/SwitchDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/MotorcycleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/MotorcycleDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/TruckDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/TruckDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/UtilityVehicleDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/UtilityVehicleDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/ComputingDeviceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/HubController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/MonitorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/NotebookController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/RouterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/SwitchController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/CarController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/MotorcycleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/TruckController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/UtilityVehicleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/vehicles/VehicleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/ComputingDeviceDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/ComputingDeviceDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/HubDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/MonitorDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/NotebookDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/RouterDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/devices/SwitchDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/CarDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/MotorcycleDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/TruckDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/dtos/vehicles/UtilityVehicleDTO.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Auction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Auction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Bid.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Bid.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Client.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/FinancialInstitution.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/FinancialInstitution.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/ComputingDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/ComputingDevice.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Hub.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Hub.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Monitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Monitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Notebook.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Notebook.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Router.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Router.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Switch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Switch.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Car.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Car.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Motorcycle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Motorcycle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Truck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Truck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/UtilityVehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/UtilityVehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/ComputingDevice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/ComputingDevice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Hub.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Monitor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Notebook.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Router.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/devices/Switch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Motorcycle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Truck.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/UtilityVehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/vehicles/Vehicle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/entities/Vehicle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/leilao.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/AuctionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/BidRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/ClientRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/FInstitutionRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/ComputingDeviceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/HubRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/MonitorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/NotebookRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/RouterRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/devices/SwitchRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/CarRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/MotorcycleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/TruckRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/UtilityVehicleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/VehicleRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/AuctionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/AuctionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/BidService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/BidService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/FInstitutionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/FInstitutionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/ComputingDeviceService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/HubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/HubService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/MonitorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/MonitorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/NotebookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/NotebookService.java" afterDir="false" />
@@ -56,6 +98,11 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/MotorcycleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/MotorcycleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/TruckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/TruckService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/UtilityVehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/UtilityVehicleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/VehicleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/status/AuctionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/enums/CategoryEnums.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/lp/leilao/LpLeilaoTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/swagger/leilao-sle-1.0.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/swagger/leilao-sle-1.0.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,8 +113,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Enum" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -88,31 +135,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "last_directory_selection": "C:/Users/leall/OneDrive/Área de Trabalho/testessssssssss/lp-leilao/lp-leilao/src/main/java/lp/leilao",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/leall/OneDrive/Área de Trabalho/testessssssssss/lp-leilao/lp-leilao/src/main/java/lp/leilao&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/ramonfernandes/Documents/Faculdade/Nadalete/lp-leilao/lp-leilao&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "h2"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;h2&quot;,
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="lp.leilao.enums" />
+      <recent name="lp.leilao.exceptions" />
+      <recent name="lp.leilao.services.devices" />
+      <recent name="lp.leilao.repositories" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\leall\OneDrive\Área de Trabalho\testessssssssss\lp-leilao\lp-leilao\src\main\java\lp\leilao\dtos\vehicles" />
       <recent name="C:\Users\leall\OneDrive\Área de Trabalho\testessssssssss\lp-leilao\lp-leilao\src\main\resources" />
@@ -130,10 +188,12 @@
       <method v="2" />
     </configuration>
     <configuration name="Application" type="MicronautRunConfigurationType" factoryName="Micronaut" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="17" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="lp.leilao.Application" />
       <module name="lp-leilao" />
-      <option name="alternativeJrePath" />
-      <option name="alternativeJrePathEnabled" value="false" />
+      <option name="alternativeJrePath" value="17" />
+      <option name="alternativeJrePathEnabled" value="true" />
       <option name="mainClass" value="lp.leilao.Application" />
       <option name="passParentEnvs" value="true" />
       <option name="vmParameters" />
@@ -161,7 +221,7 @@
         <list />
       </option>
       <option name="specificationPath" value="C:\Users\leall\OneDrive\Área de Trabalho\lp\lp-leilao\lp-leilao\target\classes\META-INF\swagger\leilão-sle-1.0.yml" />
-      <option name="workingDirectory" value="C:\Users\leall\OneDrive\Área de Trabalho\lp\lp-leilao\lp-leilao\target\classes\META-INF\swagger" />
+      <option name="workingDirectory" value="C:$PROJECT_DIR$/../../../../../../leall/OneDrive/Área de Trabalho/lp/lp-leilao/lp-leilao/target/classes/META-INF/swagger/leilão-sle-1.0.yml" />
       <method v="2" />
     </configuration>
     <configuration name="swagger.yml (1)" type="SwaggerCodegen" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
@@ -184,7 +244,7 @@
         <list />
       </option>
       <option name="specificationPath" value="C:\Users\leall\OneDrive\Área de Trabalho\testessssssssss\lp-leilao\lp-leilao\src\main\resources\META-INF\swagger\swagger.yml" />
-      <option name="workingDirectory" value="C:\Users\leall\OneDrive\Área de Trabalho\testessssssssss\lp-leilao\lp-leilao\src\main\resources\META-INF\swagger" />
+      <option name="workingDirectory" value="C:$PROJECT_DIR$/../../../../../../leall/OneDrive/Área de Trabalho/testessssssssss/lp-leilao/lp-leilao/src/main/resources/META-INF/swagger/swagger.yml" />
       <method v="2" />
     </configuration>
     <configuration name="swagger.yml" type="SwaggerCodegen" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
@@ -207,14 +267,18 @@
         <list />
       </option>
       <option name="specificationPath" value="C:\Users\leall\OneDrive\Área de Trabalho\lp\lp-leilao\lp-leilao\target\classes\META-INF\swagger\swagger.yml" />
-      <option name="workingDirectory" value="C:\Users\leall\OneDrive\Área de Trabalho\lp\lp-leilao\lp-leilao\target\classes\META-INF\swagger" />
+      <option name="workingDirectory" value="C:$PROJECT_DIR$/../../../../../../leall/OneDrive/Área de Trabalho/lp/lp-leilao/lp-leilao/target/classes/META-INF/swagger/swagger.yml" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="HTTP Request.generated-requests | #1" />
+      <item itemvalue="Micronaut.Application" />
+      <item itemvalue="OpenAPI/Swagger Code Generator.leilão-sle-1.0.yml" />
+      <item itemvalue="OpenAPI/Swagger Code Generator.swagger.yml" />
+      <item itemvalue="OpenAPI/Swagger Code Generator.swagger.yml (1)" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="OpenAPI/Swagger Code Generator.swagger.yml (1)" />
-        <item itemvalue="OpenAPI/Swagger Code Generator.swagger.yml" />
-        <item itemvalue="OpenAPI/Swagger Code Generator.leilão-sle-1.0.yml" />
         <item itemvalue="HTTP Request.generated-requests | #1" />
       </list>
     </recent_temporary>
@@ -241,6 +305,19 @@
       <workItem from="1696437093690" duration="23641000" />
       <workItem from="1696633915066" duration="56000" />
       <workItem from="1696635878850" duration="1084000" />
+      <workItem from="1697760544244" duration="37714000" />
+      <workItem from="1698102208411" duration="53000" />
+      <workItem from="1698102281257" duration="18000" />
+      <workItem from="1698102493533" duration="11098000" />
+      <workItem from="1698635900992" duration="14516000" />
+      <workItem from="1699314782566" duration="1539000" />
+      <workItem from="1699316456617" duration="879000" />
+      <workItem from="1699317347010" duration="165000" />
+      <workItem from="1699317545005" duration="3551000" />
+      <workItem from="1699321117612" duration="389000" />
+      <workItem from="1699321560910" duration="39689000" />
+      <workItem from="1699534249949" duration="502000" />
+      <workItem from="1699534827494" duration="9837000" />
     </task>
     <servers />
   </component>
@@ -253,7 +330,27 @@
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/entities/Product.java</url>
           <line>15</line>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/MonitorService.java</url>
+          <line>40</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/controllers/AuctionController.java</url>
+          <line>53</line>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/services/AuctionService.java</url>
+          <line>175</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/VehicleService.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="43" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

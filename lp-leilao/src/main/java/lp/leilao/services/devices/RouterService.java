@@ -1,70 +1,81 @@
 package lp.leilao.services.devices;
 
-import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.devices.RouterDTO;
-import lp.leilao.entities.devices.Router;
-import lp.leilao.repositories.devices.RouterRepository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Singleton
 public class RouterService {
-    @Inject
-    private final RouterRepository routerRepository;
 
-    public RouterService(RouterRepository routerRepository) {
-        this.routerRepository = routerRepository;
-    }
-
-    public Iterable<RouterDTO> getAllRouter() {
-        return toRouterDTOList(routerRepository.findAll());
-    }
-
-    public RouterDTO getRouterById(Long id) {
-        return routerRepository.findById(id)
-                .map(this::toRouterDTO)
-                .orElse(null);
-    }
-
-    public RouterDTO createRouter(Router router) {
-        Router savedRouter = routerRepository.save(router);
-        return toRouterDTO(savedRouter);
-    }
-
-    public RouterDTO updateRouter(Long id, RouterDTO updatedRouterDTO) {
-        Router existingRouter = routerRepository.findById(id).orElse(null);
-        if (existingRouter != null) {
-            existingRouter.setName(updatedRouterDTO.getName());
-            existingRouter.setQuantity(updatedRouterDTO.getQuantity());
-            existingRouter.setBrand(updatedRouterDTO.getBrand());
-            existingRouter.setAntenna(updatedRouterDTO.getAntenna());
-
-            Router updatedRouter = routerRepository.update(existingRouter);
-            return toRouterDTO(updatedRouter);
-        }
-        return null;
-    }
-
-    public void deleteRouter(Long id) {
-        routerRepository.deleteById(id);
-    }
-
-    private RouterDTO toRouterDTO(Router router) {
-        RouterDTO dto = new RouterDTO();
-        dto.setName(router.getName());
-        dto.setQuantity(router.getQuantity());
-        dto.setBrand(router.getBrand());
-        dto.setAntenna(router.getAntenna());
-        return dto;
-    }
-
-    private Iterable<RouterDTO> toRouterDTOList(Iterable<Router> routers) {
-        List<RouterDTO> dtos = new ArrayList<>();
-        for (Router router : routers) {
-            dtos.add(toRouterDTO(router));
-        }
-        return dtos;
-    }
+//    private final RouterRepository routerRepository;
+//    private final AuctionService auctionService;
+//
+//    @Inject
+//    public RouterService(RouterRepository routerRepository, AuctionService auctionService) {
+//        this.routerRepository = routerRepository;
+//        this.auctionService = auctionService;
+//    }
+//
+//    public List<Router> getAllRouter() {
+//        try {
+//            List<Router> routers = routerRepository.findAll();
+//            if (routers.isEmpty()){
+//                throw new NoResultsFound();
+//            }
+//            return routers;
+//        }catch (NoResultsFound e){
+//            throw new NoResultsFound();
+//        }
+//    }
+//
+//    public Router getRouterById(Long id) {
+//        try {
+//            return routerRepository.findById(id)
+//                    .orElseThrow(NoResultsFound::new);
+//        }catch (NoResultsFound e){
+//            throw new NoResultsFound();
+//        }
+//
+//    }
+//
+//    public void createRouter(Router router) {
+//        try {
+//            auctionService.getAuctionById(null);
+//            routerRepository.save(router);
+//        }catch (NoAuctionFoundException e){
+//            throw new NoAuctionFoundException();
+//        }
+//
+//    }
+//
+//    public void updateRouter(Long id, Router updateRouter) {
+//        try {
+//            Router existingRouter = routerRepository.findById(id)
+//                    .orElseThrow(NoResultsFound::new);
+//
+//            updateMapper(existingRouter, updateRouter);
+//        }catch (NoResultsFound e){
+//            throw new NoResultsFound();
+//        }
+//    }
+//
+//    public void deleteRouter(Long id) {
+//        try{
+//            routerRepository.deleteById(id);
+//        }catch (FailDeleteException e){
+//            throw new RuntimeException() ;
+//        }
+//
+//    }
+//
+//    private Router updateMapper(Router existingRouter, Router router) {
+//        try {
+//            existingRouter.setBrand(router.getBrand() != null ? router.getBrand() : existingRouter.getBrand());
+//            existingRouter.setAntenna(router.getAntenna() != null ? router.getAntenna()  : existingRouter.getAntenna());
+//            existingRouter.setQuantity(router.getQuantity() != null ? router.getQuantity() : existingRouter.getQuantity());
+//
+//            return existingRouter;
+//        }catch (RuntimeException e){
+//            throw new UpdateObjectException();
+//        }
+//
+//    }
 }

@@ -1,73 +1,89 @@
 package lp.leilao.services.devices;
 
-import jakarta.inject.Inject;
 import jakarta.inject.Singleton;
-import lp.leilao.dtos.devices.HubDTO;
-import lp.leilao.entities.devices.Hub;
-import lp.leilao.repositories.devices.HubRepository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 @Singleton
 public class HubService {
-    @Inject
-    private final HubRepository hubRepository;
 
-    public HubService(HubRepository hubRepository) {
-        this.hubRepository = hubRepository;
-    }
+//    private final HubRepository hubRepository;
+//
+//    private final AuctionService auctionService;
+//
+//    @Inject
+//    public HubService(HubRepository hubRepository, AuctionService auctionService) {
+//        this.hubRepository = hubRepository;
+//        this.auctionService = auctionService;
+//    }
+//
+//
+//    public List<Hub> getAllHubs() {
+//        try {
+//            List<Hub> hubs = hubRepository.findAll();
+//            if (hubs.isEmpty()){
+//                throw new NoResultsFound();
+//            }
+//
+//            return hubs;
+//        }catch (RuntimeException e){
+//            throw new NoResultsFound();
+//        }
+//    }
+//
+//    public Hub getHubById(Long id) {
+//        try {
+//            return hubRepository.findById(id).orElseThrow(NoResultsFound::new);
+//        } catch (NoResultsFound e) {
+//            throw new NoResultsFound();
+//        }
+//
+//    }
+//
+//    public void createHub(Hub hub) {
+//        try{
+//            Auction auction = auctionService.getAuctionById(null);
+//            if (auction.equals(null)){
+//                throw new NoAuctionFoundException();
+//            }
+//            hubRepository.save(hub);
+//        }catch (RuntimeException e) {
+//            throw new NoAuctionFoundException();
+//        }
+//    }
+//
+//    public void updateHub(Long id, Hub hub) {
+//        try {
+//            Hub existingHub = getHubById(id);
+//            Hub updateHub = updateMapper(existingHub, hub);
+//
+//            hubRepository.update(updateHub);
+//        } catch (RuntimeException e) {
+//            throw new NoResultsFound();
+//        }
+//    }
+//
+//    public void deleteHub(Long id) {
+//        try{
+//            hubRepository.deleteById(id);
+//        }catch (FailDeleteException e){
+//            throw new RuntimeException() ;
+//        }
+//    }
+//
+//    private Hub updateMapper(Hub existingHub, Hub hub) {
+//        try {
+//            existingHub.setPorts(hub.getPorts() != null ? hub.getPorts() : existingHub.getPorts());
+//            existingHub.setVolts(hub.getVolts() != null ? hub.getVolts()  :existingHub.getVolts());
+//            existingHub.setBrand(hub.getBrand() != null ? hub.getBrand() :existingHub.getBrand());
+//            existingHub.setQuantity(hub.getQuantity() != null ? hub.getQuantity() :existingHub.getQuantity());
+//            existingHub.setName(hub.getName() != null ? hub.getName() :existingHub.getName());
+//            existingHub.setDescription(hub.getDescription() != null ? hub.getDescription() :existingHub.getDescription());
+//            existingHub.setInitialValue(hub.getInitialValue() != null ? hub.getInitialValue() :existingHub.getInitialValue());
+//
+//            return existingHub;
+//        }catch (RuntimeException e){
+//            throw new UpdateObjectException();
+//        }
+//
+//    }
 
-    public Iterable<HubDTO> getAllHubs() {
-        return toHubDTOList(hubRepository.findAll());
-    }
-
-    public HubDTO getHubById(Long id) {
-        return hubRepository.findById(id)
-                .map(this::toHubDTO)
-                .orElse(null);
-    }
-
-    public HubDTO createHub(Hub hub) {
-
-        return toHubDTO(hubRepository.save(hub));
-    }
-
-    public HubDTO updateHub(Long id, HubDTO updatedHubDTO) {
-        Hub existingHub = hubRepository.findById(id).orElse(null);
-        if (existingHub != null) {
-            existingHub.setName(updatedHubDTO.getName());
-            existingHub.setQuantity(updatedHubDTO.getQuantity());
-            existingHub.setBrand(updatedHubDTO.getBrand());
-            existingHub.setPorts(updatedHubDTO.getPorts());
-            existingHub.setVolts(updatedHubDTO.getVolts());
-
-            Hub updatedHub = hubRepository.update(existingHub);
-
-            return toHubDTO(updatedHub);
-        }
-        return null;
-    }
-
-    public void deleteHub(Long id) {
-        hubRepository.deleteById(id);
-    }
-
-    private HubDTO toHubDTO(Hub hub) {
-        HubDTO dto = new HubDTO();
-        dto.setName(hub.getName());
-        dto.setQuantity(hub.getQuantity());
-        dto.setBrand(hub.getBrand());
-        dto.setPorts(hub.getPorts());
-        dto.setVolts(hub.getVolts());
-        return dto;
-    }
-
-    private Iterable<HubDTO> toHubDTOList(Iterable<Hub> Hubs) {
-        List<HubDTO> dtos = new ArrayList<>();
-        for (Hub hub : Hubs) {
-            dtos.add(toHubDTO(hub));
-        }
-        return dtos;
-    }
 }

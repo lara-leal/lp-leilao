@@ -9,47 +9,44 @@ import jakarta.validation.Valid;
 import lp.leilao.entities.FinancialInstitution;
 import lp.leilao.services.FInstitutionService;
 
+import java.util.List;
+
 @Controller("/financialInstitution")
 @Tag(name = "Financial Institutions")
 public class FInstitutionController {
 
+    private final FInstitutionService fInstitutionService;
+
     @Inject
-    private final FInstitutionService fiService;
-
-    public FInstitutionController(FInstitutionService fiService) {
-        this.fiService = fiService;
+    public FInstitutionController(FInstitutionService fInstitutionService) {
+        this.fInstitutionService = fInstitutionService;
     }
 
-    @Get("/list")
-    public Iterable<FinancialInstitution> listFI() {
-        return fiService.getAllFI();
+    @Get("/financial-institution")
+    public HttpResponse<List<FinancialInstitution>> findFinancialInstitution() {
+        return HttpResponse.ok(fInstitutionService.getAllFI());
     }
 
-    @Get("/{fi_id}")
-    public FinancialInstitution getFI(Long fi_id) {
-
-        return fiService.getFIById(fi_id);
+    @Get("/{id}")
+    public HttpResponse<FinancialInstitution> getFinancialInstitution(Long id) {
+        return HttpResponse.ok(fInstitutionService.getFIById(id));
     }
 
-    @Post("/create")
-    @Status(HttpStatus.CREATED)
-    public FinancialInstitution createFI(@Body @Valid FinancialInstitution financial) {
-        return fiService.createFI(financial);
+    @Post("/register-fi")
+    public HttpResponse<?> createFI(@Body @Valid FinancialInstitution financial) {
+        fInstitutionService.createFI(financial);
+        return HttpResponse.created("Register with successfully");
     }
 
-    @Put("/{fi_id}")
-    public HttpResponse<FinancialInstitution> updateFI(@PathVariable Long fi_id, @Body FinancialInstitution updatedFI) {
-        FinancialInstitution updated = fiService.updateFI(fi_id, updatedFI);
-        if (updated != null) {
-            return HttpResponse.ok(updated);
-        } else {
-            return HttpResponse.notFound();
-        }
+    @Put("/{id}")
+    public HttpResponse<?> updateFI(@PathVariable Long id, @Body FinancialInstitution updatedFI) {
+        fInstitutionService.updateFI(id, updatedFI);
+        return HttpResponse.noContent();
     }
 
-    @Delete("/{fi_id}")
-    @Status(HttpStatus.NO_CONTENT)
-    public void deleteFI(Long fi_id) {
-        fiService.deleteFI(fi_id);
+    @Delete("/{id}")
+    public HttpResponse<?> deleteFI(Long id) {
+        fInstitutionService.deleteFI(id);
+        return HttpResponse.ok("Delete with successuful");
     }
 }

@@ -72,6 +72,10 @@
 <groupId>io.micronaut.views</groupId>
 <artifactId>micronaut-views-handlebars</artifactId>
 </dependency>
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+    </dependency>
 <dependency>
 <groupId>jakarta.validation</groupId>
 <artifactId>jakarta.validation-api</artifactId>
@@ -113,6 +117,11 @@
 <artifactId>junit-jupiter-api</artifactId>
 <scope>test</scope>
 </dependency>
+    <dependency>
+        <groupId>org.modelmapper</groupId>
+        <artifactId>modelmapper</artifactId>
+        <version>2.4.4</version>
+    </dependency>
 <dependency>
 <groupId>org.junit.jupiter</groupId>
 <artifactId>junit-jupiter-engine</artifactId>
