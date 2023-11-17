@@ -1,35 +1,47 @@
 package lp.leilao.entities;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import io.micronaut.serde.annotation.Serdeable;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Date;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Serdeable
-@Table(name = "bids")
+@Table(name = "bid")
 public class Bid {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long bid_id;
+    private Long bidId;
 
-    private Double bid_value;
+    @Column(name = "bidValue")
+    private Double bidValue;
 
+    @Column(name = "date")
     private Date date;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "id_client")
-    private Client clients;
+    @Column(name = "bidCategory", nullable = false)
+    private String bidCategory;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    @JoinColumn(name = "auction_id")
-    private Auction auction;
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH})
+    @JoinColumn(name="deviceId")
+    private ComputingDevice device;
+
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.EAGER, cascade = {CascadeType.DETACH})
+    @JoinColumn(name="vehicleId")
+    private Vehicle vehicle;
+
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
+    @JoinColumn(name = "clientId")
+    private Client client;
+
 }

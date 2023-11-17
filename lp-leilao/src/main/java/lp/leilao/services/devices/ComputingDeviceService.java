@@ -9,9 +9,9 @@ import lp.leilao.enums.CategoryEnums;
 import lp.leilao.enums.DevicesTypeEnum;
 import lp.leilao.exceptions.*;
 import lp.leilao.repositories.ComputingDeviceRepository;
-import lp.leilao.repositories.ProductRepository;
 import lp.leilao.services.AuctionService;
 import org.modelmapper.ModelMapper;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -22,15 +22,12 @@ public class ComputingDeviceService {
 
     private final AuctionService auctionService;
 
-    private final ProductRepository productRepository;
 
     private final ComputingDeviceRepository computingDeviceRepository;
 
     @Inject
-    public ComputingDeviceService(AuctionService auctionService, ProductRepository productRepository, ComputingDeviceRepository computingDeviceRepository) {
+    public ComputingDeviceService(AuctionService auctionService, ComputingDeviceRepository computingDeviceRepository) {
         this.auctionService = auctionService;
-        this.productRepository = productRepository;
-
         this.computingDeviceRepository = computingDeviceRepository;
     }
 
@@ -128,4 +125,12 @@ public class ComputingDeviceService {
         return device;
     }
 
+    public void updateDeviceForNewProduct(List<ComputingDevice> devicesToTransfer) {
+
+        computingDeviceRepository.updateAll(devicesToTransfer);
+    }
+
+    public void deleteAllDevice(List<ComputingDevice> devices) {
+        computingDeviceRepository.deleteAll(devices);
+    }
 }

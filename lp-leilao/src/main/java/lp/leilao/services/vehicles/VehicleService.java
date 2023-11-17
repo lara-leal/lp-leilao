@@ -139,4 +139,8 @@ public class VehicleService {
 
         throw new DeviceTypeNotValidException();
     }
+
+    public void updateVehicleForNewProduct(List<Vehicle> vehiclesToTransfer) {
+        vehicleRepository.updateAll(vehiclesToTransfer);
+    }
 }

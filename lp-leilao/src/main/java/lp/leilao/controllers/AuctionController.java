@@ -9,13 +9,15 @@ import io.micronaut.http.annotation.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
 import jakarta.validation.Valid;
+import lp.leilao.dtos.AuctionDTO;
 import lp.leilao.entities.Auction;
 import lp.leilao.services.AuctionService;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-@Controller("/auctions")
+@Controller("/auction")
 @Tag(name = "Auctions")
 public class AuctionController {
 
@@ -26,15 +28,27 @@ public class AuctionController {
         this.auctionService = auctionService;
     }
 
-    @Get("/all-auctions")
-    public List<Auction> listAuctions() {
+    @Get("/allAuctions")
+    public List<AuctionDTO> listAuctions() {
         return auctionService.getAllAuctions();
+    }
+
+    @Get("all")
+    public HttpResponse<List<AuctionDTO>> auction() {
+
+        return HttpResponse.ok().body(auctionService.getAllAuctions());
     }
 
     @Get("/find-by-category")
     public HttpResponse<List<Auction>> getAuction(@Parameter String category) {
         List<Auction> auction = auctionService.getAuctionByType(category);
         return HttpResponse.ok(auction);
+    }
+
+    @Get("/export-data/{id}")
+    public HttpResponse<?> auction(@PathVariable Long id) throws IOException {
+        auctionService.exportDatFile(id);
+        return HttpResponse.ok();
     }
 
     @Post("/create")

@@ -11,6 +11,8 @@
         <option name="micronaut.processing.module" value="lp-leilao" />
         <processorPath useClasspath="false">
           <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.30/lombok-1.18.30.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.5.Final/mapstruct-processor-1.5.5.Final.jar" />
+          <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.5.Final/mapstruct-1.5.5.Final.jar" />
           <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-inject-java/4.1.3/micronaut-inject-java-4.1.3.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/2.0.7/slf4j-api-2.0.7.jar" />
           <entry name="$MAVEN_REPOSITORY$/io/micronaut/micronaut-core-processor/4.1.3/micronaut-core-processor-4.1.3.jar" />

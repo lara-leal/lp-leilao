@@ -22,30 +22,30 @@ public class FInstitutionController {
         this.fInstitutionService = fInstitutionService;
     }
 
-    @Get("/financial-institution")
+    @Get("/available")
     public HttpResponse<List<FinancialInstitution>> findFinancialInstitution() {
         return HttpResponse.ok(fInstitutionService.getAllFI());
     }
 
     @Get("/{id}")
-    public HttpResponse<FinancialInstitution> getFinancialInstitution(Long id) {
+    public HttpResponse<FinancialInstitution> getFinancialInstitution(@PathVariable Long id) {
         return HttpResponse.ok(fInstitutionService.getFIById(id));
     }
 
-    @Post("/register-fi")
+    @Post("/register")
     public HttpResponse<?> createFI(@Body @Valid FinancialInstitution financial) {
         fInstitutionService.createFI(financial);
         return HttpResponse.created("Register with successfully");
     }
 
-    @Put("/{id}")
+    @Put("/update/{id}")
     public HttpResponse<?> updateFI(@PathVariable Long id, @Body FinancialInstitution updatedFI) {
         fInstitutionService.updateFI(id, updatedFI);
         return HttpResponse.noContent();
     }
 
-    @Delete("/{id}")
-    public HttpResponse<?> deleteFI(Long id) {
+    @Delete("/delete/{id}")
+    public HttpResponse<?> deleteFI(@PathVariable Long id) {
         fInstitutionService.deleteFI(id);
         return HttpResponse.ok("Delete with successuful");
     }

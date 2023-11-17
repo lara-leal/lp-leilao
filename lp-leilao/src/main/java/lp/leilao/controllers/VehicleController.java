@@ -1,7 +1,7 @@
 package lp.leilao.controllers;
 
 import io.micronaut.http.HttpResponse;
-import io.micronaut.http.HttpStatus;
+import io.micronaut.http.MutableHttpResponse;
 import io.micronaut.http.annotation.*;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.inject.Inject;
@@ -29,8 +29,13 @@ public class VehicleController {
     }
 
     @Get("/find-vehicle/{id}")
-    public HttpResponse<VehicleDTO> getVehicle(Long id) {
+    public HttpResponse<VehicleDTO> getVehicle(@PathVariable Long id) {
         return HttpResponse.ok().body(vehicleService.getVehicleById(id));
+    }
+
+    @Get("/find-vehicle-category/{category}")
+    public MutableHttpResponse<List<VehicleDTO>> getVehicleByCategory(@PathVariable String category) {
+        return HttpResponse.ok().body(vehicleService.findVehicleByCategory(category));
     }
 
     @Post("/register-vehicle")
@@ -40,13 +45,13 @@ public class VehicleController {
     }
 
     @Put("/update-vehicle/{id}")
-    public HttpResponse<?> updateVehicle(Vehicle vehicle, Long id){
+    public HttpResponse<?> updateVehicle(Vehicle vehicle, @PathVariable Long id){
         vehicleService.updateVehicle(id, vehicle);
         return HttpResponse.ok("Update with successful");
     }
 
     @Delete("/delete-vehicle/{id}")
-    public HttpResponse deleteVehicle(Long id) {
+    public HttpResponse deleteVehicle(@PathVariable Long id) {
         vehicleService.deleteVehicle(id);
         return HttpResponse.ok("Deleted with successful");
     }

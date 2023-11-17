@@ -2,27 +2,27 @@ package lp.leilao.entities;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
-@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
 @Serdeable
-@Table(name = "financial_instituition")
+@Table(name = "financialInstitution")
 public class FinancialInstitution {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long fi_id;
+    private Long fiid;
 
-    @Column(name = "cnpj")
+    @Column(name = "cnpj", unique = true)
     private String cnpj;
 
     @Column(name = "name")
@@ -30,5 +30,9 @@ public class FinancialInstitution {
 
     @Column(name = "address")
     private String address;
+
+    @ManyToMany(mappedBy = "fInstitutions", fetch = FetchType.EAGER)
+    @JsonIgnore
+    private List<Auction> auction;
 
 }

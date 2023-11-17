@@ -1,20 +1,18 @@
 package lp.leilao.entities;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.*;
 
 import io.micronaut.serde.annotation.Serdeable;
 import io.swagger.v3.oas.annotations.Hidden;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import lp.leilao.entities.Auction;
 import lp.leilao.entities.Product;
 
-@Data
+import java.util.List;
+
+@Getter
+@Setter
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -61,9 +59,14 @@ public class Vehicle {
     private Boolean sunroof = false;
 
     @JsonBackReference
-    @ManyToOne(cascade = CascadeType.DETACH)
+    @ManyToOne(cascade = {CascadeType.REMOVE, CascadeType.DETACH}, fetch = FetchType.EAGER)
     @JoinColumn(name = "prodId")
     private Product product;
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "vehicle", fetch = FetchType.EAGER,
+            cascade = {CascadeType.ALL, CascadeType.REMOVE}, orphanRemoval = true)
+    private List<Bid> bid;
 
 
 }

@@ -3,11 +3,16 @@ package lp.leilao.entities;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import io.micronaut.serde.annotation.Serdeable;
 import jakarta.persistence.*;
 import lombok.*;
 import lp.leilao.entities.Auction;
 import lp.leilao.entities.Product;
+
+import java.util.Arrays;
+import java.util.List;
 
 @Getter
 @Setter
@@ -54,8 +59,13 @@ public class ComputingDevice {
     private Boolean antenna;
 
     @JsonBackReference
-    @ManyToOne(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
+    @ManyToOne(cascade = {CascadeType.REMOVE, CascadeType.DETACH}, fetch = FetchType.EAGER)
     @JoinColumn(name = "prodId")
     private Product product;
+
+
+    @JsonManagedReference
+    @OneToMany(mappedBy = "device", fetch = FetchType.EAGER, cascade = {CascadeType.ALL}, orphanRemoval = true)
+    private List<Bid> bids;
 
 }

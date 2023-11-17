@@ -9,46 +9,44 @@ import jakarta.validation.Valid;
 import lp.leilao.entities.Client;
 import lp.leilao.services.ClientService;
 
-@Controller("/clients")
-@Tag(name = "Clients")
+import java.util.List;
+
+@Controller("/client")
+@Tag(name = "Client")
 public class ClientController {
-    @Inject
+
     private final ClientService clientService;
 
+    @Inject
     public ClientController(ClientService clientService) {
         this.clientService = clientService;
     }
 
-    @Get("/list")
-    public Iterable<Client> listClient() {
-        return clientService.getAllClient();
+    @Get("/find-clients")
+    public HttpResponse<List<Client>> allClients() {
+        return HttpResponse.ok().body(clientService.getAllClient());
     }
 
-    @Get("/{id_client}")
-    public Client getClient(Long id_client) {
-
-        return clientService.getClientById(id_client);
+    @Get("/find-client/{id}")
+    public HttpResponse<Client> findClientById(Long id) {
+        return HttpResponse.ok().body(clientService.getClientById(id));
     }
 
-    @Post("/create")
-    @Status(HttpStatus.CREATED)
-    public Client createClient(@Body @Valid Client client) {
-        return clientService.createClient(client);
+    @Post("/register")
+    public HttpResponse<?> registerClient(@Body @Valid Client client) {
+        clientService.createClient(client);
+        return HttpResponse.created("Register with successfully");
     }
 
-    @Put("/{id_client}")
-    public HttpResponse<Client> updateClient(@PathVariable Long id_client, @Body Client updatedClient) {
-        Client updated = clientService.updateClient(id_client, updatedClient);
-        if (updated != null) {
-            return HttpResponse.ok(updated);
-        } else {
-            return HttpResponse.notFound();
-        }
+    @Put("/update-client/{id}")
+    public HttpResponse<?> updateClient(@PathVariable Long id, @Body Client updatedClient) {
+        clientService.updateClient(id, updatedClient);
+        return HttpResponse.ok().body("Update with successfully");
     }
 
-    @Delete("/{id_client}")
-    @Status(HttpStatus.NO_CONTENT)
-    public void deleteClient(Long id_client) {
-        clientService.deleteClient(id_client);
+    @Delete("/delete/{id}")
+    public HttpResponse deleteClient(Long id) {
+        clientService.deleteClient(id);
+        return HttpResponse.noContent().body("Delete with successfully");
     }
 }

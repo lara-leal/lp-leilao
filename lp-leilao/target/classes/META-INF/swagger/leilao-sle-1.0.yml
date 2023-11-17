@@ -4,7 +4,21 @@ info:
   description: API usando Micronaut
   version: "1.0"
 paths:
-  /auctions/all-auctions:
+  /auction/all:
+    get:
+      tags:
+      - Auctions
+      operationId: auction
+      responses:
+        "200":
+          description: auction 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/AuctionDTO'
+  /auction/allAuctions:
     get:
       tags:
       - Auctions
@@ -17,8 +31,99 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Auction'
-  /auctions/create:
+                  $ref: '#/components/schemas/AuctionDTO'
+  /auction/bids/available-bids:
+    get:
+      tags:
+      - Bids
+      operationId: allBinds
+      responses:
+        "200":
+          description: allBinds 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Bid'
+  /auction/bids/delete/{id}:
+    delete:
+      tags:
+      - Bids
+      operationId: deleteBid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                bid_id:
+                  type: integer
+                  format: int64
+        required: true
+      responses:
+        "200":
+          description: deleteBid 200 response
+          content:
+            application/json:
+              schema:
+                type: object
+  /auction/bids/find-bid/{id}:
+    get:
+      tags:
+      - Bids
+      operationId: findBidById
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: findBidById 200 response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Bid'
+  /auction/bids/register-bid:
+    post:
+      tags:
+      - Bids
+      operationId: createBid
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bid'
+        required: true
+      responses:
+        "200":
+          description: createBid 200 response
+          content:
+            application/json:
+              schema:
+                type: object
+  /auction/bids/update-bid/{id}:
+    put:
+      tags:
+      - Bids
+      operationId: updateBidById
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Bid'
+        required: true
+      responses:
+        "200":
+          description: updateBidById 200 response
+          content:
+            application/json:
+              schema:
+                type: object
+  /auction/create:
     post:
       tags:
       - Auctions
@@ -36,7 +141,26 @@ paths:
             application/json:
               schema:
                 type: object
-  /auctions/find-by-category:
+  /auction/export-data/{id}:
+    get:
+      tags:
+      - Auctions
+      operationId: auction_1
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: auction_1 200 response
+          content:
+            application/json:
+              schema:
+                type: object
+  /auction/find-by-category:
     get:
       tags:
       - Auctions
@@ -56,7 +180,7 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Auction'
-  /auctions/{auction_id}:
+  /auction/{auction_id}:
     put:
       tags:
       - Auctions
@@ -99,45 +223,13 @@ paths:
             application/json:
               schema:
                 type: object
-  /clients/create:
-    post:
+  /client/delete/{id}:
+    delete:
       tags:
-      - Clients
-      operationId: createClient
-      requestBody:
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/Client'
-        required: true
-      responses:
-        "201":
-          description: createClient 201 response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Client'
-  /clients/list:
-    get:
-      tags:
-      - Clients
-      operationId: listClient
-      responses:
-        "200":
-          description: listClient 200 response
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/Client'
-  /clients/{id_client}:
-    get:
-      tags:
-      - Clients
-      operationId: getClient
+      - Client
+      operationId: deleteClient
       parameters:
-      - name: id_client
+      - name: id
         in: path
         required: true
         schema:
@@ -145,17 +237,69 @@ paths:
           format: int64
       responses:
         "200":
-          description: getClient 200 response
+          description: deleteClient 200 response
+          content:
+            application/json:
+              schema:
+                type: object
+  /client/find-client/{id}:
+    get:
+      tags:
+      - Client
+      operationId: findClientById
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: findClientById 200 response
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/Client'
+  /client/find-clients:
+    get:
+      tags:
+      - Client
+      operationId: allClients
+      responses:
+        "200":
+          description: allClients 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Client'
+  /client/register:
+    post:
+      tags:
+      - Client
+      operationId: registerClient
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Client'
+        required: true
+      responses:
+        "200":
+          description: registerClient 200 response
+          content:
+            application/json:
+              schema:
+                type: object
+  /client/update-client/{id}:
     put:
       tags:
-      - Clients
+      - Client
       operationId: updateClient
       parameters:
-      - name: id_client
+      - name: id
         in: path
         required: true
         schema:
@@ -173,21 +317,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/Client'
-    delete:
-      tags:
-      - Clients
-      operationId: deleteClient
-      parameters:
-      - name: id_client
-        in: path
-        required: true
-        schema:
-          type: integer
-          format: int64
-      responses:
-        "204":
-          description: deleteClient 204 response
+                type: object
   /devices/available-devices:
     get:
       tags:
@@ -287,7 +417,7 @@ paths:
             application/json:
               schema:
                 type: object
-  /financialInstitution/financial-institution:
+  /financialInstitution/available:
     get:
       tags:
       - Financial Institutions
@@ -301,7 +431,26 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/FinancialInstitution'
-  /financialInstitution/register-fi:
+  /financialInstitution/delete/{id}:
+    delete:
+      tags:
+      - Financial Institutions
+      operationId: deleteFI
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+          format: int64
+      responses:
+        "200":
+          description: deleteFI 200 response
+          content:
+            application/json:
+              schema:
+                type: object
+  /financialInstitution/register:
     post:
       tags:
       - Financial Institutions
@@ -319,25 +468,7 @@ paths:
             application/json:
               schema:
                 type: object
-  /financialInstitution/{id}:
-    get:
-      tags:
-      - Financial Institutions
-      operationId: getFinancialInstitution
-      parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: integer
-          format: int64
-      responses:
-        "200":
-          description: getFinancialInstitution 200 response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/FinancialInstitution'
+  /financialInstitution/update/{id}:
     put:
       tags:
       - Financial Institutions
@@ -362,10 +493,11 @@ paths:
             application/json:
               schema:
                 type: object
-    delete:
+  /financialInstitution/{id}:
+    get:
       tags:
       - Financial Institutions
-      operationId: deleteFI
+      operationId: getFinancialInstitution
       parameters:
       - name: id
         in: path
@@ -375,11 +507,11 @@ paths:
           format: int64
       responses:
         "200":
-          description: deleteFI 200 response
+          description: getFinancialInstitution 200 response
           content:
             application/json:
               schema:
-                type: object
+                $ref: '#/components/schemas/FinancialInstitution'
   /vehicles/available-vehicle:
     get:
       tags:
@@ -413,6 +545,26 @@ paths:
             application/json:
               schema:
                 type: object
+  /vehicles/find-vehicle-category/{category}:
+    get:
+      tags:
+      - Vehicles
+      operationId: getVehicleByCategory
+      parameters:
+      - name: category
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        "200":
+          description: getVehicleByCategory 200 response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/VehicleDTO'
   /vehicles/find-vehicle/{id}:
     get:
       tags:
@@ -498,6 +650,12 @@ components:
         occurrenceHour:
           type: string
           format: partial-time
+        finishDate:
+          type: string
+          format: date
+        finishHour:
+          type: string
+          format: partial-time
         visitDate:
           type: string
           format: date
@@ -508,10 +666,6 @@ components:
           type: string
         category:
           type: string
-        bids:
-          type: array
-          items:
-            $ref: '#/components/schemas/Bid'
         fInstitutions:
           type: array
           items:
@@ -520,31 +674,80 @@ components:
           nullable: true
           allOf:
           - $ref: '#/components/schemas/Product'
+    AuctionDTO:
+      type: object
+      properties:
+        numAuction:
+          type: integer
+          format: int32
+        status:
+          type: string
+        occurrenceDate:
+          type: string
+          format: date
+        occurrenceHour:
+          type: string
+          format: partial-time
+        visitDate:
+          type: string
+          format: date
+        visitHour:
+          type: string
+          format: partial-time
+        address:
+          type: string
+        category:
+          type: string
+        fInstitutions:
+          type: array
+          items:
+            $ref: '#/components/schemas/FinancialInstitutionDTO'
+        product:
+          $ref: '#/components/schemas/ProductDTO'
     Bid:
       type: object
       properties:
-        bid_id:
+        bidId:
           type: integer
           format: int64
           nullable: true
-        bid_value:
+        bidValue:
           type: number
           format: double
         date:
           type: string
           format: date-time
-        clients:
+        bidCategory:
+          type: string
+        device:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/ComputingDevice'
+        vehicle:
+          nullable: true
+          allOf:
+          - $ref: '#/components/schemas/Vehicle'
+        client:
           nullable: true
           allOf:
           - $ref: '#/components/schemas/Client'
-        auction:
-          nullable: true
-          allOf:
-          - $ref: '#/components/schemas/Auction'
+    BidDTO:
+      type: object
+      properties:
+        bidValue:
+          type: number
+          format: double
+        date:
+          type: string
+          format: date-time
+        bidCategory:
+          type: string
+        client:
+          $ref: '#/components/schemas/ClientDTO'
     Client:
       type: object
       properties:
-        id_client:
+        clientId:
           type: integer
           format: int64
           nullable: true
@@ -556,13 +759,21 @@ components:
           type: string
         digitalCertificate:
           type: string
-        bids:
-          type: array
-          items:
-            $ref: '#/components/schemas/Bid'
+    ClientDTO:
+      type: object
+      properties:
+        name:
+          type: string
+        email:
+          type: string
+        cpf:
+          type: string
+        digitalCertificate:
+          type: string
     ComputingDevice:
       required:
       - antenna
+      - bids
       - brand
       - category
       - description
@@ -606,6 +817,10 @@ components:
           nullable: true
           allOf:
           - $ref: '#/components/schemas/Product'
+        bids:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bid'
     ComputingDeviceDTO:
       type: object
       properties:
@@ -631,13 +846,29 @@ components:
           type: string
         antenna:
           type: boolean
+        bids:
+          type: array
+          items:
+            $ref: '#/components/schemas/BidDTO'
     FinancialInstitution:
       type: object
       properties:
-        fi_id:
+        fiid:
           type: integer
           format: int64
           nullable: true
+        cnpj:
+          type: string
+        name:
+          type: string
+        address:
+          type: string
+    FinancialInstitutionDTO:
+      type: object
+      properties:
+        fiid:
+          type: integer
+          format: int64
         cnpj:
           type: string
         name:
@@ -659,12 +890,20 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Vehicle'
-        auction:
-          nullable: true
-          allOf:
-          - $ref: '#/components/schemas/Auction'
+    ProductDTO:
+      type: object
+      properties:
+        devices:
+          type: array
+          items:
+            $ref: '#/components/schemas/ComputingDeviceDTO'
+        vehicles:
+          type: array
+          items:
+            $ref: '#/components/schemas/VehicleDTO'
     Vehicle:
       required:
+      - bid
       - brand
       - category
       - color
@@ -712,6 +951,10 @@ components:
           nullable: true
           allOf:
           - $ref: '#/components/schemas/Product'
+        bid:
+          type: array
+          items:
+            $ref: '#/components/schemas/Bid'
     VehicleDTO:
       type: object
       properties:
@@ -742,3 +985,7 @@ components:
           type: string
         sunroof:
           type: boolean
+        bids:
+          type: array
+          items:
+            $ref: '#/components/schemas/BidDTO'

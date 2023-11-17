@@ -28,6 +28,7 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/.idea/workspace.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/AuctionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/AuctionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/BidController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/BidController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ClientController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/FInstitutionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/FInstitutionController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/ProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/controllers/devices/ComputingDeviceController.java" beforeDir="false" />
@@ -86,18 +87,19 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/repositories/vehicles/VehicleRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/AuctionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/AuctionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/BidService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/BidService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/FInstitutionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/FInstitutionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/ProductService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/ComputingDeviceService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/HubService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/HubService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/MonitorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/MonitorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/NotebookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/NotebookService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/RouterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/RouterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/SwitchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/SwitchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/CarService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/CarService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/MotorcycleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/MotorcycleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/TruckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/TruckService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/UtilityVehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/UtilityVehicleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/HubService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/MonitorService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/NotebookService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/RouterService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/SwitchService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/CarService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/MotorcycleService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/TruckService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/UtilityVehicleService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/VehicleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/VehicleService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/lp/leilao/status/AuctionStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lp/leilao/enums/CategoryEnums.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
@@ -112,9 +114,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
-        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -123,6 +125,13 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$USER_HOME$/Downloads/apache-maven-3.9.5" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 7
@@ -148,7 +157,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;SDKs&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;,
@@ -166,6 +175,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="lp.leilao.dtos" />
       <recent name="lp.leilao.enums" />
       <recent name="lp.leilao.exceptions" />
       <recent name="lp.leilao.services.devices" />
@@ -188,12 +198,10 @@
       <method v="2" />
     </configuration>
     <configuration name="Application" type="MicronautRunConfigurationType" factoryName="Micronaut" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="17" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="lp.leilao.Application" />
       <module name="lp-leilao" />
-      <option name="alternativeJrePath" value="17" />
-      <option name="alternativeJrePathEnabled" value="true" />
+      <option name="alternativeJrePath" />
+      <option name="alternativeJrePathEnabled" value="false" />
       <option name="mainClass" value="lp.leilao.Application" />
       <option name="passParentEnvs" value="true" />
       <option name="vmParameters" />
@@ -201,82 +209,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="leilão-sle-1.0.yml" type="SwaggerCodegen" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allowRunningInParallel" value="false" />
-      <option name="customTemplatesPath" value="" />
-      <option name="envs">
-        <map />
-      </option>
-      <option name="generateToPath" value="C:\Users\leall\OneDrive\Área de Trabalho\lp\lp-leilao\lp-leilao\src\main\gen" />
-      <option name="generationParameters">
-        <list />
-      </option>
-      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
-      <option name="jdkPath" value="C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.1\jbr\bin\java.exe" />
-      <option name="language" value="java" />
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="specificationPath" value="C:\Users\leall\OneDrive\Área de Trabalho\lp\lp-leilao\lp-leilao\target\classes\META-INF\swagger\leilão-sle-1.0.yml" />
-      <option name="workingDirectory" value="C:$PROJECT_DIR$/../../../../../../leall/OneDrive/Área de Trabalho/lp/lp-leilao/lp-leilao/target/classes/META-INF/swagger/leilão-sle-1.0.yml" />
-      <method v="2" />
-    </configuration>
-    <configuration name="swagger.yml (1)" type="SwaggerCodegen" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allowRunningInParallel" value="false" />
-      <option name="customTemplatesPath" value="" />
-      <option name="envs">
-        <map />
-      </option>
-      <option name="generateToPath" value="C:\Users\leall\OneDrive\Área de Trabalho\testessssssssss\lp-leilao\lp-leilao\src\main\gen" />
-      <option name="generationParameters">
-        <list />
-      </option>
-      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
-      <option name="jdkPath" value="C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.1\jbr\bin\java.exe" />
-      <option name="language" value="java" />
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="specificationPath" value="C:\Users\leall\OneDrive\Área de Trabalho\testessssssssss\lp-leilao\lp-leilao\src\main\resources\META-INF\swagger\swagger.yml" />
-      <option name="workingDirectory" value="C:$PROJECT_DIR$/../../../../../../leall/OneDrive/Área de Trabalho/testessssssssss/lp-leilao/lp-leilao/src/main/resources/META-INF/swagger/swagger.yml" />
-      <method v="2" />
-    </configuration>
-    <configuration name="swagger.yml" type="SwaggerCodegen" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
-      <option name="allowRunningInParallel" value="false" />
-      <option name="customTemplatesPath" value="" />
-      <option name="envs">
-        <map />
-      </option>
-      <option name="generateToPath" value="C:\Users\leall\OneDrive\Área de Trabalho\lp\lp-leilao\lp-leilao\src\main\gen" />
-      <option name="generationParameters">
-        <list />
-      </option>
-      <option name="generatorType" value="OPENAPI_GENERATOR_V6" />
-      <option name="jdkPath" value="C:\Program Files\JetBrains\IntelliJ IDEA 2023.2.1\jbr\bin\java.exe" />
-      <option name="language" value="java" />
-      <option name="passParentEnvs" value="true" />
-      <option name="programParameters" />
-      <option name="projectPathOnTarget" />
-      <option name="selectedOptions">
-        <list />
-      </option>
-      <option name="specificationPath" value="C:\Users\leall\OneDrive\Área de Trabalho\lp\lp-leilao\lp-leilao\target\classes\META-INF\swagger\swagger.yml" />
-      <option name="workingDirectory" value="C:$PROJECT_DIR$/../../../../../../leall/OneDrive/Área de Trabalho/lp/lp-leilao/lp-leilao/target/classes/META-INF/swagger/swagger.yml" />
-      <method v="2" />
-    </configuration>
-    <list>
-      <item itemvalue="HTTP Request.generated-requests | #1" />
-      <item itemvalue="Micronaut.Application" />
-      <item itemvalue="OpenAPI/Swagger Code Generator.leilão-sle-1.0.yml" />
-      <item itemvalue="OpenAPI/Swagger Code Generator.swagger.yml" />
-      <item itemvalue="OpenAPI/Swagger Code Generator.swagger.yml (1)" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="HTTP Request.generated-requests | #1" />
@@ -317,7 +249,21 @@
       <workItem from="1699321117612" duration="389000" />
       <workItem from="1699321560910" duration="39689000" />
       <workItem from="1699534249949" duration="502000" />
-      <workItem from="1699534827494" duration="9837000" />
+      <workItem from="1699534827494" duration="15977000" />
+      <workItem from="1699732708014" duration="171000" />
+      <workItem from="1699734744858" duration="25473000" />
+      <workItem from="1699845136134" duration="785000" />
+      <workItem from="1699845949642" duration="418000" />
+      <workItem from="1699846410141" duration="59000" />
+      <workItem from="1699846471557" duration="335000" />
+      <workItem from="1699846831419" duration="733000" />
+      <workItem from="1699847801434" duration="477000" />
+      <workItem from="1699848296500" duration="1066000" />
+      <workItem from="1699849393975" duration="220000" />
+      <workItem from="1700016927349" duration="73000" />
+      <workItem from="1700027675915" duration="1139000" />
+      <workItem from="1700028820865" duration="349000" />
+      <workItem from="1700088754340" duration="12646000" />
     </task>
     <servers />
   </component>
@@ -329,28 +275,28 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/entities/Product.java</url>
-          <line>15</line>
+          <line>17</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/services/devices/MonitorService.java</url>
-          <line>40</line>
-          <option name="timeStamp" value="11" />
+          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/services/ClientService.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="51" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/controllers/AuctionController.java</url>
-          <line>53</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/services/ClientService.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/services/AuctionService.java</url>
-          <line>175</line>
-          <option name="timeStamp" value="38" />
+          <line>161</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/services/vehicles/VehicleService.java</url>
-          <line>73</line>
-          <option name="timeStamp" value="43" />
+          <url>file://$PROJECT_DIR$/src/main/java/lp/leilao/services/AuctionService.java</url>
+          <line>157</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

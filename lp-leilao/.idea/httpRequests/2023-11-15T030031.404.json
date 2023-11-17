@@ -1,0 +1,18 @@
+{
+  "_links": {
+    "self": [
+      {
+        "href": "/auction/all-auctions",
+        "templated": false
+      }
+    ]
+  },
+  "_embedded": {
+    "errors": [
+      {
+        "message": "Page Not Found"
+      }
+    ]
+  },
+  "message": "Not Found"
+}

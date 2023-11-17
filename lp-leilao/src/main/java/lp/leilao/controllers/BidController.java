@@ -9,47 +9,46 @@ import jakarta.validation.Valid;
 import lp.leilao.entities.Bid;
 import lp.leilao.services.BidService;
 
+import java.util.List;
+
 @Controller("/auction/bids")
 @Tag(name = "Bids")
 public class BidController {
-//    @Inject
-//    private final BidService bidService;
-//
-//    public BidController(BidService bidService) {
-//        this.bidService = bidService;
-//    }
-//
-//    @Get("/list")
-//    public Iterable<Bid> listBids() {
-//        return bidService.getAllBids();
-//    }
-//
-//    @Get("/{bid_id}")
-//    public Bid getBids(Long bid_id) {
-//
-//        return bidService.getBidById(bid_id);
-//    }
-//
-//    @Post("/create")
-//    @Status(HttpStatus.CREATED)
-//    public Bid createBid(@Body @Valid Bid bid) {
-//        return bidService.createBid(bid);
-//    }
-//
-//    @Put("/{bid_id}")
-//    public HttpResponse<Bid> updateBid(@PathVariable Long bid_id, @Body Bid updatedBid) {
-//        Bid updated = bidService.updateBid(bid_id, updatedBid);
-//        if (updated != null) {
-//            return HttpResponse.ok(updated);
-//        } else {
-//            return HttpResponse.notFound();
-//        }
-//    }
 
-//    @Delete("/{bid_id}")
-//    @Status(HttpStatus.NO_CONTENT)
-//    public void deleteBid(Long bid_id) {
-//        bidService.deleteBid(bid_id);
-//    }
+    private final BidService bidService;
+
+    @Inject
+    public BidController(BidService bidService) {
+        this.bidService = bidService;
+    }
+
+    @Get("/available-bids")
+    public HttpResponse<List<Bid>> allBinds() {
+        return HttpResponse.ok().body(bidService.findAllBids());
+    }
+
+    @Get("/find-bid/{id}")
+    public HttpResponse<Bid> findBidById(@PathVariable Long id) {
+
+        return HttpResponse.ok().body(bidService.findBidById(id));
+    }
+
+    @Post("/register-bid")
+    public HttpResponse createBid(@Body @Valid Bid bid) {
+        bidService.registerBid(bid);
+        return HttpResponse.created("Register with successfully");
+    }
+
+    @Put("/update-bid/{id}")
+    public HttpResponse<?> updateBidById(@PathVariable Long bid_id, @Body Bid updatedBid) {
+        bidService.updateBid(bid_id, updatedBid);
+        return HttpResponse.ok("Update with successfully");
+    }
+
+    @Delete("/delete/{id}")
+    public HttpResponse<?> deleteBid(Long bid_id) {
+        bidService.deleteBid(bid_id);
+        return HttpResponse.noContent().body("Delete with successfully");
+    }
 
 }
