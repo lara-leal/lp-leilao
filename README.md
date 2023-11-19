@@ -46,3 +46,7 @@ Registro, consulta, atualização e remoção das instituições financeiras res
 Acesse o link a seguir para visualizar a documentação da aplicação: 
 
 http://localhost:8080/swagger-ui/#/default
+
+Este documento contém exemplos de requisições prontos para teste: 
+
+https://github.com/lara-leal/lp-leilao/blob/main/README2.md
